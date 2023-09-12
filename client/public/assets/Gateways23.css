@@ -1,0 +1,27 @@
+/*Gateways 2023 StyleSheet*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+    background-color: #000;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    background-image: linear-gradient(rgba(8, 8, 42, 0.4), rgba(4, 4, 35, 0.4)), url("../assets/temp_gw.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
