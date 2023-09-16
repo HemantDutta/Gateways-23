@@ -1,7 +1,11 @@
 /*Navbar CSS*/
 
 .navbar{
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 110;
 }
 
 .navbar .topBar{
@@ -61,12 +65,41 @@
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
     position: relative;
+    z-index: 1;
 }
 
 .navbar nav .nav-list a {
     color: white;
     font-weight: 400;
     text-decoration: none;
+    position: relative;
+}
+
+.navbar nav .nav-list a:not(.active):after{
+    transition: all 0.2s ease;
+    transform-origin: bottom center;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    bottom: -4px;
+    left: -1px;
+    transform: scaleX(0);
+}
+
+.navbar nav .nav-list a.active:after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-color: #4C1E75;
+    bottom: -4px;
+    left: -1px;
+}
+
+.navbar nav .nav-list a:not(.active):hover:after{
+    transform: scaleX(1);
 }
 
 .navbar nav .nav-menu{
@@ -75,6 +108,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 16px;
+}
+
+.navbar nav .nav-menu > span{
+    color: white;
+    font-weight: bold;
 }
 
 .navbar nav .nav-menu .menu-btn{
@@ -100,4 +139,8 @@
 
 .navbar nav .nav-menu .menu-btn span:nth-child(3){
     width: 26px;
+}
+
+@media screen and (max-width: 991px) {
+
 }

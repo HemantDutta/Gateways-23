@@ -1,0 +1,246 @@
+/*Home CSS*/
+
+/*==========Hero Section==========*/
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+.hero .event-loading {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+.hero .event-loading .event-loading-text span {
+    color: black;
+    font-weight: 900;
+    font-size: 128px;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 8px 8px 8px #A614C5;
+}
+
+.hero .event-slides {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    padding: 100px 0 0 0;
+}
+
+.hero .event-slides .event-slide-container {
+    flex-basis: 90%;
+    flex-grow: 0;
+}
+
+.hero .event-slides .event-slide-container .event-slide {
+    position: relative;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    transform: translateY(10%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.hero .event-slides .event-slide-container .event-slide.active{
+    transform: none;
+    opacity: 1;
+}
+
+.hero .event-slides .event-slide-container .event-slide.none{
+    display: none;
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content {
+    position: absolute;
+    z-index: 105;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    left: 20%;
+    gap: 1rem;
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-header {
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 8px 8px 8px #A614C5;
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-tag {
+    font-size: 40px;
+    color: white;
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-des {
+    text-align: justify;
+    color: white;
+    margin: 1rem 0;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.5);
+    clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
+    padding: 5px;
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-btn-container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 80px;
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-btn-container button.event-cta {
+    width: 99%;
+    height: 96%;
+    background-color: #000;
+    color: white;
+    font-size: 24px;
+    z-index: 105;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.4s ease;
+    clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-btn-container .event-cta-bg {
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    margin: auto;
+    clip-path: polygon(0 1.2em, 1.2em 0, 100% 0, 100% calc(100% - 1.2em), calc(100% - 1.2em) 100%, 0 100%);
+    transition: background 0.4s ease;
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-btn-container:hover .event-cta{
+    transform: scale(0.98);
+}
+
+.hero .event-slides .event-slide-container .event-slide .event-content .event-btn-container:hover .event-cta-bg{
+    background: linear-gradient(45deg, #13053D, #700B85, #103C63);
+    background-size: 200% 200%;
+    animation: pulsate-btn linear 2s infinite;
+}
+
+@keyframes pulsate-btn {
+    0%{
+        background-position: 50% 100%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 50% 100%;
+    }
+}
+
+.hero .event-slides .event-slide-container .event-slide img {
+    position: absolute;
+    width: 60%;
+    inset: 0;
+    margin: auto;
+    clip-path: ellipse(50% 45% at 50% 50%);
+    z-index: 100;
+    filter: blur(20px);
+    transform: translateY(15%);
+    transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+.hero .event-slides .event-slide-container .event-slide.active img{
+    filter: none;
+    transform: none;
+}
+
+.hero .event-slides .chip-outer {
+    flex-basis: 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.hero .event-slides .event-chips-container {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    gap: 2rem;
+    overflow-x: scroll;
+    position: relative;
+    z-index: 100;
+    -ms-overflow-style: none;
+    width: 50vw;
+    transition: all 0.4s ease;
+}
+
+.hero .event-slides .event-chips-container::-webkit-scrollbar {
+    display: none;
+}
+
+.hero .event-slides .chip-outer i {
+    color: white;
+    position: absolute;
+    font-size: 1.5em;
+    text-shadow: 4px 4px 4px #A614C5;
+    height: 90%;
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 105;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .event-slides .chip-outer i.fa-angle-left {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background: linear-gradient(to right, #000, #000 60%, transparent);
+}
+
+.hero .event-slides .chip-outer i.fa-angle-right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: linear-gradient(to left, #000, #000 60%, transparent);
+}
+
+.hero .event-slides .event-chips-container button {
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.hero .event-slides .event-chips-container button.active{
+    background: linear-gradient(rgba(16, 60, 99, 0.8), rgb(112, 11, 133), rgba(19, 5, 61, 0.8));
+}
+
+/*==========Hero Section End==========*/
