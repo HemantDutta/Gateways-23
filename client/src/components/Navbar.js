@@ -1,7 +1,29 @@
 import './Navbar.css';
 import {Link} from "react-router-dom";
+import {useEffect} from "react";
 
 export const Navbar = ({active}) => {
+
+    let prevScroll = window.scrollY;
+    useEffect(()=>{
+        const checkScroll = () => {
+            let nav = document.getElementById("navbar");
+            if(window.scrollY>prevScroll){
+                nav.style.transform = "translateY(-100%)";
+            }
+            if(prevScroll>window.scrollY){
+                nav.style.transform = "none";
+            }
+            prevScroll = window.scrollY;
+        }
+
+        window.addEventListener("scroll", checkScroll);
+
+        return ()=> {
+            window.removeEventListener("scroll", checkScroll);
+        }
+    },[])
+
     return (
         <>
             <section className="navbar" id="navbar">

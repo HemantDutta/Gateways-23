@@ -41,7 +41,7 @@ export const Home = () => {
         if (drag >= dragMax - 377) {
             curr = dragMax;
         } else {
-            drag += 300;
+            drag += 500;
             curr = drag
         }
         ecc.scrollTo({
@@ -55,7 +55,7 @@ export const Home = () => {
         let ecc = document.getElementById("ecc");
         ecc.scrollTo({
             top: 0,
-            left: drag <= dragMin ? dragMin : drag -= 300,
+            left: drag <= dragMin ? dragMin : drag -= 500,
             behavior: "smooth"
         })
     }
@@ -104,53 +104,62 @@ export const Home = () => {
                     <div className="event-slide-container">
                         <EventSlide id="it-quiz" imgSrc="assets/eventImgs/itQuiz.png" header="AstroBytes" tag="Space Tech Quiz" active="active"/>
                         <EventSlide id="ui-ux" imgSrc="assets/eventImgs/ui_ux.png" header="DesignNauts" tag="UI/UX Design" active="none"/>
+                        <EventSlide id="treasure-hunt" imgSrc="assets/eventImgs/th.png" header="Intergalatic" tag="Treasure Hunt" active="none"/>
+                        <EventSlide id="gaming" imgSrc="assets/eventImgs/ge.png" header="QUASAR ODYSSEY" tag="Gaming Event" active="none"/>
+                        <EventSlide id="coding-debug" imgSrc="assets/eventImgs/cd.png" header="Stellar Perplexity" tag="Coding/Debugging" active="none"/>
+                        <EventSlide id="ctf" imgSrc="assets/eventImgs/ctf.png" header="Space Wars" tag="Capture The Flag" active="none"/>
+                        <EventSlide id="it-manager" imgSrc="assets/eventImgs/im.png" header="Space Captain" tag="IT manager" active="none"/>
+                        <EventSlide id="hack" imgSrc="assets/eventImgs/hack.png" header="SpaceTech" tag="24hr Hackathon" active="none"/>
+                        <EventSlide id="photo" imgSrc="assets/eventImgs/photo.png" header="Cosmic Capture" tag="Photography" active="none"/>
+                        <EventSlide id="pe" imgSrc="assets/eventImgs/pe.png" header="Celestial Conversations" tag="Prompt Engineering" active="none"/>
+                        <EventSlide id="se" imgSrc="assets/eventImgs/se.png" header="Surprise Event" tag="Shhh it's a secret" active="none"/>
                     </div>
                     <div className="chip-outer">
                         <i className="fa-solid fa-angle-left" tabIndex="0" onClick={() => {
                             slideBack()
                         }}/>
                         <div className="event-chips-container" id="ecc">
-                            <button className={currSlide==="it-quiz"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "it-quiz" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("it-quiz")
                             }}>IT QUIZ
                             </button>
-                            <button className={currSlide==="ui-ux"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "ui-ux" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("ui-ux")
                             }}>UI/UX
                             </button>
-                            <button className={currSlide==="treasure-hunt"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "treasure-hunt" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("treasure-hunt")
                             }}>Treasure Hunt
                             </button>
-                            <button className={currSlide==="gaming"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "gaming" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("gaming")
                             }}>Gaming
                             </button>
-                            <button className={currSlide==="coding-debug"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "coding-debug" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("coding-debug")
                             }}>Coding/Debugging
                             </button>
-                            <button className={currSlide==="ctf"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "ctf" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("ctf")
                             }}>Capture&nbsp;The&nbsp;Flag
                             </button>
-                            <button className={currSlide==="it-manager"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "it-manager" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("it-manager")
                             }}>IT Manager
                             </button>
-                            <button className={currSlide==="hack"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "hack" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("hack")
                             }}>Hackathon
                             </button>
-                            <button className={currSlide==="photo"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "photo" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("photo")
                             }}>Photography
                             </button>
-                            <button className={currSlide==="pe"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "pe" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("pe")
                             }}>Prompt&nbsp;Engineering
                             </button>
-                            <button className={currSlide==="se"?"active":""} disabled={disabled} tabIndex={0} onClick={() => {
+                            <button className={currSlide === "se" ? "active" : ""} disabled={disabled} tabIndex={0} onClick={() => {
                                 slideExchange("se")
                             }}>Surprise Event
                             </button>
@@ -163,6 +172,11 @@ export const Home = () => {
                 {/*  Events Slides End  */}
             </section>
             {/*  Hero Section End  */}
+            {/*  Sponsors Section  */}
+            <section className="sponsors" id="sponsors">
+
+            </section>
+            {/*  Sponsors Section End  */}
         </>
     )
 }

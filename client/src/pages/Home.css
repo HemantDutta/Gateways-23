@@ -33,6 +33,7 @@
     flex-direction: column;
     display: none;
     padding: 100px 0 0 0;
+    background: linear-gradient(to bottom, transparent, transparent 90%, #000);
 }
 
 .hero .event-slides .event-slide-container {
@@ -240,7 +241,18 @@
 }
 
 .hero .event-slides .event-chips-container button.active{
+    scale: 1.1;
     background: linear-gradient(rgba(16, 60, 99, 0.8), rgb(112, 11, 133), rgba(19, 5, 61, 0.8));
 }
 
 /*==========Hero Section End==========*/
+
+/*==========Sponsors Section==========*/
+
+.sponsors{
+    background-color: #000;
+    min-height: 100vh;
+}
+
+/*==========Sponsors Section End==========*/
+
