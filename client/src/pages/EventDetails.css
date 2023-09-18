@@ -1,0 +1,86 @@
+/* Adhish Bahl */
+
+/* Event Deatils CSS */
+.event-container {
+    z-index: 100;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.event-container .event-sidebar .event-overview .event-banner {
+    z-index: 105;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 56vw;
+    height: 75vh;
+    left: 20%;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.event-container .event-sidebar .event-overview .event-banner .event-header {
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 8px 8px 8px #A614C5;
+}
+
+.event-container .event-sidebar .event-overview .event-banner .event-tag {
+    font-size: 40px;
+    color: white;
+}
+
+.event-container .event-sidebar .event-overview .event-banner :is(.event-head, .event-date, .event-time) {
+    color: white;
+}
+
+
+.event-container .event-sidebar .event-overview .event-details {
+    text-align: justify;
+    color: rgb(0, 0, 0);
+    margin: 1rem 0;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
+    padding: 1rem;
+}
+
+.event-container .event-sidebar .event-overview img {
+    position: absolute;
+    width: 60%;
+    inset: 0;
+    margin: auto;
+    clip-path: ellipse(50% 45% at 50% 50%);
+    z-index: -10;
+    top: 50px;
+    filter: blur(20px);
+    transform: translateY(15%);
+    transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+.event-container .event-sidebar .event-overview.active img{
+    filter: none;
+    transform: none;
+}
+
+
+.event-container .event-form {
+    border: 1px white solid;
+    height: fit-content;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.event-container .event-form form {
+    z-index: 105;
+    display: flex;
+    flex-direction: column;
+    width: 32vw;
+    margin: 2rem;
+    border: 1px white solid;
+    min-height: 50vh;
+}
