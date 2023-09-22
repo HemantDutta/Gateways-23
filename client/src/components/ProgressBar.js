@@ -9,10 +9,11 @@ export const ProgressBar = ({handler}) => {
     //Handler
     useEffect(() => {
         if(filled<100){
-            setTimeout(()=>{setFilled(prevState => prevState +=2)},80)
+            setTimeout(()=>{setFilled(prevState => prevState +=2)},50)
         }
         else{
             document.getElementById("loading-stat").innerText = "Loading Complete!"
+            document.getElementById("loading-stat2").innerText = "Loading Complete!"
             setTimeout(()=>{
                 handler(true)
             },200)
@@ -30,9 +31,10 @@ export const ProgressBar = ({handler}) => {
                                  transition: "width 0.2s"
                              }}
                         />
+                        <span id="loading-stat">Loading&nbsp;{filled}%</span>
                     </div>
                 </div>
-                <span id="loading-stat">Loading&nbsp;{filled}%</span>
+                <span id="loading-stat2">Loading&nbsp;{filled}%</span>
             </div>
         </>
     )

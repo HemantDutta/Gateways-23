@@ -104,15 +104,15 @@ export const Home = () => {
                     <div className="event-slide-container">
                         <EventSlide id="it-quiz" imgSrc="assets/eventImgs/itQuiz.png" header="AstroBytes" tag="Space Tech Quiz" active="active"/>
                         <EventSlide id="ui-ux" imgSrc="assets/eventImgs/ui_ux.png" header="DesignNauts" tag="UI/UX Design" active="none"/>
-                        <EventSlide id="treasure-hunt" imgSrc="assets/eventImgs/th.png" header="Intergalatic" tag="Treasure Hunt" active="none"/>
+                        <EventSlide id="treasure-hunt" imgSrc="assets/eventImgs/th.jpg" header="Intergalatic" tag="Treasure Hunt" active="none"/>
                         <EventSlide id="gaming" imgSrc="assets/eventImgs/ge.png" header="QUASAR ODYSSEY" tag="Gaming Event" active="none"/>
                         <EventSlide id="coding-debug" imgSrc="assets/eventImgs/cd.png" header="Stellar Perplexity" tag="Coding/Debugging" active="none"/>
                         <EventSlide id="ctf" imgSrc="assets/eventImgs/ctf.png" header="Space Wars" tag="Capture The Flag" active="none"/>
                         <EventSlide id="it-manager" imgSrc="assets/eventImgs/im.png" header="Space Captain" tag="IT manager" active="none"/>
-                        <EventSlide id="hack" imgSrc="assets/eventImgs/hack.png" header="SpaceTech" tag="24hr Hackathon" active="none"/>
+                        <EventSlide id="hack" imgSrc="assets/eventImgs/hack.jpg" header="SpaceTech" tag="24hr Hackathon" active="none"/>
                         <EventSlide id="photo" imgSrc="assets/eventImgs/photo.png" header="Cosmic Capture" tag="Photography" active="none"/>
                         <EventSlide id="pe" imgSrc="assets/eventImgs/pe.png" header="Celestial Conversations" tag="Prompt Engineering" active="none"/>
-                        <EventSlide id="se" imgSrc="assets/eventImgs/se.png" header="Surprise Event" tag="Shhh it's a secret" active="none"/>
+                        <EventSlide id="se" imgSrc="assets/eventImgs/se.jpg" header="Surprise Event" tag="Shhh it's a secret" active="none"/>
                     </div>
                     <div className="chip-outer">
                         <i className="fa-solid fa-angle-left" tabIndex="0" onClick={() => {
@@ -174,7 +174,31 @@ export const Home = () => {
             {/*  Hero Section End  */}
             {/*  Sponsors Section  */}
             <section className="sponsors" id="sponsors">
-
+                <div className="sponsors-header">
+                    <span>Our Sponsors</span>
+                </div>
+                <div className="star-sponsor">
+                    <div className="star-sponsor-content">
+                        <div className="star-logo-container">
+                            <div className="logo-overlay"/>
+                            <div className="star-logo">
+                                <span>Your Logo here</span>
+                            </div>
+                        </div>
+                        <div className="star-text">
+                            <div className="star-name">
+                                <span>Star Sponsor Name</span>
+                            </div>
+                            <div className="star-des">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At est laborum maiores porro possimus quas quasi quibusdam, velit voluptas? Aliquid aut consequuntur cum deleniti dignissimos distinctio dolore doloribus enim, eveniet expedita harum id iusto minus molestiae porro quas similique, veritatis?</span>
+                            </div>
+                            <div className="star-cta">
+                                <span className="btn-overlay"/>
+                                <a href="#" target="_blank" rel="noreferrer">Visit&nbsp;their&nbsp;website</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             {/*  Sponsors Section End  */}
         </>
