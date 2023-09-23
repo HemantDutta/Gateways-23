@@ -24,9 +24,15 @@ function EventDetails() {
             {/* Events Form SideBar */}
             <div className="event-form">
                 <div className="event-form-heading">Registration Form</div>
-                <form action="" method="get">
-                    <input type="text" name="" id="" />
-                    <button type="button">Submit</button>
+                <form action="" method="" className='registration-form'>
+                    <input type="text" name="Name" id="name" placeholder='Participant Name' />
+                    <input type="email" name="email" id="email" placeholder='E-mail' />
+                    <input type="phone" name="phone" id="phone" placeholder='Phone Number' />
+                    <input type="text" name="college" id="college" placeholder='College Name' />
+                    <div className="event-btn-container">
+                        <button type='button' className="event-cta">Register</button>
+                        <div className="event-cta-bg"/>
+                    </div>
                 </form>
             </div>
             {/* Events Form SideBar End */}
