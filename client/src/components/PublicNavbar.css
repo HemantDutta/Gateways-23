@@ -18,7 +18,7 @@ nav .navbar-container{
 
 nav .navbar-container .navbar-underlay{
     position: absolute;
-    width: 100.5%;
+    width: 101%;
     height: 110%;
     z-index: 100;
     border-radius: 20px;
@@ -178,4 +178,66 @@ nav .navbar-container .navbar-main .navbar-right ul li button{
 
 nav .navbar-container .navbar-main .navbar-right ul li button:hover{
     background-position: 100% 100%;
+}
+
+nav .navbar-container .navbar-main .navbar-right ul li.menu-btn{
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 5px;
+}
+
+nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span{
+    height: 2px;
+    background-color: #fff;
+}
+
+nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(1){
+    width: 22px;
+}
+
+nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(2){
+    width: 30px;
+}
+
+nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3){
+    width: 26px;
+}
+
+@media screen and (max-width: 1100px){
+    nav .navbar-container .navbar-main .navbar-right ul li.nav-link{
+        display: none;
+    }
+
+    nav .navbar-container .navbar-main .navbar-right ul li.menu-btn{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    nav .navbar-container .navbar-main .navbar-left .navbar-social-links{
+        display: none;
+    }
+
+    nav .navbar-container .navbar-main .navbar-right ul li button{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    nav .navbar-container .navbar-main{
+        padding: 16px 16px 16px 5px;
+    }
+
+    nav .navbar-container .navbar-main .navbar-left .navbar-cu-logo img{
+        height: 50px;
+    }
+
+    nav .navbar-container .navbar-underlay{
+        width: 102%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
 }

@@ -70,3 +70,9 @@
     background: #fff;
     color: black;
 }
+
+@media screen and (max-width: 380px) {
+    .progress-bar{
+        width: 280px;
+    }
+}

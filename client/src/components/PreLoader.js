@@ -11,6 +11,7 @@ export const PreLoader = ({preHandler}) => {
     //Refs and States
     const preLoader = useRef(null);
     const text = useRef(null);
+    const mobText = useRef(null);
     const [finish, setFinish] = useState(false);
 
     //Progress Bar Handler
@@ -64,6 +65,10 @@ export const PreLoader = ({preHandler}) => {
                     autoAlpha: 0,
                     duration: 0.5
                 }, 0)
+                .to(mobText.current, {
+                    autoAlpha: 0,
+                    duration: 0.4
+                }, 0)
                 .to(preLoader.current, {
                     duration: 0.5,
                     height: "0vh",
@@ -80,6 +85,7 @@ export const PreLoader = ({preHandler}) => {
                     <span ref={text} id="loader-text" data-value="GATEWAYS 2023">GATEWAYS 2023</span>
                 </div>
                 <ProgressBar handler={handler}/>
+                <span ref={mobText} className="mobile-text">Please use a desktop/laptop for best experience</span>
             </div>
         </>
     )

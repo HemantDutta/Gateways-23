@@ -37,16 +37,20 @@ export const PublicNavbar = ({active}) => {
                             <div className="navbar-social-links">
                                 <button><i className="fa-brands fa-linkedin-in"/></button>
                                 <button><i className="fa-brands fa-instagram"/></button>
-                                {/*<button><i className="fa-brands fa-facebook"/></button>*/}
                             </div>
                         </div>
                         <div className="navbar-right">
                             <ul>
-                                <li><Link to={"/"} className={active==="home"?"active":""}>Home</Link></li>
-                                <li><a href="#events" className={active==="events"?"active":""}>Events</a></li>
-                                <li><Link to={"/about"} className={active==="about"?"active":""}>About</Link></li>
-                                <li>
+                                <li className="nav-link"><Link to={"/"} className={active==="home"?"active":""}>Home</Link></li>
+                                <li className="nav-link"><a href="#events" className={active==="events"?"active":""}>Events</a></li>
+                                <li className="nav-link"><Link to={"/about"} className={active==="about"?"active":""}>About</Link></li>
+                                <li className="nav-btn">
                                     <button type="button">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
+                                </li>
+                                <li className="menu-btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </li>
                             </ul>
                         </div>

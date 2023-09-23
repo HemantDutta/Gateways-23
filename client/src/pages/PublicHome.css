@@ -75,6 +75,35 @@
         margin-top: 150px;
     }
 }
+
+@media screen and (max-width: 680px) {
+    .public-home .hero .hero-container .hero-left span{
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .public-home .hero .hero-container .hero-left span{
+        font-size: 46px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .public-home .hero .hero-container .hero-right img{
+        height: 300px;
+        margin-top: 150px;
+    }
+    .public-home .hero .hero-container .hero-left span{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .public-home .hero .hero-container .hero-right img{
+        height: 280px;
+        margin-top: 150px;
+    }
+}
 /*==========Hero Section End==========*/
 
 /*==========Events Section==========*/
@@ -111,6 +140,8 @@
 
 .events .events-container .events-grid .atropos .atropos-scale .atropos-rotate .atropos-inner{
     overflow: visible;
+    display: grid;
+    place-items: center;
 }
 
 .events .events-container .events-grid .event-item{
@@ -271,6 +302,82 @@
 
 .events .events-container .events-grid .event-item .event-bottom .event-cta:hover:hover + .event-cta-bg{
     background: linear-gradient(45deg, #fe7c62, #f33456, #f33456, #974de0);
+}
+
+@media screen and (max-width: 1420px) {
+    .events .events-container .events-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .events .events-container .events-grid{
+        grid-template-columns: 1fr;
+        row-gap: 128px;
+    }
+
+    .events .events-container .events-grid .event-item{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .events .events-container .events-grid .event-item{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .events .events-container .events-grid .event-item{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .events .events-container{
+        padding: 48px 32px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .events .events-container{
+        padding: 48px 16px;
+    }
+
+    .events .events-container .events-grid .event-item{
+        width: 100%;
+    }
+
+    .events .events-container .events-grid .event-item .event-bottom .event-cta{
+        font-size: 18px;
+        width: 60%;
+        height: 55%;
+    }
+
+    .events .events-container .events-grid .event-item .event-bottom .event-cta-bg{
+        width: 63%;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .events .events-container .events-grid{
+        padding: 32px 16px;
+    }
+
+    .events .events-container .events-grid .event-item span.hover-text{
+        font-size: 32px;
+        top: -6%;
+        left: -6%;
+    }
+    .events .events-container .events-grid .event-item span.hover-text2{
+        font-size: 32px;
+        top: -6%;
+        left: -6%;
+    }
+    .events .events-container .events-grid .event-item .event-top span{
+        font-size: 20px;
+    }
 }
 
 /*==========Events Section End==========*/

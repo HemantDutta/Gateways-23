@@ -16,3 +16,30 @@
     color: white;
     font-family: 'Big Shoulders Stencil Display', cursive;
 }
+
+.preloader span.mobile-text{
+    font-size: 18px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .preloader span{
+        font-size: 76px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .preloader span.mobile-text{
+        display: initial;
+        padding: 32px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .preloader span{
+        font-size: 46px;
+    }
+}
