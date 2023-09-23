@@ -1,9 +1,8 @@
 // Adhish Bahl
 import React from 'react'
-import { Navbar } from '../components/Navbar'
 import './EventDetails.css'
-// import "../../public/assets/Gateways23.css"
 import EventDeatilsSideBar from '../components/EventDeatilsSideBar'
+import { PublicNavbar } from '../components/PublicNavbar'
 
 
 function EventDetails() {
@@ -12,7 +11,7 @@ function EventDetails() {
         {/* Importing global CSS */}
         <link href="/assets/Gateways23.css" rel="stylesheet" type="text/css" />
         {/* Header */}
-        <Navbar active="home"/>
+        <PublicNavbar active="home"/>
         {/* Header End */}
         {/* Container for event details and form */}
         <section className="event-container">

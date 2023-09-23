@@ -120,11 +120,6 @@
     color: white;
     font-family: 'Orbitron', sans-serif;
 }
-
-.event-container .event-form form {
-   
-}
-
 .event-container .event-form .registration-form .event-btn-container {
     position: relative;
     display: grid;
