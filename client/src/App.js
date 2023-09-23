@@ -1,4 +1,5 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {PublicHome} from "./pages/PublicHome";
 import {Home} from "./pages/Home";
 import EventDetails from "./pages/EventDetails";
 
@@ -8,9 +9,7 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path={"/"} element={<Home/>}/>
-                </Routes>
-                <Routes>
+                    <Route path={"/"} element={<PublicHome/>}/>
                     <Route path={"/event/quiz"} element={<EventDetails/>}/>
                 </Routes>
             </BrowserRouter>
