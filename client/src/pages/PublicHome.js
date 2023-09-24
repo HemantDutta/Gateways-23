@@ -228,12 +228,21 @@ export const PublicHome = () => {
                                 <div className="guest-content">
                                     <div className="guest-img">
                                         <img src="assets/guest-temp.jpg" className="guest-img-bg" alt="Guest name"/>
-                                        <img src="assets/guest-temp.jpg" className="guest-img-fg" alt="Guest name"/>
                                     </div>
                                     <div className="guest-text">
+                                        <img src="assets/guest-temp.jpg" className="guest-img-fg" alt="Guest name"/>
                                         <span className="guestName">Guest Name</span>
                                         <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque earum esse eum inventore natus officiis perferendis repudiandae vitae. Iure!</span>
                                     </div>
+                                </div>
+                            </div>
+                            <div className="guest-item guest-chief-mb">
+                                <div className="guest-item-framing-left"/>
+                                <div className="guest-item-framing-right"/>
+                                <img src="assets/guest-temp.jpg" alt="Guest name"/>
+                                <div className="guest-content">
+                                    <span className="guestName">Guest Name</span>
+                                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
                                 </div>
                             </div>
                             <div className="guest-item">
