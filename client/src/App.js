@@ -3,7 +3,6 @@ import {PublicHome} from "./pages/PublicHome";
 import {Home} from "./pages/Home";
 import EventDetails from "./pages/EventDetails";
 
-
 function App() {
     return (
         <>
