@@ -16,9 +16,11 @@ function EventDeatilsSideBar ({id, imgSrc}) {
             <div className="event-banner">
                 <span className="event-header">AstroBytes</span>
                 <span className="event-tag">Space Tech Quiz</span>
+                <span className="event-date-time">
+                    <span className="event-date">13th Dec</span>
+                    <span className="event-time">10:00 AM</span>
+                </span>
                 <span className="event-head">Event Head: Mr. XYZ</span>
-                <span className="event-date">Event Date: XX-12-23</span>
-                <span className="event-time">Event Time: XX:XX AM</span>
             </div>
             <div className="event-details">
                 <div className="event-details-heading">About AstroBytes:</div>
