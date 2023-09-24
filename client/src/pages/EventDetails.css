@@ -33,8 +33,14 @@
     color: white;
 }
 
-.event-container .event-sidebar .event-overview .event-banner :is(.event-head, .event-date, .event-time) {
+.event-container .event-sidebar .event-overview .event-banner .event-head {
     color: white;
+    font-size: 1rem;
+}
+.event-container .event-sidebar .event-overview .event-banner .event-date-time :is(.event-date, .event-time) {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 2rem;
 }
 
 
@@ -47,13 +53,13 @@
     clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
     padding: 2rem;
     padding-right: 45vw;
-    /* margin: 2rem; */
     position: absolute;
     width: 100vw;
 }
 
 .event-container .event-sidebar .event-overview .event-details .event-details-heading {
     font-weight: bold;
+    font-size: 1.8rem;
     margin: 1rem 0rem;
 }
 
@@ -88,28 +94,37 @@
     /* border: 1px white solid; */
     height: fit-content;
     color: white;
-    padding-top: 1rem;
+    padding: 1rem;
     text-align: center;
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.69);
+    background: linear-gradient(#fe7c62, #f33456, #f33456, #974de0);
     clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
+    z-index: 1000;
 }
 
 .event-container .event-form .registration-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: rgba(0, 0, 0, 0.752); */
     z-index: 105;
     flex-direction: column;
     width: 32vw;
-    margin: 1rem 2rem;
-    /* border: 1px white solid; */
+    margin: 0rem 2rem;
     min-height: 50vh;
 }
 
+.event-container .event-form  .event-form-bg {
+    background-color: rgb(0, 0, 0);
+    clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0rem;
+}
+
 .event-container .event-form .registration-form input {
-    width: 70%;
+    width: 80%;
     margin: 0.5rem;
     font-size: 1.3rem;
     padding: 5px;
@@ -120,6 +135,7 @@
     color: white;
     font-family: 'Orbitron', sans-serif;
 }
+
 .event-container .event-form .registration-form .event-btn-container {
     position: relative;
     display: grid;
@@ -153,7 +169,7 @@
     width: 100%;
     inset: 0;
     margin: auto;
-    clip-path: polygon(0 1.2em, 1.2em 0, 100% 0, 100% calc(100% - 1.2em), calc(100% - 1.2em) 100%, 0 100%);
+    clip-path: polygon(0 0.5em, 0.5em 0, 100% 0, 100% calc(100% - 0.5em), calc(100% - 0.5em) 100%, 0 100%);
     transition: background 0.4s ease;
 }
 
@@ -163,7 +179,7 @@
 
 .event-container .event-form .registration-form .event-btn-container:hover .event-cta-bg{
     background: linear-gradient(45deg, #13053D, #700B85, #103C63);
-    background-size: 200% 200%;
+    background-size: 300% 300%;
     animation: pulsate-btn linear 2s infinite;
 }
 
