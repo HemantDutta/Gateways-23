@@ -15,28 +15,27 @@ export const PublicHome = () => {
     //BG Effect Loader
     useEffect(() => {
         if (!bgEffect)
-        if(window.innerWidth<1320){
-            {
-                setBgEffect(Halo({
-                    el: heroRef.current,
-                    size: 1,
-                    baseColor: "#974de0",
-                    backgroundColor: "#1d0728",
-                    xOffset: 0
-                }))
+            if (window.innerWidth < 1320) {
+                {
+                    setBgEffect(Halo({
+                        el: heroRef.current,
+                        size: 1,
+                        baseColor: "#974de0",
+                        backgroundColor: "#1d0728",
+                        xOffset: 0
+                    }))
+                }
+            } else if (window.innerWidth > 1320) {
+                {
+                    setBgEffect(Halo({
+                        el: heroRef.current,
+                        size: 1.5,
+                        baseColor: "#974de0",
+                        backgroundColor: "#1d0728",
+                        xOffset: 0.23
+                    }))
+                }
             }
-        }
-        else if(window.innerWidth>1320){
-            {
-                setBgEffect(Halo({
-                    el: heroRef.current,
-                    size: 1.5,
-                    baseColor: "#974de0",
-                    backgroundColor: "#1d0728",
-                    xOffset: 0.23
-                }))
-            }
-        }
         return () => {
             if (bgEffect) {
                 bgEffect.destroy();
@@ -45,12 +44,11 @@ export const PublicHome = () => {
     }, [bgEffect])
 
     //Resize Handler
-    useEffect(()=>{
+    useEffect(() => {
         const checkResize = () => {
-            if(window.innerWidth<1320){
+            if (window.innerWidth < 1320) {
                 setBgEffect(null);
-            }
-            else if(window.innerWidth>1320){
+            } else if (window.innerWidth > 1320) {
                 setBgEffect(null);
             }
         }
@@ -60,7 +58,7 @@ export const PublicHome = () => {
         return () => {
             window.removeEventListener("resize", checkResize);
         }
-    },[])
+    }, [])
 
     //Preloader Handler
     function preLoader() {
@@ -93,7 +91,8 @@ export const PublicHome = () => {
                 <section className="events" id="events">
                     <div className="events-container">
                         <div className="events-header">
-                            <span>Our Events</span>
+                            <span>Our</span>
+                            <span>Events</span>
                         </div>
                         <div className="events-grid">
                             <Atropos
@@ -210,9 +209,55 @@ export const PublicHome = () => {
                 {/*  Events End  */}
                 {/*  Sponsors  */}
                 <section className="sponsors" id="sponsors">
-                    <div className="sponsors-container"></div>
+                    <div className="sponsors-container">
+
+                    </div>
                 </section>
                 {/*  Sponsors End  */}
+                {/*  Guests  */}
+                <section className="guests" id="guests">
+                    <div className="guests-container">
+                        <div className="guests-header">
+                            <span>Meet</span>
+                            <span>our Guests</span>
+                        </div>
+                        <div className="guests-grid">
+                            <div className="guest-item guest-chief">
+                                <div className="guest-item-framing-left"/>
+                                <div className="guest-item-framing-right"/>
+                                <div className="guest-content">
+                                    <div className="guest-img">
+                                        <img src="assets/guest-temp.jpg" className="guest-img-bg" alt="Guest name"/>
+                                        <img src="assets/guest-temp.jpg" className="guest-img-fg" alt="Guest name"/>
+                                    </div>
+                                    <div className="guest-text">
+                                        <span className="guestName">Guest Name</span>
+                                        <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque earum esse eum inventore natus officiis perferendis repudiandae vitae. Iure!</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="guest-item">
+                                <div className="guest-item-framing-left"/>
+                                <div className="guest-item-framing-right"/>
+                                <img src="assets/guest-temp.jpg" alt="Guest name"/>
+                                <div className="guest-content">
+                                    <span className="guestName">Guest Name</span>
+                                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
+                                </div>
+                            </div>
+                            <div className="guest-item">
+                                <div className="guest-item-framing-left"/>
+                                <div className="guest-item-framing-right"/>
+                                <img src="assets/guest-temp.jpg" alt="Guest name"/>
+                                <div className="guest-content">
+                                    <span className="guestName">Guest Name</span>
+                                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/*  Guests End  */}
             </div>
         </>
     )

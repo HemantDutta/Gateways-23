@@ -42,7 +42,14 @@ export const PublicNavbar = ({active}) => {
                         <div className="navbar-right">
                             <ul>
                                 <li className="nav-link"><Link to={"/"} className={active==="home"?"active":""}>Home</Link></li>
-                                <li className="nav-link"><a href="#events" className={active==="events"?"active":""}>Events</a></li>
+                                {
+                                    active === "home" &&
+                                    <li className="nav-link"><a href="#events" className={active==="events"?"active":""}>Events</a></li>
+                                }
+                                {
+                                    active !== "home" &&
+                                    <li className="nav-link"><Link to={"/#events"} className={active==="events"?"active":""}>Events</Link></li>
+                                }
                                 <li className="nav-link"><Link to={"/about"} className={active==="about"?"active":""}>About</Link></li>
                                 <li className="nav-btn">
                                     <button type="button">Brochure&nbsp;<i className="fa-solid fa-download"/></button>

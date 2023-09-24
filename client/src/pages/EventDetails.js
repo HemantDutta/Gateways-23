@@ -11,7 +11,7 @@ function EventDetails() {
         {/* Importing global CSS */}
         <link href="/assets/Gateways23.css" rel="stylesheet" type="text/css" />
         {/* Header */}
-        <PublicNavbar active="home"/>
+        <PublicNavbar active="events"/>
         {/* Header End */}
         {/* Container for event details and form */}
         <section className="event-container">
