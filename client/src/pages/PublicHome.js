@@ -10,6 +10,7 @@ export const PublicHome = () => {
 
     //states
     const [bgEffect, setBgEffect] = useState(null);
+    const [showAll, setShowAll] = useState(false);
     const heroRef = useRef(null);
 
     //BG Effect Loader
@@ -22,7 +23,9 @@ export const PublicHome = () => {
                         size: 1,
                         baseColor: "#974de0",
                         backgroundColor: "#1d0728",
-                        xOffset: 0
+                        xOffset: 0,
+                        mouseControls: false,
+                        amplitudeFactor: 3.0
                     }))
                 }
             } else if (window.innerWidth > 1320) {
@@ -32,7 +35,9 @@ export const PublicHome = () => {
                         size: 1.5,
                         baseColor: "#974de0",
                         backgroundColor: "#1d0728",
-                        xOffset: 0.23
+                        xOffset: 0.23,
+                        mouseControls: false,
+                        amplitudeFactor: 3.0
                     }))
                 }
             }
@@ -82,7 +87,7 @@ export const PublicHome = () => {
                             <span data-text="Cosmos">Cosmos</span>
                         </div>
                         <div className="hero-right">
-                            <img src="assets/gw_white_trans.png" alt="Gateways 2023"/>
+                            <img src="assets/gw_logo_color.png" alt="Gateways 2023"/>
                         </div>
                     </div>
                 </section>
@@ -149,61 +154,74 @@ export const PublicHome = () => {
                                     </div>
                                 </div>
                             </Atropos>
-                            <Atropos
-                                activeOffset={40}
-                                shadowScale={1.5}
-                            >
-                                <div className="event-item event-odd">
-                                    <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/hack.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                    <span className="hover-text" data-atropos-offset="5">Hackathon</span>
-                                    <span className="hover-text2" data-atropos-offset="5">Hackathon</span>
-                                    <div className="event-top" data-atropos-offset="-5">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
-                                    </div>
-                                    <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
-                                        <div className="event-cta-bg"/>
-                                    </div>
-                                </div>
-                            </Atropos>
-                            <Atropos
-                                activeOffset={40}
-                                shadowScale={1.5}
-                            >
-                                <div className="event-item event-even">
-                                    <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                    <span className="hover-text" data-atropos-offset="5">Treasure Hunt</span>
-                                    <span className="hover-text2" data-atropos-offset="5">Treasure Hunt</span>
-                                    <div className="event-top" data-atropos-offset="-5">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
-                                    </div>
-                                    <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
-                                        <div className="event-cta-bg"/>
-                                    </div>
-                                </div>
-                            </Atropos>
-                            <Atropos
-                                activeOffset={40}
-                                shadowScale={1.5}
-                            >
-                                <div className="event-item event-odd">
-                                    <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                    <span className="hover-text" data-atropos-offset="5">Surprise Event</span>
-                                    <span className="hover-text2" data-atropos-offset="5">Surprise Event</span>
-                                    <div className="event-top" data-atropos-offset="-5">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
-                                    </div>
-                                    <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
-                                        <div className="event-cta-bg"/>
-                                    </div>
-                                </div>
-                            </Atropos>
+                            {
+                                showAll &&
+                                <>
+                                    <Atropos
+                                        activeOffset={40}
+                                        shadowScale={1.5}
+                                    >
+                                        <div className="event-item event-odd">
+                                            <div className="event-bg" data-atropos-offset="5"/>
+                                            <img src="assets/eventImgs/hack.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
+                                            <span className="hover-text" data-atropos-offset="5">Hackathon</span>
+                                            <span className="hover-text2" data-atropos-offset="5">Hackathon</span>
+                                            <div className="event-top" data-atropos-offset="-5">
+                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
+                                            </div>
+                                            <div className="event-bottom" data-atropos-offset="5">
+                                                <button className="event-cta">Register</button>
+                                                <div className="event-cta-bg"/>
+                                            </div>
+                                        </div>
+                                    </Atropos>
+                                    <Atropos
+                                        activeOffset={40}
+                                        shadowScale={1.5}
+                                    >
+                                        <div className="event-item event-even">
+                                            <div className="event-bg" data-atropos-offset="5"/>
+                                            <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
+                                            <span className="hover-text" data-atropos-offset="5">Treasure Hunt</span>
+                                            <span className="hover-text2" data-atropos-offset="5">Treasure Hunt</span>
+                                            <div className="event-top" data-atropos-offset="-5">
+                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
+                                            </div>
+                                            <div className="event-bottom" data-atropos-offset="5">
+                                                <button className="event-cta">Register</button>
+                                                <div className="event-cta-bg"/>
+                                            </div>
+                                        </div>
+                                    </Atropos>
+                                    <Atropos
+                                        activeOffset={40}
+                                        shadowScale={1.5}
+                                    >
+                                        <div className="event-item event-odd">
+                                            <div className="event-bg" data-atropos-offset="5"/>
+                                            <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
+                                            <span className="hover-text" data-atropos-offset="5">Surprise Event</span>
+                                            <span className="hover-text2" data-atropos-offset="5">Surprise Event</span>
+                                            <div className="event-top" data-atropos-offset="-5">
+                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
+                                            </div>
+                                            <div className="event-bottom" data-atropos-offset="5">
+                                                <button className="event-cta">Register</button>
+                                                <div className="event-cta-bg"/>
+                                            </div>
+                                        </div>
+                                    </Atropos>
+                                </>
+                            }
                         </div>
+                        {
+                            !showAll &&
+                            <div className="event-show-all">
+                                <button className="show-all-btn" onClick={() => {
+                                    setShowAll(true)
+                                }}>Show more&nbsp;<i className="fa-solid fa-chevron-down"/></button>
+                            </div>
+                        }
                     </div>
                 </section>
                 {/*  Events End  */}

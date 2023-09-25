@@ -49,9 +49,9 @@
 }
 
 .public-home .hero .hero-container .hero-right img{
-    height: 80%;
+    height: 50%;
     object-fit: contain;
-    filter: drop-shadow(2px 2px 2px black);
+    filter: drop-shadow(0 0 50px #974de0) brightness(120%);
 }
 
 @media screen and (max-width: 1320px) {
@@ -116,6 +116,54 @@
 
 .events .events-container{
     padding: 48px;
+}
+
+.events .events-container .event-show-all{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.events .events-container .event-show-all button{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.events .events-container .event-show-all button:before{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    bottom: -20%;
+    border-radius: 20px;
+    transform-origin: bottom left;
+    transform: scaleX(0);
+    transition: all 0.2s ease;
+}
+
+.events .events-container .event-show-all button:hover:before{
+    transform: scaleX(1);
+}
+
+.events .events-container .event-show-all button i{
+    animation: downPulse linear 1s infinite;
+}
+
+@keyframes downPulse {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(20%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
 
 .events .events-container .events-header{
