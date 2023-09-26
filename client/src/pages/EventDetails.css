@@ -6,6 +6,11 @@
     margin-top: 10rem;
     display: flex;
     flex-direction: row;
+    height: auto;
+}
+
+.event-container , .event-container .event-sidebar,  .event-container .event-sidebar .event-overview {
+    min-height: 100%;
 }
 
 .event-container .event-sidebar .event-overview .event-banner {
@@ -110,7 +115,7 @@
     flex-direction: column;
     width: 32vw;
     margin: 0rem 2rem;
-    min-height: 50vh;
+    min-height: fit-content;
 }
 
 .event-container .event-form  .event-form-bg {
@@ -192,5 +197,195 @@
     }
     100%{
         background-position: 50% 100%;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .event-container .event-form .registration-form input {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .event-container .event-sidebar .event-overview .event-banner {
+        margin: 0px;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-header {
+        font-size: 2.5rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-tag {
+        font-size: 1.8rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-date-time :is(.event-date, .event-time) {
+        font-size: 1.2rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-head {
+        font-size: 0.8rem;
+    }
+    .event-container .event-sidebar .event-overview .event-details .event-details-heading {
+        font-size: 1.5rem;
+    }
+    .event-container .event-sidebar .event-overview .event-details {
+        margin-top: 0;
+        padding-top: 0px;
+        font-size: 1.0rem;
+    }
+    .event-container .event-form .event-form-bg .event-form-heading {
+        font-size: 1.5rem;
+    }
+    .event-container .event-form .registration-form input {
+        font-size: 1.2rem;
+    }
+    .event-container .event-form .registration-form .event-btn-container {
+        height: 40px;
+    }
+    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+        font-size: 0.8rem;
+    }
+    .event-container .event-sidebar .event-overview img {
+        left: -150px;
+        top: -100px;
+    }
+    .event-container .event-form {
+        margin-top: 7rem;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .event-container .event-sidebar .event-overview .event-banner .event-header {
+        font-size: 2rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-tag {
+        font-size: 1.2rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-date-time :is(.event-date, .event-time) {
+        font-size: 0.8rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-head {
+        font-size: 0.8rem;
+    }
+    .event-container .event-sidebar .event-overview .event-details .event-details-heading {
+        font-size: 1.3rem;
+    }
+    .event-container .event-sidebar .event-overview .event-details .event-des {
+        font-size: 0.9rem;
+    }
+    .event-container .event-form .event-form-bg .event-form-heading {
+        font-size: 1.2rem;
+    }
+    .event-container .event-form .registration-form input {
+        font-size: 1rem;
+        width: 100%;
+    }
+    .event-container .event-form .registration-form .event-btn-container {
+        height: 40px;
+    }
+    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+        font-size: 0.7rem;
+    }
+    
+}
+
+@media screen and (max-width: 660px) {
+    .event-container {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    .event-container .event-sidebar .event-overview {
+        min-height: fit-content;
+    }
+    .event-container .event-sidebar .event-overview .event-details{
+        padding: 2rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-header {
+        font-size: 3rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-tag {
+        font-size: 1.8rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-date-time :is(.event-date, .event-time) {
+        font-size: 1.2rem;
+    }
+    .event-container .event-sidebar .event-overview img {
+        left: 150px;
+        top: 30px;
+    }
+    .event-container .event-form {
+        position:relative;
+        bottom: -800px;
+        width: 70vw;
+        margin: 1rem auto;
+    }
+    .event-container .event-form .event-form-bg .event-form-heading {
+        font-size: 1.5rem;
+    }
+    .event-container .event-form .registration-form input {
+        font-size: 1rem;
+        width: 150%;
+    }
+    .event-container .event-form .registration-form .event-btn-container {
+        height: 50px;
+    }
+    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+        font-size: 0.9rem;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .event-container .event-sidebar .event-overview .event-banner {
+        width: 100vw;
+        position: static;
+        justify-content: center;
+        align-items: center;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-header {
+        font-size: 2.5rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-tag {
+        font-size: 1.3rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-date-time :is(.event-date, .event-time) {
+        font-size: 1rem;
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-head {
+        font-size: 0.8rem;
+    }
+    .event-container .event-sidebar .event-overview .event-details .event-details-heading {
+        font-size: 1.1rem;
+    }
+    .event-container .event-sidebar .event-overview .event-details .event-des {
+        font-size: 0.8rem;
+    }
+    .event-container .event-form .event-form-bg .event-form-heading {
+        font-size: 1.1rem;
+    }
+    .event-container .event-form .registration-form input {
+        font-size: 1rem;
+        width: 170%;
+    }
+    .event-container .event-form .registration-form .event-btn-container {
+        height: 40px;
+    }
+    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+        font-size: 0.7rem;
+    }
+    .event-container .event-form {
+        width: 80vw;
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .event-container .event-form {
+        width: 80vw;
+        margin: 1rem auto;
+    }
+    .event-container .event-sidebar .event-overview .event-details {
+        padding: 1rem;
+    }
+    .event-container .event-form {
+        width: 90vw;
+        /* margin: 1rem auto; */
+        bottom: -900px;
     }
 }
