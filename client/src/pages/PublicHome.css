@@ -1,3 +1,12 @@
+:root{
+    --mouse-x: 0;
+    --mouse-y: 0;
+}
+
+html{
+    overflow-x: hidden;
+}
+
 .public-home{
     position: relative;
     z-index: 100;
@@ -6,6 +15,7 @@
 /*==========Hero Section==========*/
 .public-home .hero{
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    position: relative;
 }
 
 .public-home .hero .hero-container{
@@ -33,7 +43,7 @@
 .public-home .hero .hero-container .hero-left{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     height: 100%;
 }
 
@@ -49,7 +59,7 @@
 }
 
 .public-home .hero .hero-container .hero-right img{
-    height: 50%;
+    height: 80%;
     object-fit: contain;
     filter: drop-shadow(0 0 50px #974de0) brightness(120%);
 }
@@ -71,7 +81,7 @@
     }
 
     .public-home .hero .hero-container .hero-right img{
-        height: 350px;
+        height: 380px;
         margin-top: 150px;
     }
 }
@@ -112,10 +122,36 @@
     position: relative;
     min-height: 100vh;
     background-color: #1d0728;
+    z-index: 110;
+    /*background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://w.wallhaven.cc/full/p8/wallhaven-p8q8qe.jpg"), center, no-repeat;*/
+    background-size: cover;
+}
+
+.events .hero-blur{
+    position: absolute;
+    top: -12%;
+    left: -10%;
+    width: 120%;
+    height: 200px;
+    background-color: #000;
+    filter: blur(20px);
+}
+
+@media screen and (max-width: 1420px) {
+    .events .hero-blur{
+        top: -8%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .events .hero-blur{
+        top: -6%;
+    }
 }
 
 .events .events-container{
     padding: 48px;
+    margin-top: 100px;
 }
 
 .events .events-container .event-show-all{
@@ -137,17 +173,18 @@
     content: "";
     height: 4px;
     width: 100%;
-    background-color: #fff;
+    background-image: linear-gradient(90deg, #fe7c62, #f33456, #974de0);
     left: 0;
     bottom: -20%;
     border-radius: 20px;
-    transform-origin: bottom left;
+    transform-origin: right;
     transform: scaleX(0);
-    transition: all 0.2s ease;
+    transition: transform 0.4s ease;
 }
 
 .events .events-container .event-show-all button:hover:before{
     transform: scaleX(1);
+    transform-origin: left;
 }
 
 .events .events-container .event-show-all button i{
@@ -211,6 +248,10 @@
     column-gap: 32px;
     row-gap: 200px;
     padding: 32px;
+}
+
+.events .events-container .events-grid .atropos{
+    clip-path: none;
 }
 
 .events .events-container .events-grid .atropos .atropos-scale .atropos-rotate .atropos-inner{
@@ -463,8 +504,146 @@
     position: relative;
     min-height: 100vh;
     background-color: #1d0728;
+    /*background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://w.wallhaven.cc/full/lm/wallhaven-lm35vp.jpg");*/
 }
 
+.sponsors .sponsors-container .sponsor-header{
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    padding-left: 32px;
+    font-size: 126px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+@media screen and (max-width: 991px) {
+    .sponsors .sponsors-container .sponsor-header{
+        text-align: center;
+        font-size: 76px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .sponsors .sponsors-container .sponsor-header{
+        font-size: 76px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .sponsors .sponsors-container .sponsor-header{
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .sponsors .sponsors-container .sponsor-header{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sponsors .sponsors-container .sponsor-header{
+        font-size: 28px;
+    }
+}
+
+.sponsors .sponsors-container .sponsor-main-flex{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    gap: 32px;
+}
+
+.sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main{
+    height: 350px;
+    width: 350px;
+    z-index: 110;
+    background: rgba(0,0,0,0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    clip-path: polygon(0 1.2em, 1.2em 0, 100% 0, 100% calc(100% - 1.2em), calc(100% - 1.2em) 100%, 0 100%);
+}
+
+.sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 115;
+    transition: opacity 0.5s;
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
+}
+
+.sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main:hover:before{
+    opacity: 1;
+}
+
+.sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main.chief-sponsor{
+    height: 450px;
+    width: 450px;
+}
+
+.sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main img{
+    flex-basis: 80%;
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main .sponsor-name{
+    font-size: 36px;
+    color: white;
+    flex-basis: 20%;
+}
+
+.sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main .top-blur{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    opacity: 0.8;
+    background: linear-gradient(#fe7c62, #f33456, #f33456, #974de0);
+    filter: blur(20px) drop-shadow(0 0 25px #fe7c62);
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media screen and (max-width: 1260px) {
+    .sponsors .sponsors-container .sponsor-main-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main:nth-child(1){
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main{
+        width: 80vw;
+    }
+
+    .sponsors .sponsors-container .sponsor-main-flex .sponsor-item-main.chief-sponsor{
+        width: 90vw;
+    }
+}
 /*==========Sponsors Section End==========*/
 
 
@@ -474,6 +653,9 @@
     position: relative;
     min-height: 100vh;
     background-color: #1d0728;
+    /*background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://w.wallhaven.cc/full/p8/wallhaven-p8lwvp.jpg"), center, no-repeat;*/
+    background-size: cover;
+
 }
 
 .guests .guests-container .guests-header{
@@ -517,13 +699,20 @@
     grid-template-rows: auto;
     padding: 32px;
     gap: 32px;
+    place-items: center;
 }
 
 .guests .guests-container .guests-grid .guest-item{
-    width: 100%;
+    width: 80%;
     height: 600px;
     position: relative;
     padding: 24px;
+}
+
+@media screen and (max-width: 500px) {
+    .guests .guests-container .guests-grid .guest-item{
+        width: 100%;
+    }
 }
 
 .guests .guests-container .guests-grid .guest-item.guest-chief{

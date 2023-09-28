@@ -2,16 +2,25 @@ import {PublicNavbar} from "../components/PublicNavbar";
 import {PreLoader} from "../components/PreLoader";
 import './PublicHome.css'
 import Halo from "vanta/src/vanta.halo";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import Atropos from "atropos/react";
-// import 'atropos/css'
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {Link} from "react-router-dom";
+import {Footer} from "../components/Footer";
 
 export const PublicHome = () => {
 
+    //Register Scroll Trigger
+    gsap.registerPlugin(ScrollTrigger);
+
     //states
     const [bgEffect, setBgEffect] = useState(null);
-    const [showAll, setShowAll] = useState(false);
+
+    //Refs
     const heroRef = useRef(null);
+    const heroContent = useRef(null);
+    const eventTrigger = useRef(null);
 
     //BG Effect Loader
     useEffect(() => {
@@ -70,6 +79,54 @@ export const PublicHome = () => {
         console.log("Preload Handled");
     }
 
+    //Hero to Events Animation
+    useLayoutEffect(() => {
+        gsap.to(heroRef.current, {
+            y: "50%",
+            filter: "blur(5px)",
+            scrollTrigger: {
+                trigger: heroContent.current,
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        })
+
+    }, [])
+
+    //Event Section Animation
+    useLayoutEffect(() => {
+        gsap.from(".atropos", {
+            clipPath: "inset(90% 0 0 0)",
+            y: 100,
+            filter: "blur(5px)",
+            stagger: 0.2,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: eventTrigger.current,
+                start: "top top",
+            }
+        })
+    }, [])
+
+    //Sponsors Card Hover Effect
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const {currentTarget: target} = e;
+
+            const rect = target.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+            target.style.setProperty("--mouse-x", `${x}px`);
+            target.style.setProperty("--mouse-y", `${y}px`);
+        }
+
+        for (const card of document.querySelectorAll(".sponsor-item-main")) {
+            card.onmousemove = e => handleMouseMove(e);
+        }
+    }, [])
+
     return (
         <>
             {/*Preloader*/}
@@ -81,19 +138,20 @@ export const PublicHome = () => {
             <div className="public-home">
                 {/*  Hero  */}
                 <section className="hero" id="hero" ref={heroRef}>
-                    <div className="hero-container">
+                    <div className="hero-container" ref={heroContent}>
                         <div className="hero-left">
                             <span data-text="Code">Code</span>
                             <span data-text="Cosmos">Cosmos</span>
                         </div>
                         <div className="hero-right">
-                            <img src="assets/gw_logo_color.png" alt="Gateways 2023"/>
+                            <img src="assets/gw_white_trans.png" alt="Gateways 2023"/>
                         </div>
                     </div>
                 </section>
                 {/*  Hero End  */}
                 {/*  Events  */}
-                <section className="events" id="events">
+                <section className="events" id="events" ref={eventTrigger}>
+                    {/*<div className="hero-blur"/>*/}
                     <div className="events-container">
                         <div className="events-header">
                             <span>Our</span>
@@ -154,81 +212,39 @@ export const PublicHome = () => {
                                     </div>
                                 </div>
                             </Atropos>
-                            {
-                                showAll &&
-                                <>
-                                    <Atropos
-                                        activeOffset={40}
-                                        shadowScale={1.5}
-                                    >
-                                        <div className="event-item event-odd">
-                                            <div className="event-bg" data-atropos-offset="5"/>
-                                            <img src="assets/eventImgs/hack.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                            <span className="hover-text" data-atropos-offset="5">Hackathon</span>
-                                            <span className="hover-text2" data-atropos-offset="5">Hackathon</span>
-                                            <div className="event-top" data-atropos-offset="-5">
-                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
-                                            </div>
-                                            <div className="event-bottom" data-atropos-offset="5">
-                                                <button className="event-cta">Register</button>
-                                                <div className="event-cta-bg"/>
-                                            </div>
-                                        </div>
-                                    </Atropos>
-                                    <Atropos
-                                        activeOffset={40}
-                                        shadowScale={1.5}
-                                    >
-                                        <div className="event-item event-even">
-                                            <div className="event-bg" data-atropos-offset="5"/>
-                                            <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                            <span className="hover-text" data-atropos-offset="5">Treasure Hunt</span>
-                                            <span className="hover-text2" data-atropos-offset="5">Treasure Hunt</span>
-                                            <div className="event-top" data-atropos-offset="-5">
-                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
-                                            </div>
-                                            <div className="event-bottom" data-atropos-offset="5">
-                                                <button className="event-cta">Register</button>
-                                                <div className="event-cta-bg"/>
-                                            </div>
-                                        </div>
-                                    </Atropos>
-                                    <Atropos
-                                        activeOffset={40}
-                                        shadowScale={1.5}
-                                    >
-                                        <div className="event-item event-odd">
-                                            <div className="event-bg" data-atropos-offset="5"/>
-                                            <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                            <span className="hover-text" data-atropos-offset="5">Surprise Event</span>
-                                            <span className="hover-text2" data-atropos-offset="5">Surprise Event</span>
-                                            <div className="event-top" data-atropos-offset="-5">
-                                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
-                                            </div>
-                                            <div className="event-bottom" data-atropos-offset="5">
-                                                <button className="event-cta">Register</button>
-                                                <div className="event-cta-bg"/>
-                                            </div>
-                                        </div>
-                                    </Atropos>
-                                </>
-                            }
                         </div>
-                        {
-                            !showAll &&
-                            <div className="event-show-all">
-                                <button className="show-all-btn" onClick={() => {
-                                    setShowAll(true)
-                                }}>Show more&nbsp;<i className="fa-solid fa-chevron-down"/></button>
-                            </div>
-                        }
+                        <div className="event-show-all">
+                            <Link to={"/events"}>
+                                <button className="show-all-btn">Show more&nbsp;<i className="fa-solid fa-chevron-down"/></button>
+                            </Link>
+                        </div>
                     </div>
                 </section>
                 {/*  Events End  */}
                 {/*  Sponsors  */}
                 <section className="sponsors" id="sponsors">
                     <div className="sponsors-container">
-
+                        <div className="sponsor-header">
+                            <span>Our</span>
+                            <span>Sponsors</span>
+                        </div>
+                        <div className="sponsor-main-flex">
+                            <div className="sponsor-item-main">
+                                <div className="top-blur"/>
+                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
+                                <span className="sponsor-name">Name</span>
+                            </div>
+                            <div className="sponsor-item-main chief-sponsor">
+                                <div className="top-blur"/>
+                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
+                                <span className="sponsor-name">Name</span>
+                            </div>
+                            <div className="sponsor-item-main">
+                                <div className="top-blur"/>
+                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
+                                <span className="sponsor-name">Name</span>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 {/*  Sponsors End  */}
@@ -286,6 +302,9 @@ export const PublicHome = () => {
                 </section>
                 {/*  Guests End  */}
             </div>
+            {/*  Footer  */}
+            <Footer active="home"/>
+            {/*  Footer End  */}
         </>
     )
 }

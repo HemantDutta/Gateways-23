@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {PublicHome} from "./pages/PublicHome";
-import {Home} from "./pages/Home";
 import EventDetails from "./pages/EventDetails";
+import {Events} from "./pages/Events";
 
 function App() {
     return (
@@ -10,6 +10,7 @@ function App() {
                 <Routes>
                     <Route path={"/"} element={<PublicHome/>}/>
                     <Route path={"/it-quiz"} element={<EventDetails/>}/>
+                    <Route path={"/events"} element={<Events/>}/>
                 </Routes>
             </BrowserRouter>
         </>
