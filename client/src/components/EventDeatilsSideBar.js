@@ -21,6 +21,10 @@ function EventDeatilsSideBar ({id, imgSrc}) {
                     <span className="event-time">10:00 AM</span>
                 </span>
                 <span className="event-head">Event Head: Mr. XYZ</span>
+                <div className="event-btn-container">
+                    <button type='button' className="event-cta">Register</button>
+                    <div className="event-cta-bg"/>
+                </div>
             </div>
             <div className="event-details">
                 <div className="event-details-heading">About AstroBytes:</div>
@@ -42,6 +46,7 @@ function EventDeatilsSideBar ({id, imgSrc}) {
                         <span className="event-des-sub">Rs. XX,XXX</span>
                     </div>
                 </span>
+                
             </div>
         </div>
     </>

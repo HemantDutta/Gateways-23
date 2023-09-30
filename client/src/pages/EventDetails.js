@@ -19,7 +19,7 @@ function EventDetails() {
             </div>
             {/* Events Details SideBar End */}
             {/* Events Form SideBar */}
-            <div className="event-form">
+            {/* <div className="event-form">
                 <div className="event-form-bg">
                     <div className="event-form-heading">Registration Form</div>
                     <form action="" method="" className='registration-form'>
@@ -33,7 +33,7 @@ function EventDetails() {
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> */}
             {/* Events Form SideBar End */}
         </section>
       
