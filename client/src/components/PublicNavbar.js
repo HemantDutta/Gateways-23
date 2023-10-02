@@ -77,6 +77,33 @@ export const PublicNavbar = ({active}) => {
                     </div>
                 </div>
             </nav>
+            {/*  Sidebar  */}
+            <div className="sidebar" id="sidebar">
+                <div className="sidebar-container">
+                    <div className="sidebar-link">
+                        <ul>
+                            <li><Link to={"/"}>Home</Link></li>
+                            {
+                                active === "home" &&
+                                <li><a href="#events">Events</a></li>
+                            }
+                            {
+                                active !== "home" &&
+                                <li><Link to={"/#events"}>Events</Link></li>
+                            }
+                            <li><Link to={"/about"}>About</Link></li>
+                        </ul>
+                    </div>
+                    <div className="sidebar-socials">
+                        <button><i className="fa-brands fa-linkedin-in"/></button>
+                        <button><i className="fa-brands fa-instagram"/></button>
+                    </div>
+                    <div className="sidebar-brochure">
+                        <button type="button">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
+                    </div>
+                </div>
+            </div>
+            {/*  Sidebar End  */}
         </>
     )
 }
