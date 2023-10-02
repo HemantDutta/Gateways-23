@@ -1,8 +1,11 @@
 import './PublicNavbar.css'
 import {Link} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const PublicNavbar = ({active}) => {
+
+    //States
+    const [sideActive, setSideActive] = useState(false);
 
     let prevScroll = window.scrollY;
     useEffect(() => {
@@ -37,6 +40,36 @@ export const PublicNavbar = ({active}) => {
         }
     }, [])
 
+    //Toggle Sidebar
+    function toggleSidebar() {
+        let sidebar = document.getElementById("sidebar");
+
+        if (sidebar.classList.contains("active")) {
+            sidebar.classList.remove("active");
+            setSideActive(false);
+        } else {
+            sidebar.classList.add("active");
+            setSideActive(true);
+        }
+    }
+
+    //Close Sidebar on out-click
+    // useEffect(() => {
+    //     const closeSidebar = (e) => {
+    //         let sidebar = document.getElementById("sidebar");
+    //         if (!sidebar.contains(e.target)) {
+    //             if (sidebar.classList.contains("active")) {
+    //                 sidebar.classList.remove("active");
+    //                 setSideActive(false);
+    //             }
+    //         }
+    //     }
+    //     window.addEventListener("click", closeSidebar)
+    //     return () => {
+    //         window.removeEventListener("click", closeSidebar)
+    //     }
+    // }, [])
+
     return (
         <>
             <nav id="navbar">
@@ -67,7 +100,7 @@ export const PublicNavbar = ({active}) => {
                                 <li className="nav-btn">
                                     <button type="button">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
                                 </li>
-                                <li className="menu-btn">
+                                <li className="menu-btn" onClick={toggleSidebar}>
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -80,18 +113,19 @@ export const PublicNavbar = ({active}) => {
             {/*  Sidebar  */}
             <div className="sidebar" id="sidebar">
                 <div className="sidebar-container">
+                    <span className="close-side" onClick={toggleSidebar}><i className="fa-solid fa-xmark"/></span>
                     <div className="sidebar-link">
                         <ul>
-                            <li><Link to={"/"}>Home</Link></li>
+                            <li onClick={toggleSidebar}><Link to={"/"}>Home</Link></li>
                             {
                                 active === "home" &&
-                                <li><a href="#events">Events</a></li>
+                                <li onClick={toggleSidebar}><a href="#events">Events</a></li>
                             }
                             {
                                 active !== "home" &&
-                                <li><Link to={"/#events"}>Events</Link></li>
+                                <li onClick={toggleSidebar}><Link to={"/#events"}>Events</Link></li>
                             }
-                            <li><Link to={"/about"}>About</Link></li>
+                            <li onClick={toggleSidebar}><Link to={"/about"}>About</Link></li>
                         </ul>
                     </div>
                     <div className="sidebar-socials">
