@@ -27,15 +27,20 @@ export const PublicNavbar = ({active}) => {
         }
     }, [])
 
+    let prevWidth = window.innerWidth;
     //Page Reload
     useEffect(() => {
         window.addEventListener("resize", () => {
-            window.location.reload();
+            if(window.innerWidth !== prevWidth){
+                window.location.reload();
+            }
         })
 
         return () => {
             window.removeEventListener("resize", () => {
-                window.location.reload();
+                if(window.innerWidth !== prevWidth){
+                    window.location.reload();
+                }
             })
         }
     }, [])

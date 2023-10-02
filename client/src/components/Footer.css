@@ -53,6 +53,7 @@ footer .footer-container .footer-right ul{
     justify-content: space-evenly;
     height: 100%;
     gap: 5px;
+    padding: 0;
 }
 
 footer .footer-container .footer-right ul li a{
