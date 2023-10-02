@@ -211,7 +211,7 @@ html{
 
 .events .events-container .events-header span{
     color: white;
-    font-size: 126px;
+    font-size: 106px;
     letter-spacing: 15px;
 }
 
@@ -512,7 +512,7 @@ html{
     flex-direction: column;
     padding-top: 32px;
     padding-left: 32px;
-    font-size: 126px;
+    font-size: 106px;
     color: white;
     text-transform: uppercase;
     letter-spacing: 15px;
@@ -659,7 +659,7 @@ html{
 }
 
 .guests .guests-container .guests-header{
-    font-size: 126px;
+    font-size: 106px;
     display: flex;
     flex-direction: column;
     color: white;

@@ -1,6 +1,7 @@
 import {PublicNavbar} from "../components/PublicNavbar";
 import Atropos from "atropos/react";
 import './Events.css';
+import {Footer} from "../components/Footer";
 
 export const Events = () => {
 
@@ -199,6 +200,9 @@ export const Events = () => {
                     </div>
                 </div>
             </div>
+            {/*  Footer  */}
+            <Footer active="events"/>
+            {/*  Footer End  */}
         </>
     )
 }

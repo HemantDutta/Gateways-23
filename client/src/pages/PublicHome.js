@@ -21,35 +21,37 @@ export const PublicHome = () => {
     const heroRef = useRef(null);
     const heroContent = useRef(null);
     const eventTrigger = useRef(null);
+    const heroHeader = useRef(null);
+    const heroImg = useRef(null);
 
     //BG Effect Loader
     useEffect(() => {
-        if (!bgEffect)
-            if (window.innerWidth < 1320) {
-                {
-                    setBgEffect(Halo({
-                        el: heroRef.current,
-                        size: 1,
-                        baseColor: "#974de0",
-                        backgroundColor: "#1d0728",
-                        xOffset: 0,
-                        mouseControls: false,
-                        amplitudeFactor: 3.0
-                    }))
+            if (!bgEffect)
+                if (window.innerWidth < 1320) {
+                    {
+                        setBgEffect(Halo({
+                            el: heroRef.current,
+                            size: 1,
+                            baseColor: "#974de0",
+                            backgroundColor: "#1d0728",
+                            xOffset: 0,
+                            mouseControls: false,
+                            amplitudeFactor: 3.0
+                        }))
+                    }
+                } else if (window.innerWidth > 1320) {
+                    {
+                        setBgEffect(Halo({
+                            el: heroRef.current,
+                            size: 1.5,
+                            baseColor: "#974de0",
+                            backgroundColor: "#1d0728",
+                            xOffset: 0.23,
+                            mouseControls: false,
+                            amplitudeFactor: 3.0
+                        }))
+                    }
                 }
-            } else if (window.innerWidth > 1320) {
-                {
-                    setBgEffect(Halo({
-                        el: heroRef.current,
-                        size: 1.5,
-                        baseColor: "#974de0",
-                        backgroundColor: "#1d0728",
-                        xOffset: 0.23,
-                        mouseControls: false,
-                        amplitudeFactor: 3.0
-                    }))
-                }
-            }
         return () => {
             if (bgEffect) {
                 bgEffect.destroy();
@@ -76,7 +78,17 @@ export const PublicHome = () => {
 
     //Preloader Handler
     function preLoader() {
-        console.log("Preload Handled");
+        const tl = gsap.timeline();
+        tl.from(heroImg.current, {
+            autoAlpha: 0,
+            scale: 0.8,
+            duration: 0.4,
+        })
+            .from(heroHeader.current, {
+                yPercent: 10,
+                duration: 0.4,
+                autoAlpha: 0
+            })
     }
 
     //Hero to Events Animation
@@ -97,7 +109,7 @@ export const PublicHome = () => {
     //Event Section Animation
     useLayoutEffect(() => {
         gsap.from(".atropos", {
-            clipPath: "inset(90% 0 0 0)",
+            autoAlpha: 0,
             y: 100,
             filter: "blur(5px)",
             stagger: 0.2,
@@ -105,6 +117,7 @@ export const PublicHome = () => {
             scrollTrigger: {
                 trigger: eventTrigger.current,
                 start: "top top",
+                markers: true
             }
         })
     }, [])
@@ -139,11 +152,11 @@ export const PublicHome = () => {
                 {/*  Hero  */}
                 <section className="hero" id="hero" ref={heroRef}>
                     <div className="hero-container" ref={heroContent}>
-                        <div className="hero-left">
+                        <div className="hero-left" ref={heroHeader}>
                             <span data-text="Code">Code</span>
                             <span data-text="Cosmos">Cosmos</span>
                         </div>
-                        <div className="hero-right">
+                        <div className="hero-right" ref={heroImg}>
                             <img src="assets/gw_white_trans.png" alt="Gateways 2023"/>
                         </div>
                     </div>

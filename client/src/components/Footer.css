@@ -120,6 +120,7 @@ footer .footer-container .footer-bottom{
     font-family: sans-serif;
     border-top: 1px solid white;
     margin-top: 50px;
+    padding-top: 25px;
 }
 
 @media screen and (max-width: 1091px) {
@@ -129,10 +130,15 @@ footer .footer-container .footer-bottom{
 
     footer .footer-container .footer-right{
         grid-column: 1/-1;
+        margin-top: 25px;
     }
 
     footer .footer-container .footer-right ul{
         flex-direction: row;
+    }
+
+    footer .footer-container .footer-bottom{
+        margin-top: 25px;
     }
 }
 

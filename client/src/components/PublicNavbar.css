@@ -238,6 +238,21 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
+    nav .navbar-container .navbar-main{
+        padding: 16px;
+    }
 
+    nav .navbar-container .navbar-main .navbar-left .navbar-cu-logo img{
+        height: 40px;
+        width: max-content;
+    }
+
+    nav .navbar-container .navbar-main .navbar-left{
+        flex-basis: 70%;
+    }
+
+    nav .navbar-container .navbar-main .navbar-right{
+        flex-basis: 30%;
+    }
 }
