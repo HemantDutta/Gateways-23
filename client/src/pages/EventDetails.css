@@ -4,8 +4,6 @@
 .event-container {
     z-index: 100;
     margin-top: 10rem;
-    display: flex;
-    flex-direction: row;
     height: auto;
 }
 
@@ -19,8 +17,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    width: 56vw;
-    height: 40vh;
+    height: 45vh;
     left: 20%;
     gap: 1rem;
     margin: 2rem;
@@ -48,7 +45,6 @@
     margin-right: 2rem;
 }
 
-
 .event-container .event-sidebar .event-overview .event-details {
     text-align: justify;
     color: white;
@@ -57,7 +53,6 @@
     background-color: rgb(0, 0, 0);
     clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
     padding: 2rem;
-    padding-right: 45vw;
     position: absolute;
     width: 100vw;
 }
@@ -96,7 +91,6 @@
 
 
 .event-container .event-form {
-    /* border: 1px white solid; */
     height: fit-content;
     color: white;
     padding: 1rem;
@@ -113,7 +107,6 @@
     align-items: center;
     z-index: 105;
     flex-direction: column;
-    width: 32vw;
     margin: 0rem 2rem;
     min-height: fit-content;
 }
@@ -141,17 +134,18 @@
     font-family: 'Orbitron', sans-serif;
 }
 
-.event-container .event-form .registration-form .event-btn-container {
+.event-container .event-sidebar .event-overview .event-banner .event-btn-container {
     position: relative;
     display: grid;
     place-items: center;
     height: 60px;
     margin-top: 1rem;
+    width: 20%;
 }
 
-.event-container .event-form .registration-form .event-btn-container button.event-cta {
-    width: 99%;
-    height: 96%;
+.event-container .event-sidebar .event-overview .event-banner .event-btn-container button.event-cta {
+    width: 97%;
+    height: 92%;
     background-color: #000;
     color: white;
     font-size: 16px;
@@ -166,23 +160,24 @@
     clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
 }
 
-.event-container .event-form .registration-form .event-btn-container .event-cta-bg {
+.event-container .event-sidebar .event-overview .event-banner .event-btn-container .event-cta-bg {
     position: absolute;
     z-index: 100;
     background: #fff;
-    height: 100%;
-    width: 100%;
+    /* height: 100%; */
+    /* width: 100%; */
     inset: 0;
     margin: auto;
-    clip-path: polygon(0 0.5em, 0.5em 0, 100% 0, 100% calc(100% - 0.5em), calc(100% - 0.5em) 100%, 0 100%);
+    /* clip-path: polygon(0 0.5em, 0.5em 0, 100% 0, 100% calc(100% - 0.5em), calc(100% - 0.5em) 100%, 0 100%); */
+    clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
     transition: background 0.4s ease;
 }
 
-.event-container .event-form .registration-form .event-btn-container:hover .event-cta{
+.event-container .event-sidebar .event-overview .event-banner .event-btn-container:hover .event-cta{
     transform: scale(0.98);
 }
 
-.event-container .event-form .registration-form .event-btn-container:hover .event-cta-bg{
+.event-container .event-sidebar .event-overview .event-banner .event-btn-container:hover .event-cta-bg{
     background: linear-gradient(45deg, #13053D, #700B85, #103C63);
     background-size: 300% 300%;
     animation: pulsate-btn linear 2s infinite;
@@ -236,10 +231,10 @@
     .event-container .event-form .registration-form input {
         font-size: 1.2rem;
     }
-    .event-container .event-form .registration-form .event-btn-container {
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container {
         height: 40px;
     }
-    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container button.event-cta {
         font-size: 0.8rem;
     }
     .event-container .event-sidebar .event-overview img {
@@ -277,11 +272,16 @@
         font-size: 1rem;
         width: 100%;
     }
-    .event-container .event-form .registration-form .event-btn-container {
-        height: 40px;
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container {
+        /* height: 40px; */
     }
-    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container .event-cta-bg {
+        clip-path: polygon(0 0.5em, 0.5em 0, 100% 0, 100% calc(100% - 0.5em), calc(100% - 0.5em) 100%, 0 100%); 
+    }
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container button.event-cta {
         font-size: 0.7rem;
+        /* height: 90%;
+        width: 90%; */
     }
     
 }
@@ -323,10 +323,12 @@
         font-size: 1rem;
         width: 150%;
     }
-    .event-container .event-form .registration-form .event-btn-container {
-        height: 50px;
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container {
+        /* height: 50px; */
+        min-width: fit-content;
     }
-    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+    
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container button.event-cta {
         font-size: 0.9rem;
     } 
 }
@@ -363,10 +365,10 @@
         font-size: 1rem;
         width: 170%;
     }
-    .event-container .event-form .registration-form .event-btn-container {
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container {
         height: 40px;
     }
-    .event-container .event-form .registration-form .event-btn-container button.event-cta {
+    .event-container .event-sidebar .event-overview .event-banner .event-btn-container button.event-cta {
         font-size: 0.7rem;
     }
     .event-container .event-form {
