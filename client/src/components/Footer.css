@@ -52,6 +52,7 @@ footer .footer-container .footer-right ul{
     align-items: flex-start;
     justify-content: space-evenly;
     height: 100%;
+    gap: 5px;
 }
 
 footer .footer-container .footer-right ul li a{

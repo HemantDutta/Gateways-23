@@ -5,13 +5,13 @@ import {useEffect} from "react";
 export const PublicNavbar = ({active}) => {
 
     let prevScroll = window.scrollY;
-    useEffect(()=>{
+    useEffect(() => {
         const checkScroll = () => {
             let nav = document.getElementById("navbar");
-            if(window.scrollY>prevScroll){
+            if (window.scrollY > prevScroll) {
                 nav.style.transform = "translateY(-150%)";
             }
-            if(prevScroll>window.scrollY){
+            if (prevScroll > window.scrollY) {
                 nav.style.transform = "none";
             }
             prevScroll = window.scrollY;
@@ -19,10 +19,23 @@ export const PublicNavbar = ({active}) => {
 
         window.addEventListener("scroll", checkScroll);
 
-        return ()=> {
+        return () => {
             window.removeEventListener("scroll", checkScroll);
         }
-    },[])
+    }, [])
+
+    //Page Reload
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            window.location.reload();
+        })
+
+        return () => {
+            window.removeEventListener("resize", () => {
+                window.location.reload();
+            })
+        }
+    }, [])
 
     return (
         <>
@@ -41,16 +54,16 @@ export const PublicNavbar = ({active}) => {
                         </div>
                         <div className="navbar-right">
                             <ul>
-                                <li className="nav-link"><Link to={"/"} className={active==="home"?"active":""}>Home</Link></li>
+                                <li className="nav-link"><Link to={"/"} className={active === "home" ? "active" : ""}>Home</Link></li>
                                 {
                                     active === "home" &&
-                                    <li className="nav-link"><a href="#events" className={active==="events"?"active":""}>Events</a></li>
+                                    <li className="nav-link"><a href="#events" className={active === "events" ? "active" : ""}>Events</a></li>
                                 }
                                 {
                                     active !== "home" &&
-                                    <li className="nav-link"><Link to={"/#events"} className={active==="events"?"active":""}>Events</Link></li>
+                                    <li className="nav-link"><Link to={"/#events"} className={active === "events" ? "active" : ""}>Events</Link></li>
                                 }
-                                <li className="nav-link"><Link to={"/about"} className={active==="about"?"active":""}>About</Link></li>
+                                <li className="nav-link"><Link to={"/about"} className={active === "about" ? "active" : ""}>About</Link></li>
                                 <li className="nav-btn">
                                     <button type="button">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
                                 </li>

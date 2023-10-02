@@ -2,8 +2,14 @@ import {PublicNavbar} from "../components/PublicNavbar";
 import Atropos from "atropos/react";
 import './Events.css';
 import {Footer} from "../components/Footer";
+import {useEffect} from "react";
 
 export const Events = () => {
+
+    //Page to Top
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    },[])
 
     return (
         <>
