@@ -1,6 +1,7 @@
 import './PublicNavbar.css'
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {gsap} from "gsap";
 
 export const PublicNavbar = ({active}) => {
 
@@ -67,6 +68,16 @@ export const PublicNavbar = ({active}) => {
         }
     }
 
+    //Sidebar Animation
+    useEffect(()=>{
+        gsap.from(".sideAnim", {
+            yPercent: 100,
+            duration: 0.4,
+            delay: 0.3,
+            ease: "back.in"
+        })
+    },[sideActive])
+
     return (
         <>
             <nav id="navbar">
@@ -114,24 +125,24 @@ export const PublicNavbar = ({active}) => {
                     <span className="close-side" onClick={toggleSidebar}><i className="fa-solid fa-xmark"/></span>
                     <div className="sidebar-link">
                         <ul>
-                            <li onClick={toggleSidebar}><Link to={"/"}>Home</Link></li>
+                            <li onClick={toggleSidebar}><Link to={"/"} className="sideAnim">Home</Link></li>
                             {
                                 active === "home" &&
-                                <li onClick={toggleSidebar}><a href="#events">Events</a></li>
+                                <li onClick={toggleSidebar}><a href="#events" className="sideAnim">Events</a></li>
                             }
                             {
                                 active !== "home" &&
-                                <li onClick={toggleSidebar}><Link to={"/#events"}>Events</Link></li>
+                                <li onClick={toggleSidebar}><Link to={"/#events"} className="sideAnim">Events</Link></li>
                             }
-                            <li onClick={toggleSidebar}><Link to={"/about"}>About</Link></li>
+                            <li onClick={toggleSidebar}><Link to={"/about"} className="sideAnim">About</Link></li>
                         </ul>
                     </div>
                     <div className="sidebar-socials">
-                        <button><i className="fa-brands fa-linkedin-in"/></button>
-                        <button><i className="fa-brands fa-instagram"/></button>
+                        <button className="sideAnim"><i className="fa-brands fa-linkedin-in"/></button>
+                        <button className="sideAnim"><i className="fa-brands fa-instagram"/></button>
                     </div>
                     <div className="sidebar-brochure">
-                        <button type="button">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
+                        <button type="button" className="sideAnim">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
                     </div>
                 </div>
             </div>

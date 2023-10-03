@@ -296,6 +296,10 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     cursor: pointer;
 }
 
+.sidebar .sidebar-container .sidebar-link{
+    overflow-y: hidden;
+}
+
 .sidebar .sidebar-container .sidebar-link ul{
     list-style-type: none;
     padding: 0;
@@ -303,6 +307,10 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+.sidebar .sidebar-container .sidebar-link ul li{
+    overflow-y: hidden;
 }
 
 .sidebar .sidebar-container .sidebar-link ul li a{
@@ -321,6 +329,8 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    overflow-y: hidden;
+    padding: 10px 0;
 }
 
 .sidebar .sidebar-container .sidebar-socials button{
@@ -351,6 +361,7 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
 
 .sidebar .sidebar-container .sidebar-brochure{
     margin-top: 20px;
+    overflow-y: hidden;
 }
 
 .sidebar .sidebar-container .sidebar-brochure button{
@@ -385,6 +396,10 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
 
 .sidebar-underlay.active{
     opacity: 1;
+}
+
+.sideAnim{
+    display: inline-block;
 }
 
 @media screen and (max-width: 400px) {
