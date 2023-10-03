@@ -1,12 +1,15 @@
 import './PublicNavbar.css'
 import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {gsap} from "gsap";
 
 export const PublicNavbar = ({active}) => {
 
     //States
     const [sideActive, setSideActive] = useState(false);
+
+    //Refs
+    const sidebar = useRef(null);
 
     let prevScroll = window.scrollY;
     useEffect(() => {
@@ -32,14 +35,14 @@ export const PublicNavbar = ({active}) => {
     //Page Reload
     useEffect(() => {
         window.addEventListener("resize", () => {
-            if(window.innerWidth !== prevWidth){
+            if (window.innerWidth !== prevWidth) {
                 window.location.reload();
             }
         })
 
         return () => {
             window.removeEventListener("resize", () => {
-                if(window.innerWidth !== prevWidth){
+                if (window.innerWidth !== prevWidth) {
                     window.location.reload();
                 }
             })
@@ -52,31 +55,31 @@ export const PublicNavbar = ({active}) => {
         let sideUnder = document.getElementById("sideUnder");
 
         if (sidebar.classList.contains("active")) {
-            sideUnder.classList.remove("active");
-            setTimeout(()=>{
-                sideUnder.style.display = "none";
-            },400)
-            sidebar.classList.remove("active");
             setSideActive(false);
+            sideUnder.classList.remove("active");
+            setTimeout(() => {
+                sideUnder.style.display = "none";
+            }, 400)
+            sidebar.classList.remove("active");
         } else {
-            sideUnder.style.display = "block";
-            setTimeout(()=>{
-                sideUnder.classList.add("active");
-            },100)
-            sidebar.classList.add("active");
             setSideActive(true);
+            sideUnder.style.display = "block";
+            setTimeout(() => {
+                sideUnder.classList.add("active");
+            }, 100)
+            sidebar.classList.add("active");
         }
     }
 
     //Sidebar Animation
-    useEffect(()=>{
-        gsap.from(".sideAnim", {
-            yPercent: 100,
-            duration: 0.4,
-            delay: 0.3,
-            ease: "back.in"
-        })
-    },[sideActive])
+    // useLayoutEffect(() => {
+    //     gsap.from(".sideAnim", {
+    //         yPercent: 200,
+    //         duration: 0.4,
+    //         delay: 0.2,
+    //         ease: "back.in",
+    //     })
+    // }, [sideActive])
 
     return (
         <>
@@ -102,7 +105,7 @@ export const PublicNavbar = ({active}) => {
                                 }
                                 {
                                     active !== "home" &&
-                                    <li className="nav-link"><Link to={"/#events"} className={active === "events" ? "active" : ""}>Events</Link></li>
+                                    <li className="nav-link"><Link to={"/events"} className={active === "events" ? "active" : ""}>Events</Link></li>
                                 }
                                 <li className="nav-link"><Link to={"/about"} className={active === "about" ? "active" : ""}>About</Link></li>
                                 <li className="nav-btn">
@@ -121,7 +124,7 @@ export const PublicNavbar = ({active}) => {
             {/*  Sidebar  */}
             <div className="sidebar-underlay" id="sideUnder" onClick={toggleSidebar}/>
             <div className="sidebar" id="sidebar">
-                <div className="sidebar-container">
+                <div className="sidebar-container" ref={sidebar}>
                     <span className="close-side" onClick={toggleSidebar}><i className="fa-solid fa-xmark"/></span>
                     <div className="sidebar-link">
                         <ul>
@@ -132,7 +135,7 @@ export const PublicNavbar = ({active}) => {
                             }
                             {
                                 active !== "home" &&
-                                <li onClick={toggleSidebar}><Link to={"/#events"} className="sideAnim">Events</Link></li>
+                                <li onClick={toggleSidebar}><Link to={"/events"} className="sideAnim">Events</Link></li>
                             }
                             <li onClick={toggleSidebar}><Link to={"/about"} className="sideAnim">About</Link></li>
                         </ul>

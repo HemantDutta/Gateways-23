@@ -116,8 +116,7 @@ export const PublicHome = () => {
             duration: 0.6,
             scrollTrigger: {
                 trigger: eventTrigger.current,
-                start: "top top",
-                markers: true
+                start: "top center",
             }
         })
     }, [])

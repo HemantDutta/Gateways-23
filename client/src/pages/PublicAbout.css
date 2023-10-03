@@ -1,0 +1,80 @@
+/*==========About Section==========*/
+
+.about-page {
+    position: relative;
+    min-height: 100vh;
+    background-color: #1d0728;
+    z-index: 110;
+    background-size: cover;
+}
+
+.about-page .about-container{
+    padding: 180px 48px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.about-page .about-container .about-gw{
+}
+
+.about-page .about-container .about-header{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-page .about-container .about-header .head-text{
+    font-size: 56px;
+}
+
+.about-page .about-container .about-header .head-tag{
+    font-size: 22px;
+}
+
+.about-page .about-container .about-content p{
+    color: white;
+    text-align: justify;
+}
+
+.about-page .about-container .about-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-page .about-container .about-cards .card-item{
+    height: 350px;
+    width: 350px;
+    position: relative;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-page .about-container .about-cards .card-item:before{
+    content: "";
+    position: absolute;
+    height: 101%;
+    width: 101%;
+    background: linear-gradient(45deg, #fe7c62, #f33456, #f33456, #974de0);
+}
+
+
+.about-page .about-container .about-cards .card-item img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+    z-index: 111;
+}
+
+.about-page .about-container .about-cards .card-item span{
+    font-size: 56px;
+    color: white;
+    z-index: 112;
+
+}
