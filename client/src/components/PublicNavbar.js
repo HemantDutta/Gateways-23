@@ -48,32 +48,24 @@ export const PublicNavbar = ({active}) => {
     //Toggle Sidebar
     function toggleSidebar() {
         let sidebar = document.getElementById("sidebar");
+        let sideUnder = document.getElementById("sideUnder");
 
         if (sidebar.classList.contains("active")) {
+            sideUnder.classList.remove("active");
+            setTimeout(()=>{
+                sideUnder.style.display = "none";
+            },400)
             sidebar.classList.remove("active");
             setSideActive(false);
         } else {
+            sideUnder.style.display = "block";
+            setTimeout(()=>{
+                sideUnder.classList.add("active");
+            },100)
             sidebar.classList.add("active");
             setSideActive(true);
         }
     }
-
-    //Close Sidebar on out-click
-    // useEffect(() => {
-    //     const closeSidebar = (e) => {
-    //         let sidebar = document.getElementById("sidebar");
-    //         if (!sidebar.contains(e.target)) {
-    //             if (sidebar.classList.contains("active")) {
-    //                 sidebar.classList.remove("active");
-    //                 setSideActive(false);
-    //             }
-    //         }
-    //     }
-    //     window.addEventListener("click", closeSidebar)
-    //     return () => {
-    //         window.removeEventListener("click", closeSidebar)
-    //     }
-    // }, [])
 
     return (
         <>
@@ -116,6 +108,7 @@ export const PublicNavbar = ({active}) => {
                 </div>
             </nav>
             {/*  Sidebar  */}
+            <div className="sidebar-underlay" id="sideUnder" onClick={toggleSidebar}/>
             <div className="sidebar" id="sidebar">
                 <div className="sidebar-container">
                     <span className="close-side" onClick={toggleSidebar}><i className="fa-solid fa-xmark"/></span>
