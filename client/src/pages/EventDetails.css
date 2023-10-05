@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    height: 45vh;
+    height: 55vh;
     left: 20%;
     gap: 1rem;
     margin: 2rem;
@@ -42,7 +42,7 @@
 .event-container .event-sidebar .event-overview .event-banner .event-date-time :is(.event-date, .event-time) {
     font-size: 1.5rem;
     color: white;
-    margin-right: 2rem;
+    margin: 1rem;
 }
 
 .event-container .event-sidebar .event-overview .event-details {
@@ -271,9 +271,6 @@
     .event-container .event-form .registration-form input {
         font-size: 1rem;
         width: 100%;
-    }
-    .event-container .event-sidebar .event-overview .event-banner .event-btn-container {
-        /* height: 40px; */
     }
     .event-container .event-sidebar .event-overview .event-banner .event-btn-container .event-cta-bg {
         clip-path: polygon(0 0.5em, 0.5em 0, 100% 0, 100% calc(100% - 0.5em), calc(100% - 0.5em) 100%, 0 100%); 
