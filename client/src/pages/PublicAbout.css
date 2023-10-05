@@ -16,6 +16,7 @@
 }
 
 .about-page .about-container .about-gw{
+    margin-bottom: 50px;
 }
 
 .about-page .about-container .about-header{
@@ -74,6 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 100px;
 }
 
 .about-page .about-container .about-cards .card-item{
