@@ -24,6 +24,7 @@ export const PublicHome = () => {
     const sponsorTrigger = useRef(null);
     const heroHeader = useRef(null);
     const heroImg = useRef(null);
+    const guest = useRef(null);
 
     //BG Effect Loader
     useEffect(() => {
@@ -136,12 +137,12 @@ export const PublicHome = () => {
             scrollTrigger: {
                 trigger: sponsorTrigger.current,
                 start: "top center",
-                markers: true
             }
         });
 
         tl.from(".sponsor-header span", {
             yPercent: 100,
+            autoAlpha: 0,
             duration: 0.6
         })
             .from(".sponsor-item-main", {
@@ -170,6 +171,25 @@ export const PublicHome = () => {
             card.onmousemove = e => handleMouseMove(e);
         }
     }, [])
+
+    //Guest Animation
+    useLayoutEffect(()=>{
+        const tl = gsap.timeline({
+            scrollTrigger: guest.current
+        });
+
+        tl.from(".guests-header", {
+            yPercent: 100,
+            autoAlpha: 0,
+            duration: 0.6
+        })
+            .from(".guest-item", {
+                clipPath: "inset(80%)",
+                filter: "blur(5px)",
+                duration: 0.4,
+                stagger: 0.4
+            })
+    },[])
 
     return (
         <>
@@ -293,7 +313,7 @@ export const PublicHome = () => {
                 </section>
                 {/*  Sponsors End  */}
                 {/*  Guests  */}
-                <section className="guests" id="guests">
+                <section className="guests" id="guests" ref={guest}>
                     <div className="guests-container">
                         <div className="guests-header">
                             <span>Meet</span>

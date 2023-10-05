@@ -150,7 +150,7 @@ html{
 }
 
 .events .events-container{
-    padding: 48px;
+    padding: 48px 72px;
     margin-top: 100px;
 }
 
@@ -508,11 +508,14 @@ html{
     /*background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://w.wallhaven.cc/full/lm/wallhaven-lm35vp.jpg");*/
 }
 
+.sponsors .sponsors-container{
+    padding: 48px 72px;
+}
+
 .sponsors .sponsors-container .sponsor-header{
     display: flex;
     flex-direction: column;
     padding-top: 32px;
-    padding-left: 32px;
     font-size: 106px;
     color: white;
     text-transform: uppercase;
@@ -528,7 +531,7 @@ html{
 
 @media screen and (max-width: 769px) {
     .sponsors .sponsors-container .sponsor-header{
-        font-size: 76px;
+        font-size: 56px;
     }
 }
 
@@ -659,13 +662,16 @@ html{
 
 }
 
+.guests .guests-container{
+    padding: 48px 72px;
+}
+
 .guests .guests-container .guests-header{
     font-size: 106px;
     display: flex;
     flex-direction: column;
     color: white;
     padding-top: 32px;
-    padding-left: 32px;
     text-transform: uppercase;
     letter-spacing: 15px;
 }
@@ -698,7 +704,7 @@ html{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    padding: 32px;
+    padding: 32px 0;
     gap: 32px;
     place-items: center;
 }
@@ -708,6 +714,7 @@ html{
     height: 600px;
     position: relative;
     padding: 24px;
+    clip-path: none;
 }
 
 @media screen and (max-width: 500px) {
