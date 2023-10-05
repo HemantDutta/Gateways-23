@@ -17,7 +17,12 @@ export const PublicAbout = () => {
                         </div>
                         <div className="about-content">
                             <div className="about-item">
-
+                                <span>Gateways is a national level intercollegiate IT fest, organized by the Department of Computer Science, CHRIST (Deemed to be University) annually. CHRIST (Deemed to be University) was born out of the educational vision of St Kuriakose Elias Chavara, an educationalist and social reformer of the nineteenth century in South India. He founded the first Catholic indigenous congregation, Carmelites of Mary Immaculate (CMI), in 1831 which administers CHRIST (Deemed to be University).</span>
+                                <div className="about-img"><img src="assets/christ2.JPG" alt="CHRIST (Deemed to be University)"/></div>
+                            </div>
+                            <div className="about-item">
+                                <span>Gateways 2023, the national level intercollegiate IT fest, is being organized by the Department of Computer Science, CHRIST (Deemed to be University) on the 7th and 8th of December 2023. The two-day extravaganza provides a platform for postgraduate students to showcase their talents in various fields. The theme for this year's Gateways 2023 is "Code Cosmos" consisting of numerous technical and non-technical events along with a surprise event. The department will also be publishing the 2023 edition of INFOBAHN, a bi-annual magazine, during the fest</span>
+                                <div className="about-img"><img src="assets/gw_big.png" className="gw-img" alt="Gateways 2023"/></div>
                             </div>
                         </div>
                     </div>
@@ -44,7 +49,12 @@ export const PublicAbout = () => {
                             <span className="head-tag">Theme for 2023</span>
                         </div>
                         <div className="about-content">
-                            <p>CHRIST (Deemed to be University) is excited to unveil the theme for this year's Inter College IT Fest, Gateways 2023 - "Code Cosmos. " Inspired by space technology and recent achievements in space exploration, Code Cosmos symbolizes a quest for innovation and knowledge. It reflects the boundless potential of technology, mirroring the limitless expanse of the universe. This event promises a multifaceted experience, bringing together students and tech enthusiasts nationwide. Participants will engage in workshops, competitions, and discussions, exploring the convergence of technology and space science. Gateways 2023 invites all to embark on a cosmic journey, pushing the boundaries of human innovation</p>
+                            <div className="about-item">
+                                <span>CHRIST (Deemed to be University) is excited to unveil the theme for this year's Inter College IT Fest, Gateways 2023 - "Code Cosmos. " Inspired by space technology and recent achievements in space exploration, Code Cosmos symbolizes a quest for innovation and knowledge. It reflects the boundless potential of technology, mirroring the limitless expanse of the universe. This event promises a multifaceted experience, bringing together students and tech enthusiasts nationwide. Participants will engage in workshops, competitions, and discussions, exploring the convergence of technology and space science. Gateways 2023 invites all to embark on a cosmic journey, pushing the boundaries of human innovation</span>
+                                <div className="about-img">
+                                    <img src="assets/gw_white_trans.png" className="cc-img" alt="Code Cosmos"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

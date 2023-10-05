@@ -21,37 +21,38 @@ export const PublicHome = () => {
     const heroRef = useRef(null);
     const heroContent = useRef(null);
     const eventTrigger = useRef(null);
+    const sponsorTrigger = useRef(null);
     const heroHeader = useRef(null);
     const heroImg = useRef(null);
 
     //BG Effect Loader
     useEffect(() => {
-            if (!bgEffect)
-                if (window.innerWidth < 1320) {
-                    {
-                        setBgEffect(Halo({
-                            el: heroRef.current,
-                            size: 1,
-                            baseColor: "#974de0",
-                            backgroundColor: "#1d0728",
-                            xOffset: 0,
-                            mouseControls: false,
-                            amplitudeFactor: 3.0
-                        }))
-                    }
-                } else if (window.innerWidth > 1320) {
-                    {
-                        setBgEffect(Halo({
-                            el: heroRef.current,
-                            size: 1.5,
-                            baseColor: "#974de0",
-                            backgroundColor: "#1d0728",
-                            xOffset: 0.23,
-                            mouseControls: false,
-                            amplitudeFactor: 3.0
-                        }))
-                    }
+        if (!bgEffect)
+            if (window.innerWidth < 1320) {
+                {
+                    setBgEffect(Halo({
+                        el: heroRef.current,
+                        size: 1,
+                        baseColor: "#974de0",
+                        backgroundColor: "#1d0728",
+                        xOffset: 0,
+                        mouseControls: false,
+                        amplitudeFactor: 3.0
+                    }))
                 }
+            } else if (window.innerWidth > 1320) {
+                {
+                    setBgEffect(Halo({
+                        el: heroRef.current,
+                        size: 1.5,
+                        baseColor: "#974de0",
+                        backgroundColor: "#1d0728",
+                        xOffset: 0.23,
+                        mouseControls: false,
+                        amplitudeFactor: 3.0
+                    }))
+                }
+            }
         return () => {
             if (bgEffect) {
                 bgEffect.destroy();
@@ -108,17 +109,48 @@ export const PublicHome = () => {
 
     //Event Section Animation
     useLayoutEffect(() => {
-        gsap.from(".atropos", {
-            autoAlpha: 0,
-            y: 100,
-            filter: "blur(5px)",
-            stagger: 0.2,
-            duration: 0.6,
+        const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: eventTrigger.current,
                 start: "top center",
             }
         })
+
+        tl.from(".events-header span", {
+            yPercent: 100,
+            stagger: 0.2,
+            opacity: 0
+        })
+            .from(".atropos", {
+                autoAlpha: 0,
+                y: 100,
+                filter: "blur(5px)",
+                stagger: 0.2,
+                duration: 0.6,
+            })
+    }, [])
+
+    //Sponsor Section Animation
+    useLayoutEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: sponsorTrigger.current,
+                start: "top center",
+                markers: true
+            }
+        });
+
+        tl.from(".sponsor-header span", {
+            yPercent: 100,
+            duration: 0.6
+        })
+            .from(".sponsor-item-main", {
+                yPercent: 100,
+                filter: "blur(5px)",
+                stagger: 0.2,
+                duration: 0.6,
+                autoAlpha: 0
+            })
     }, [])
 
     //Sponsors Card Hover Effect
@@ -234,7 +266,7 @@ export const PublicHome = () => {
                 </section>
                 {/*  Events End  */}
                 {/*  Sponsors  */}
-                <section className="sponsors" id="sponsors">
+                <section className="sponsors" id="sponsors" ref={sponsorTrigger}>
                     <div className="sponsors-container">
                         <div className="sponsor-header">
                             <span>Our</span>

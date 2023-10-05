@@ -207,6 +207,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow-y: hidden;
 }
 
 .events .events-container .events-header span{

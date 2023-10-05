@@ -143,7 +143,7 @@ nav .navbar-container .navbar-main .navbar-right ul li a.active:after{
     width: 100%;
 }
 
-nav .navbar-container .navbar-main .navbar-right ul li a:not(.active):after{
+nav .navbar-container .navbar-main .navbar-right ul li a:not(.active):not(.broch):after{
     position: absolute;
     content: "";
     bottom: -5px;

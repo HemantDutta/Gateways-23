@@ -33,9 +33,41 @@
     font-size: 22px;
 }
 
-.about-page .about-container .about-content p{
+.about-page .about-container .about-content .about-item{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.about-page .about-container .about-content .about-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.about-page .about-container .about-content .about-item .about-img{
+    flex-basis: 40%;
+    display: grid;
+    place-items: center;
+}
+
+.about-page .about-container .about-content .about-item .about-img img{
+    height: 350px;
+    width: 98%;
+    object-fit: contain;
+    position: relative;
+}
+
+.about-page .about-container .about-content .about-item span{
     color: white;
     text-align: justify;
+    flex-basis: 60%;
+}
+
+@media screen and (max-width: 991px) {
+    .about-page .about-container .about-content .about-item, .about-page .about-container .about-content .about-item:nth-child(even){
+        flex-direction: column-reverse;
+    }
 }
 
 .about-page .about-container .about-cards{
@@ -76,5 +108,48 @@
     font-size: 56px;
     color: white;
     z-index: 112;
+}
 
+@media screen and (max-width: 1210px) {
+    .about-page .about-container .about-cards .card-item{
+        height: 250px;
+        width: 250px;
+    }
+
+    .about-page .about-container .about-cards .card-item span{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .about-page .about-container .about-cards{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-page .about-container .about-cards .card-item{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-page .about-container{
+        padding: 180px 24px 48px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .about-page .about-container .about-cards .card-item{
+        width: 90vw;
+        aspect-ratio: 1/1;
+    }
+
+    .about-page .about-container .about-header .head-text{
+        font-size: 36px;
+    }
+
+    .about-page .about-container .about-header .head-tag{
+        font-size: 18px;
+    }
 }
