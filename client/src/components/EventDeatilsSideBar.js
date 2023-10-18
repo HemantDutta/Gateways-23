@@ -18,9 +18,13 @@ function EventDeatilsSideBar ({id, imgSrc}) {
                 <span className="event-tag">Space Tech Quiz</span>
                 <span className="event-date-time">
                     <span className="event-date">13th Dec</span>
-                    <span className="event-time">10:00 AM</span>
+                    <span className="event-time">9:00 AM</span>
                 </span>
-                <span className="event-head">Event Head: Mr. XYZ</span>
+                <span className="event-head">
+                <div>Contact details</div>
+                <div>Akash - +91 96027 16766</div>
+                <div>Prajwal - +91 91132 72654</div>
+                </span>
                 <div className="event-btn-container">
                     <button type='button' className="event-cta">Register</button>
                     <div className="event-cta-bg"/>
@@ -28,12 +32,26 @@ function EventDeatilsSideBar ({id, imgSrc}) {
             </div>
             <div className="event-details">
                 <div className="event-details-heading">About AstroBytes:</div>
-                <span className="event-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at consequuntur doloribus expedita, minus nobis qui sit vero. Adipisci delectus, dolor doloribus nisi optio perferendis quo quod rem repudiandae suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum accusamus cumque rerum minus fugiat quas ipsam veritatis, esse nulla! Dicta, optio iusto! Tempore expedita ex quis. Esse natus quo reprehenderit, possimus optio quos autem assumenda. Nisi quia, accusamus inventore nesciunt quo, voluptates repudiandae harum dicta enim voluptatibus adipisci ab! Commodi.</span>
+                <span className="event-des">Are you the Einstein of technology trivia? Do you know your bytes from your galaxies? Think you can navigate the digital constellations, decode cosmic algorithms, and unravel the mysteries of tech in the vastness of space? Join us at Astrobytes and embark on a celestial quest through the cosmos of IT knowledge.</span>
                 <div className="event-details-heading">Rules:</div>
-                <span className="event-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at consequuntur doloribus expedita, minus nobis qui sit vero. Adipisci delectus, dolor doloribus nisi optio perferendis quo quod rem repudiandae suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
-                <div className="event-details-heading">Prize:</div>
                 <span className="event-des">
                     <div>
+                        <span className="event-des-subheading">Onspot Registration: </span>
+                        <span className="event-des-sub">Available</span>
+                    </div>
+                    <div>
+                        <span className="event-des-subheading">Team Size Upto: </span>
+                        <span className="event-des-sub">2</span>
+                    </div>
+                    <div>
+                        <span className="event-des-subheading">Pre-Requisites: </span>
+                        <span className="event-des-sub">Participants should have knowledge about the latest developments in space technology-related events.</span>
+                    </div>
+                </span>
+                <div className="event-details-heading">Prize:</div>
+                <span className="event-des">
+                    Exciting Cash Prizes for top 3 winners! 
+                    {/* <div>
                         <span className="event-des-subheading">First Prize: </span>
                         <span className="event-des-sub">Rs. XX,XXX</span>
                     </div>
@@ -44,7 +62,7 @@ function EventDeatilsSideBar ({id, imgSrc}) {
                     <div>
                         <span className="event-des-subheading">Third Prize: </span>
                         <span className="event-des-sub">Rs. XX,XXX</span>
-                    </div>
+                    </div> */}
                 </span>
                 
             </div>

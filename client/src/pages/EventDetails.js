@@ -5,7 +5,7 @@ import EventDeatilsSideBar from '../components/EventDeatilsSideBar'
 import { PublicNavbar } from '../components/PublicNavbar'
 
 
-function EventDetails() {
+function EventDetails({eventName, eventType, eventDesc, eventDate, eventTime, eventHead, eventRegLink, eventRules, eventPrize}) {
   return (
     <div>
         {/* Header */}
