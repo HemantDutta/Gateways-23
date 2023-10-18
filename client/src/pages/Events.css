@@ -61,7 +61,7 @@
 
 .events-page .events-container .events-grid .atropos{
     clip-path: none;
-    width: 100%;
+    width: 80%;
 }
 
 .events-page .events-container .events-grid .atropos .atropos-scale .atropos-rotate .atropos-inner{
@@ -74,7 +74,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 450px;
+    height: 350px;
     width: 90%;
     transition: all 0.2s ease;
 }
@@ -138,10 +138,10 @@
 
 .events-page .events-container .events-grid .event-item span.hover-text{
     position: absolute;
-    top: -8%;
+    top: -6%;
     left: -10%;
     color: white;
-    font-size: 36px;
+    font-size: 28px;
     z-index: 105;
     transition: all 0.2s ease;
     text-transform: uppercase;
@@ -149,10 +149,10 @@
 
 .events-page .events-container .events-grid .event-item span.hover-text2{
     position: absolute;
-    top: -8%;
+    top: -6%;
     left: -10%;
     color: #974de0;
-    font-size: 36px;
+    font-size: 28px;
     z-index: 104;
     transition: all 0.4s ease-in-out;
     text-transform: uppercase;
@@ -178,7 +178,7 @@
 }
 
 .events-page .events-container .events-grid .event-item .event-top span{
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     text-align: center;
 }
@@ -204,7 +204,7 @@
     height: 65%;
     background-color: #000;
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     z-index: 105;
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
@@ -293,22 +293,26 @@
 }
 
 @media screen and (max-width: 420px) {
+    .events-page .events-container .events-grid .atropos{
+        width: 100%;
+    }
+
     .events-page .events-container .events-grid{
         padding: 32px 16px;
     }
 
     .events-page .events-container .events-grid .event-item span.hover-text{
-        font-size: 32px;
+        font-size: 24px;
         top: -6%;
         left: -6%;
     }
     .events-page .events-container .events-grid .event-item span.hover-text2{
-        font-size: 32px;
+        font-size: 24px;
         top: -6%;
         left: -6%;
     }
     .events-page .events-container .events-grid .event-item .event-top span{
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 

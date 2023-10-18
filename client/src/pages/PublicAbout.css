@@ -8,6 +8,10 @@
     background-size: cover;
 }
 
+.about-page > * {
+    overflow-y: hidden;
+}
+
 .about-page .about-container{
     padding: 180px 48px 48px;
     display: flex;

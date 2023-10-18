@@ -194,7 +194,7 @@ export const PublicHome = () => {
     return (
         <>
             {/*Preloader*/}
-            <PreLoader preHandler={preLoader}/>
+            {/*<PreLoader preHandler={preLoader}/>*/}
             {/*Preloader End*/}
             {/*  Header  */}
             <PublicNavbar active="home"/>

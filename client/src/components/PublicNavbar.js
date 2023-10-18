@@ -109,7 +109,7 @@ export const PublicNavbar = ({active}) => {
                                 }
                                 <li className="nav-link"><Link to={"/about"} className={active === "about" ? "active" : ""}>About</Link></li>
                                 <li className="nav-btn">
-                                    <button type="button"><a className="broch" href="https://heyzine.com/flip-book/29803cc0eb.html" rel={"noreferrer"} target={"_blank"}>View&nbsp;Brochure</a></button>
+                                    <button type="button"><a className="broch" href="https://heyzine.com/flip-book/7293662a40.html" rel={"noreferrer"} target={"_blank"}>View&nbsp;Brochure</a></button>
                                 </li>
                                 <li className="menu-btn" onClick={toggleSidebar}>
                                     <span></span>
@@ -145,7 +145,7 @@ export const PublicNavbar = ({active}) => {
                         <button className="sideAnim"><i className="fa-brands fa-instagram"/></button>
                     </div>
                     <div className="sidebar-brochure">
-                        <button type="button" className="sideAnim">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
+                        <button type="button" className="sideAnim"><a href="https://heyzine.com/flip-book/7293662a40.html" target="_blank" rel="noreferrer">View Brochure</a></button>
                     </div>
                 </div>
             </div>

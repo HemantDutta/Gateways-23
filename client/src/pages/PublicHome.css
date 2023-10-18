@@ -121,10 +121,12 @@ html{
 .events{
     position: relative;
     min-height: 100vh;
-    background-color: #1d0728;
+    /*background-color: #1d0728;*/
     z-index: 110;
     /*background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://w.wallhaven.cc/full/p8/wallhaven-p8q8qe.jpg"), center, no-repeat;*/
     background-size: cover;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
 }
 
 .events .hero-blur{
@@ -212,7 +214,7 @@ html{
 
 .events .events-container .events-header span{
     color: white;
-    font-size: 106px;
+    font-size: 76px;
     letter-spacing: 15px;
 }
 
@@ -224,19 +226,19 @@ html{
 
 @media screen and (max-width: 769px) {
     .events .events-container .events-header span{
-        font-size: 76px;
+        font-size: 56px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .events .events-container .events-header span{
-        font-size: 56px;
+        font-size: 36px;
     }
 }
 
 @media screen and (max-width: 390px) {
     .events .events-container .events-header span{
-        font-size: 36px;
+        font-size: 28px;
     }
 }
 
@@ -253,6 +255,7 @@ html{
 
 .events .events-container .events-grid .atropos{
     clip-path: none;
+    width: 80%;
 }
 
 .events .events-container .events-grid .atropos .atropos-scale .atropos-rotate .atropos-inner{
@@ -265,7 +268,7 @@ html{
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 450px;
+    height: 350px;
     width: 90%;
     transition: all 0.2s ease;
 }
@@ -329,22 +332,24 @@ html{
 
 .events .events-container .events-grid .event-item span.hover-text{
     position: absolute;
-    top: -8%;
+    top: -6%;
     left: -10%;
     color: white;
-    font-size: 46px;
+    font-size: 28px;
     z-index: 105;
     transition: all 0.2s ease;
+    text-transform: uppercase;
 }
 
 .events .events-container .events-grid .event-item span.hover-text2{
     position: absolute;
-    top: -8%;
+    top: -6%;
     left: -10%;
     color: #974de0;
-    font-size: 46px;
+    font-size: 28px;
     z-index: 104;
     transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
 }
 
 .events .events-container .events-grid .event-item:hover span.hover-text{
@@ -367,9 +372,13 @@ html{
 }
 
 .events .events-container .events-grid .event-item .event-top span{
-    font-size: 24px;
+    font-size: 20px;
     color: white;
-    padding: 16px;
+    text-align: center;
+}
+
+.events .events-container .events-grid .event-item .event-top span.event-name{
+    color: #974de0;
 }
 
 .events .events-container .events-grid .event-item .event-bottom{
@@ -389,7 +398,7 @@ html{
     height: 65%;
     background-color: #000;
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     z-index: 105;
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
@@ -434,7 +443,7 @@ html{
     }
 
     .events .events-container .events-grid .event-item{
-        width: 60%;
+        width: 80%;
     }
 }
 
@@ -452,13 +461,13 @@ html{
 
 @media screen and (max-width: 600px) {
     .events .events-container{
-        padding: 48px 32px;
+        padding: 150px 32px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .events .events-container{
-        padding: 48px 16px;
+        padding: 150px 16px;
     }
 
     .events .events-container .events-grid .event-item{
@@ -478,22 +487,26 @@ html{
 }
 
 @media screen and (max-width: 420px) {
+    .events .events-container .events-grid .atropos{
+        width: 100%;
+    }
+
     .events .events-container .events-grid{
         padding: 32px 16px;
     }
 
     .events .events-container .events-grid .event-item span.hover-text{
-        font-size: 32px;
+        font-size: 24px;
         top: -6%;
         left: -6%;
     }
     .events .events-container .events-grid .event-item span.hover-text2{
-        font-size: 32px;
+        font-size: 24px;
         top: -6%;
         left: -6%;
     }
     .events .events-container .events-grid .event-item .event-top span{
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -504,7 +517,8 @@ html{
 .sponsors{
     position: relative;
     min-height: 100vh;
-    background-color: #1d0728;
+    /*background-color: #1d0728;*/
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     /*background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://w.wallhaven.cc/full/lm/wallhaven-lm35vp.jpg");*/
 }
 
@@ -516,7 +530,7 @@ html{
     display: flex;
     flex-direction: column;
     padding-top: 32px;
-    font-size: 106px;
+    font-size: 76px;
     color: white;
     text-transform: uppercase;
     letter-spacing: 15px;
@@ -525,29 +539,18 @@ html{
 @media screen and (max-width: 991px) {
     .sponsors .sponsors-container .sponsor-header{
         text-align: center;
-        font-size: 76px;
+        align-items: center;
+        font-size: 56px;
     }
 }
 
 @media screen and (max-width: 769px) {
     .sponsors .sponsors-container .sponsor-header{
-        font-size: 56px;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .sponsors .sponsors-container .sponsor-header{
-        font-size: 56px;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .sponsors .sponsors-container .sponsor-header{
         font-size: 36px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 660px) {
     .sponsors .sponsors-container .sponsor-header{
         font-size: 28px;
     }
@@ -656,7 +659,8 @@ html{
 .guests{
     position: relative;
     min-height: 100vh;
-    background-color: #1d0728;
+    /*background-color: #1d0728;*/
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     /*background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://w.wallhaven.cc/full/p8/wallhaven-p8lwvp.jpg"), center, no-repeat;*/
     background-size: cover;
 
@@ -666,8 +670,14 @@ html{
     padding: 48px 72px;
 }
 
+@media screen and (max-width: 500px) {
+    .guests .guests-container{
+        padding: 48px 32px;
+    }
+}
+
 .guests .guests-container .guests-header{
-    font-size: 106px;
+    font-size: 76px;
     display: flex;
     flex-direction: column;
     color: white;
@@ -684,19 +694,19 @@ html{
 
 @media screen and (max-width: 769px) {
     .guests .guests-container .guests-header{
-        font-size: 76px;
+        font-size: 56px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .guests .guests-container .guests-header{
-        font-size: 56px;
+        font-size: 36px;
     }
 }
 
 @media screen and (max-width: 390px) {
     .guests .guests-container .guests-header{
-        font-size: 36px;
+        font-size: 28px;
     }
 }
 
