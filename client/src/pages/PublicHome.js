@@ -108,6 +108,31 @@ export const PublicHome = () => {
 
     }, [])
 
+    //Hero Countdown Timer
+    useEffect(() => {
+        let eventDate = new Date("Dec 7, 2023 00:00:00").getTime();
+
+        const countDown = setInterval(() => {
+            let now = new Date().getTime();
+            let timeLeft = eventDate - now;
+
+            let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString();
+            document.getElementById("hours").innerText = hours.toString();
+            document.getElementById("minutes").innerText = minutes.toString();
+            document.getElementById("seconds").innerText = seconds.toString();
+        }, 1000);
+
+
+        return () => {
+            clearInterval(countDown);
+        }
+    }, [])
+
     //Event Section Animation
     useLayoutEffect(() => {
         const tl = gsap.timeline({
@@ -173,7 +198,7 @@ export const PublicHome = () => {
     }, [])
 
     //Guest Animation
-    useLayoutEffect(()=>{
+    useLayoutEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: guest.current
         });
@@ -189,7 +214,7 @@ export const PublicHome = () => {
                 duration: 0.4,
                 stagger: 0.4
             })
-    },[])
+    }, [])
 
     return (
         <>
@@ -210,6 +235,31 @@ export const PublicHome = () => {
                         <div className="hero-right" ref={heroImg}>
                             <img src="assets/gw_white_trans.png" alt="Gateways 2023"/>
                         </div>
+                    </div>
+                    <div className="t-minus">
+                        <img src="/assets/curly.png" className="curly" alt="T-minus"/>
+                        <div className="t-minus-content">
+                            <span className="header">T-Minus</span>
+                            <div className="countdown">
+                                <div className="time-unit">
+                                    <span className="value" id="days">00</span>
+                                    <span className="unit">Days</span>
+                                </div>
+                                <div className="time-unit">
+                                    <span className="value" id="hours">00</span>
+                                    <span className="unit">Hours</span>
+                                </div>
+                                <div className="time-unit">
+                                    <span className="value" id="minutes">00</span>
+                                    <span className="unit">Minutes</span>
+                                </div>
+                                <div className="time-unit">
+                                    <span className="value" id="seconds">00</span>
+                                    <span className="unit">Seconds</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/assets/curly.png" className="curly" alt="T-minus"/>
                     </div>
                 </section>
                 {/*  Hero End  */}

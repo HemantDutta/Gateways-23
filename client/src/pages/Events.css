@@ -276,6 +276,10 @@
         padding: 150px 16px;
     }
 
+    .events-page .events-container .events-grid .atropos{
+        width: 100%;
+    }
+
     .events-page .events-container .events-grid .event-item{
         width: 100%;
     }
@@ -293,9 +297,6 @@
 }
 
 @media screen and (max-width: 420px) {
-    .events-page .events-container .events-grid .atropos{
-        width: 100%;
-    }
 
     .events-page .events-container .events-grid{
         padding: 32px 16px;

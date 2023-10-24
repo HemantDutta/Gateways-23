@@ -40,6 +40,51 @@ html{
     }
 }
 
+.public-home .hero .t-minus{
+    position: absolute;
+    left: 0;
+    bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.public-home .hero .t-minus img.curly{
+    height: 150px;
+    filter: invert(1);
+}
+
+.public-home .hero .t-minus img.curly:nth-child(3){
+    rotate: 180deg;
+}
+
+.public-home .hero .t-minus .t-minus-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.public-home .hero .t-minus .t-minus-content .header{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.public-home .hero .t-minus .t-minus-content .countdown{
+    display: flex;
+    gap: 16px;
+}
+
+.public-home .hero .t-minus .t-minus-content .countdown .value{
+    font-size: 24px;
+}
+
+.public-home .hero .t-minus .t-minus-content .countdown .time-unit{
+    display: flex;
+    flex-direction: column;
+}
+
 .public-home .hero .hero-container .hero-left{
     display: flex;
     flex-direction: column;
@@ -468,6 +513,10 @@ html{
 @media screen and (max-width: 500px) {
     .events .events-container{
         padding: 150px 16px;
+    }
+
+    .events .events-container .events-grid .atropos{
+        width: 100%;
     }
 
     .events .events-container .events-grid .event-item{
