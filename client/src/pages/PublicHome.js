@@ -296,10 +296,10 @@ export const PublicHome = () => {
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
                                     <img src="assets/eventImgs/hack.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                    <span className="hover-text" data-atropos-offset="5">Hackathon</span>
-                                    <span className="hover-text2" data-atropos-offset="5">Hackathon</span>
+                                    <span className="hover-text" data-atropos-offset="5">Beyond Earth</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Beyond Earth</span>
                                     <div className="event-top" data-atropos-offset="-5">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
+                                        <span>6 Hour Exciting <span className="event-name">Hackathon</span></span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
                                         <button className="event-cta">Register</button>
@@ -313,11 +313,11 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-even">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                    <span className="hover-text" data-atropos-offset="5">Treasure Hunt</span>
-                                    <span className="hover-text2" data-atropos-offset="5">Treasure Hunt</span>
+                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Coding & Debugging"/>
+                                    <span className="hover-text" data-atropos-offset="5">Stellar Perplexity</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Stellar Perplexity</span>
                                     <div className="event-top" data-atropos-offset="-5">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
+                                        <span>Crack the cosmic code in our <span className="event-name">Coding & Debugging</span> event</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
                                         <button className="event-cta">Register</button>
@@ -331,11 +331,11 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
-                                    <span className="hover-text" data-atropos-offset="5">Surprise Event</span>
-                                    <span className="hover-text2" data-atropos-offset="5">Surprise Event</span>
+                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Treasure Hunt"/>
+                                    <span className="hover-text" data-atropos-offset="5">Cosmic Quest</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Cosmic Quest</span>
                                     <div className="event-top" data-atropos-offset="-5">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, fugiat!</span>
+                                        <span>Ready to embark on a <span className="event-name">Treasure Hunt</span> that spans the cosmos?</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
                                         <button className="event-cta">Register</button>

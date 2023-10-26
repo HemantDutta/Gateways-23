@@ -109,6 +109,24 @@ export const PublicAbout = () => {
             <PublicNavbar active="about"/>
             {/*Header End*/}
             <div className="about-page">
+                <div className="blob">
+                    <img src="/assets/blob2.svg" alt="Blob"/>
+                </div>
+                <div className="blob glow">
+                    <img src="/assets/blob2.svg" alt="Blob"/>
+                </div>
+                <div className="blob">
+                    <img src="/assets/blob3.svg" alt="Blob"/>
+                </div>
+                <div className="blob glow">
+                    <img src="/assets/blob3.svg" alt="Blob"/>
+                </div>
+                <div className="blob">
+                    <img src="/assets/blob.svg" alt="Blob"/>
+                </div>
+                <div className="blob glow">
+                    <img src="/assets/blob.svg" alt="Blob"/>
+                </div>
                 <div className="about-container">
                     <div className="about-gw">
                         <div className="about-header about-gw-head">

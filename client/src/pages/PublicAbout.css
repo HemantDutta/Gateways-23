@@ -3,9 +3,35 @@
 .about-page {
     position: relative;
     min-height: 100vh;
-    background-color: #1d0728;
     z-index: 110;
     background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") fixed;
+}
+
+.about-page .blob {
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+    filter: blur(5px);
+}
+
+.about-page .blob.glow {
+    filter: blur(50px);
+}
+
+.about-page .blob:nth-child(1), .about-page .blob.glow:nth-child(2) {
+    right: -10%;
+    bottom: 25%;
+}
+
+.about-page .blob:nth-child(3), .about-page .blob.glow:nth-child(4) {
+    left: -10%;
+    top: 0;
+}
+
+.about-page .blob:nth-child(5), .about-page .blob.glow:nth-child(6) {
+    left: -10%;
+    bottom: -10%;
 }
 
 .about-page > * {
@@ -13,6 +39,8 @@
 }
 
 .about-page .about-container{
+    position: relative;
+    z-index: 115;
     padding: 180px 48px 48px;
     display: flex;
     flex-direction: column;

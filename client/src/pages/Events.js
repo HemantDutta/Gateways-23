@@ -17,6 +17,24 @@ export const Events = () => {
             <PublicNavbar active="events"/>
             {/*  Header End  */}
             <div className="events-page">
+                <div className="blob">
+                    <img src="/assets/blob.svg" alt="Blob"/>
+                </div>
+                <div className="blob glow">
+                    <img src="/assets/blob.svg" alt="Blob"/>
+                </div>
+                <div className="blob">
+                    <img src="/assets/blob2.svg" alt="Blob"/>
+                </div>
+                <div className="blob glow">
+                    <img src="/assets/blob2.svg" alt="Blob"/>
+                </div>
+                <div className="blob">
+                    <img src="/assets/blob3.svg" alt="Blob"/>
+                </div>
+                <div className="blob glow">
+                    <img src="/assets/blob3.svg" alt="Blob"/>
+                </div>
                 <div className="events-container">
                     <div className="events-header">
                         <span>Our</span>
