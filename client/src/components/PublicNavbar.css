@@ -23,8 +23,6 @@ nav .navbar-container .navbar-underlay{
     z-index: 100;
     border-radius: 20px;
     background: linear-gradient(45deg, #fe7c62, #f33456, #f33456, #974de0);
-    /*background-size: 200% 200%;*/
-    /*animation: navbarUnderlay linear infinite 8s;*/
 }
 
 @keyframes navbarUnderlay {

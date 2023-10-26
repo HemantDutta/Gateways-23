@@ -8,7 +8,7 @@ export const Footer = ({active}) => {
                 <div className="footer-container">
                     <div className="footer-left">
                         <div className="logo-item">
-                            <img src="assets/gw_logo_color.png" alt="Code Cosmos"/>
+                            <img src="assets/gw_white_trans.png" alt="Code Cosmos"/>
                             <span>CODE COSMOS</span>
                         </div>
                         <div className="logo-item">

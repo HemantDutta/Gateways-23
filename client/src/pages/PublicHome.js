@@ -96,7 +96,8 @@ export const PublicHome = () => {
     //Hero to Events Animation
     useLayoutEffect(() => {
         gsap.to(heroRef.current, {
-            y: "50%",
+            y: "20%",
+            autoAlpha: 0,
             filter: "blur(5px)",
             scrollTrigger: {
                 trigger: heroContent.current,
@@ -200,7 +201,9 @@ export const PublicHome = () => {
     //Guest Animation
     useLayoutEffect(() => {
         const tl = gsap.timeline({
-            scrollTrigger: guest.current
+            scrollTrigger: {
+                trigger: guest.current,
+            },
         });
 
         tl.from(".guests-header", {
@@ -209,7 +212,8 @@ export const PublicHome = () => {
             duration: 0.6
         })
             .from(".guest-item", {
-                clipPath: "inset(80%)",
+                autoAlpha: 0,
+                y: 20,
                 filter: "blur(5px)",
                 duration: 0.4,
                 stagger: 0.4
@@ -239,7 +243,7 @@ export const PublicHome = () => {
                     <div className="t-minus">
                         <img src="/assets/curly.png" className="curly" alt="T-minus"/>
                         <div className="t-minus-content">
-                            <span className="header">T-Minus</span>
+                            <span className="header">T-Minus | Dec 7th, 2023</span>
                             <div className="countdown">
                                 <div className="time-unit">
                                     <span className="value" id="days">00</span>
@@ -260,11 +264,24 @@ export const PublicHome = () => {
                             </div>
                         </div>
                         <img src="/assets/curly.png" className="curly" alt="T-minus"/>
+                        <img src="/assets/rocket.gif" alt="Rocket" className="rocket"/>
                     </div>
                 </section>
                 {/*  Hero End  */}
                 {/*  Events  */}
                 <section className="events" id="events" ref={eventTrigger}>
+                    <div className="blob">
+                        <img src="/assets/blob.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob glow">
+                        <img src="/assets/blob.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob">
+                        <img src="/assets/blob2.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob glow">
+                        <img src="/assets/blob2.svg" alt="Blob"/>
+                    </div>
                     {/*<div className="hero-blur"/>*/}
                     <div className="events-container">
                         <div className="events-header">
@@ -337,6 +354,12 @@ export const PublicHome = () => {
                 {/*  Events End  */}
                 {/*  Sponsors  */}
                 <section className="sponsors" id="sponsors" ref={sponsorTrigger}>
+                    <div className="blob">
+                        <img src="/assets/blob3.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob glow">
+                        <img src="/assets/blob3.svg" alt="Blob"/>
+                    </div>
                     <div className="sponsors-container">
                         <div className="sponsor-header">
                             <span>Our</span>
@@ -364,6 +387,12 @@ export const PublicHome = () => {
                 {/*  Sponsors End  */}
                 {/*  Guests  */}
                 <section className="guests" id="guests" ref={guest}>
+                    <div className="blob">
+                        <img src="/assets/blob2.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob glow">
+                        <img src="/assets/blob2.svg" alt="Blob"/>
+                    </div>
                     <div className="guests-container">
                         <div className="guests-header">
                             <span>Meet</span>
@@ -375,10 +404,10 @@ export const PublicHome = () => {
                                 <div className="guest-item-framing-right"/>
                                 <div className="guest-content">
                                     <div className="guest-img">
-                                        <img src="assets/guest-temp.jpg" className="guest-img-bg" alt="Guest name"/>
+                                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="guest-img-bg" alt="Guest name"/>
                                     </div>
                                     <div className="guest-text">
-                                        <img src="assets/guest-temp.jpg" className="guest-img-fg" alt="Guest name"/>
+                                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="guest-img-fg" alt="Guest name"/>
                                         <span className="guestName">Guest Name</span>
                                         <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque earum esse eum inventore natus officiis perferendis repudiandae vitae. Iure!</span>
                                     </div>
@@ -387,7 +416,7 @@ export const PublicHome = () => {
                             <div className="guest-item guest-chief-mb">
                                 <div className="guest-item-framing-left"/>
                                 <div className="guest-item-framing-right"/>
-                                <img src="assets/guest-temp.jpg" alt="Guest name"/>
+                                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>
                                 <div className="guest-content">
                                     <span className="guestName">Guest Name</span>
                                     <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
@@ -396,7 +425,7 @@ export const PublicHome = () => {
                             <div className="guest-item">
                                 <div className="guest-item-framing-left"/>
                                 <div className="guest-item-framing-right"/>
-                                <img src="assets/guest-temp.jpg" alt="Guest name"/>
+                                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>
                                 <div className="guest-content">
                                     <span className="guestName">Guest Name</span>
                                     <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
@@ -405,7 +434,7 @@ export const PublicHome = () => {
                             <div className="guest-item">
                                 <div className="guest-item-framing-left"/>
                                 <div className="guest-item-framing-right"/>
-                                <img src="assets/guest-temp.jpg" alt="Guest name"/>
+                                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>
                                 <div className="guest-content">
                                     <span className="guestName">Guest Name</span>
                                     <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
