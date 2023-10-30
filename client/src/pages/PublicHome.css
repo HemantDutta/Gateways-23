@@ -25,6 +25,10 @@ html {
     filter: blur(50px);
 }
 
+.public-home .hero .hero-container .hero-left span, .about .about-container .about-header, .events .events-container .events-header, .sponsors .sponsors-container .sponsor-header, .guests .guests-container .guests-header, .events .events-container .events-grid .event-item span.hover-text, .events .events-container .events-grid .event-item span.hover-text2 {
+    font-family: 'Audiowide', cursive;
+}
+
 /*==========Hero Section==========*/
 .public-home .hero {
     position: relative;
@@ -211,6 +215,133 @@ html {
 
 /*==========Hero Section End==========*/
 
+/*==========About Section==========*/
+
+.about {
+    position: relative;
+    z-index: 110;
+    margin-bottom: 100px;
+    padding-top: 100px;
+}
+
+.about .about-container {
+    padding: 48px 72px;
+    position: relative;
+    z-index: 115;
+}
+
+.about .about-container .about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: hidden;
+}
+
+.about .about-container .about-header span {
+    color: white;
+    font-size: 56px;
+    letter-spacing: 15px;
+    background: linear-gradient(90deg, #fe7c62, #f33456, #974de0);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: navbarUnderlay 5s ease infinite;
+    display: inline-block;
+    overflow-y: hidden;
+}
+
+@keyframes navbarUnderlay {
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about .about-container .about-header {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .about .about-container .about-header span {
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about .about-container .about-header span {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .about .about-container .about-header span {
+        font-size: 28px;
+    }
+}
+
+.about .about-container .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-container .about-content .about-text {
+    color: white;
+    font-size: 24px;
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about .about-container .about-content .about-text a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    width: max-content;
+}
+
+.about .about-container .about-content .about-text a:after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(90deg, #fe7c62, #f33456, #974de0);
+    left: 0;
+    bottom: -20%;
+    border-radius: 20px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.about .about-container .about-content .about-text a:hover:after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.about .about-container .about-content .about-media {
+    display: grid;
+    place-items: center;
+    flex-basis: 40%;
+}
+
+.about .about-container .about-content .about-media img {
+    filter: blur(0);
+}
+
+/*==========About Section End==========*/
+
 /*==========Events Section==========*/
 
 .events {
@@ -222,13 +353,17 @@ html {
 
 .events .blob:nth-child(1), .events .blob.glow:nth-child(2) {
     right: -10%;
-    bottom: -50%;
+    bottom: 25%;
 }
 
 .events .blob:nth-child(3), .events .blob.glow:nth-child(4) {
     left: -10%;
-    top: -30%;
-    scale: 0.7;
+    top: -10%;
+}
+
+.events .blob:nth-child(5), .events .blob.glow:nth-child(6) {
+    left: -10%;
+    bottom: -10%;
 }
 
 .events .hero-blur {
@@ -255,7 +390,6 @@ html {
 
 .events .events-container {
     padding: 48px 72px;
-    margin-top: 100px;
     position: relative;
     z-index: 115;
 }

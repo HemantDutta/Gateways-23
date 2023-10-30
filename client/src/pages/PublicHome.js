@@ -25,6 +25,7 @@ export const PublicHome = () => {
     const heroHeader = useRef(null);
     const heroImg = useRef(null);
     const guest = useRef(null);
+    const about = useRef(null);
 
     //BG Effect Loader
     useEffect(() => {
@@ -132,6 +133,31 @@ export const PublicHome = () => {
         return () => {
             clearInterval(countDown);
         }
+    }, []);
+
+    //About Section Animation
+    useLayoutEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: about.current,
+                start: "top center",
+            }
+        })
+
+        tl.from(".about-header span", {
+            yPercent: 100,
+            stagger: 0.2,
+            opacity: 0
+        })
+        tl.from(".about-content .about-text", {
+            yPercent: 20,
+            opacity: 0,
+            delay: 0.2
+        }, 0)
+        tl.from(".about-content .about-media img", {
+            filter: "blur(20px)",
+            delay: 0.3
+        }, 0)
     }, [])
 
     //Event Section Animation
@@ -268,6 +294,23 @@ export const PublicHome = () => {
                     </div>
                 </section>
                 {/*  Hero End  */}
+                {/*About*/}
+                <section className="about" id="about" ref={about}>
+                    <div className="about-container">
+                        <div className="about-header">
+                            <span>About</span>
+                            <span>Gateways</span>
+                        </div>
+                        <div className="about-content">
+                            <div className="about-text">
+                                <span>Gateways 2023, the national level intercollegiate IT fest, is being organized by the Department of Computer Science, CHRIST (Deemed to be University) on the 7th and 8th of December 2023. The two-day extravaganza provides a platform for postgraduate students to showcase their talents in various fields. The theme for this year's Gateways 2023 is "Code Cosmos" consisting of numerous technical and non-technical events along with a surprise event. The department will also be publishing the 2023 edition of INFOBAHN, a bi-annual magazine, during the fest.</span>
+                                <Link to={"/about"}>Learn More</Link>
+                            </div>
+                            <div className="about-media"><img src="/assets/gw_big.png" alt="Gateways 2023"/></div>
+                        </div>
+                    </div>
+                </section>
+                {/*About End*/}
                 {/*  Events  */}
                 <section className="events" id="events" ref={eventTrigger}>
                     <div className="blob">
@@ -281,6 +324,12 @@ export const PublicHome = () => {
                     </div>
                     <div className="blob glow">
                         <img src="/assets/blob2.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob">
+                        <img src="/assets/blob3.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob glow">
+                        <img src="/assets/blob3.svg" alt="Blob"/>
                     </div>
                     {/*<div className="hero-blur"/>*/}
                     <div className="events-container">
@@ -313,11 +362,65 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-even">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Coding & Debugging"/>
+                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="IT Quiz"/>
+                                    <span className="hover-text" data-atropos-offset="5">AstroBytes</span>
+                                    <span className="hover-text2" data-atropos-offset="5">AstroBytes</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>Challenge your IT Knowledge in our <span className="event-name">IT Quiz</span></span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta">Register</button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-odd">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="UI/UX"/>
+                                    <span className="hover-text" data-atropos-offset="5">ASTRAL AESTHETICS</span>
+                                    <span className="hover-text2" data-atropos-offset="5">ASTRAL AESTHETICS</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>Unlock your imagination in our <span className="event-name">UI/UX</span> event</span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta">Register</button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-odd">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/hack.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
                                     <span className="hover-text" data-atropos-offset="5">Stellar Perplexity</span>
                                     <span className="hover-text2" data-atropos-offset="5">Stellar Perplexity</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Crack the cosmic code in our <span className="event-name">Coding & Debugging</span> event</span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta">Register</button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-even">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Photography"/>
+                                    <span className="hover-text" data-atropos-offset="5">Cosmic Capture</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Cosmic Capture</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>Capture the cosmos in our <span className="event-name">photography</span> event</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
                                         <button className="event-cta">Register</button>
@@ -343,12 +446,84 @@ export const PublicHome = () => {
                                     </div>
                                 </div>
                             </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-odd">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="IT Manager"/>
+                                    <span className="hover-text" data-atropos-offset="5">Space Xperience</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Space Xperience</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>The Ultimate <span className="event-name">IT Manager</span> Challenge</span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta">Register</button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-odd">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Gaming"/>
+                                    <span className="hover-text" data-atropos-offset="5">Quasar Odyssey</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Quasar Odyssey</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>Are you the Cosmic Champion of the <span className="event-name">Gaming</span> universe?</span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta">Register</button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-odd">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Capture The Flag"/>
+                                    <span className="hover-text" data-atropos-offset="5">Starlight Flag pursuit</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Starlight Flag pursuit</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>Decode Celestial Mysteries in our <span className="event-name">Capture The Flag</span> event</span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta">Register</button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-odd">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Prompt Engineering"/>
+                                    <span className="hover-text" data-atropos-offset="5">Celestial Conversations</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Celestial Conversations</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>Chat With The Stars in our <span className="event-name">Prompt Engineering</span> event</span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta">Register</button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
                         </div>
-                        <div className="event-show-all">
-                            <Link to={"/events"}>
-                                <button className="show-all-btn">Show more&nbsp;<i className="fa-solid fa-chevron-down"/></button>
-                            </Link>
-                        </div>
+                        {/*<div className="event-show-all">*/}
+                        {/*    <Link to={"/events"}>*/}
+                        {/*        <button className="show-all-btn">Show more&nbsp;<i className="fa-solid fa-chevron-down"/></button>*/}
+                        {/*    </Link>*/}
+                        {/*</div>*/}
                     </div>
                 </section>
                 {/*  Events End  */}
