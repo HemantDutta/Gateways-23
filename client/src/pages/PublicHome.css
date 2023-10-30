@@ -219,7 +219,7 @@ html {
 
 .about {
     position: relative;
-    z-index: 110;
+    z-index: 115;
     margin-bottom: 100px;
     padding-top: 100px;
 }
@@ -228,6 +228,18 @@ html {
     padding: 48px 72px;
     position: relative;
     z-index: 115;
+}
+
+@media screen and (max-width: 600px) {
+    .about .about-container{
+        padding: 48px 32px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about .about-container{
+        padding: 48px 16px;
+    }
 }
 
 .about .about-container .about-header {
@@ -292,6 +304,14 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 115;
+}
+
+@media screen and (max-width: 991px) {
+    .about .about-container .about-content{
+        flex-direction: column-reverse;
+    }
 }
 
 .about .about-container .about-content .about-text {
@@ -301,6 +321,15 @@ html {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+    z-index: 115;
+    text-align: justify;
+}
+
+@media screen and (max-width: 676px) {
+    .about .about-container .about-content .about-text{
+        font-size: 18px;
+    }
 }
 
 .about .about-container .about-content .about-text a {
@@ -338,6 +367,12 @@ html {
 
 .about .about-container .about-content .about-media img {
     filter: blur(0);
+}
+
+@media screen and (max-width: 400px) {
+    .about .about-container .about-content .about-media img{
+        scale: 0.8;
+    }
 }
 
 /*==========About Section End==========*/
