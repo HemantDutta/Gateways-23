@@ -135,7 +135,7 @@ export const PublicNavbar = ({active}) => {
                             }
                             {
                                 active !== "home" &&
-                                <li onClick={toggleSidebar}><Link to={"/events"} className="sideAnim">Events</Link></li>
+                                <li onClick={toggleSidebar}><Link to={"/#events"} className="sideAnim">Events</Link></li>
                             }
                             <li onClick={toggleSidebar}><Link to={"/about"} className="sideAnim">About</Link></li>
                         </ul>

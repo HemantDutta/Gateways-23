@@ -651,7 +651,7 @@ html {
 }
 
 .events .events-container .events-grid .event-item .event-top span.event-name {
-    color: #974de0;
+    color: #fe7c62;
 }
 
 .events .events-container .events-grid .event-item .event-bottom {
@@ -681,6 +681,11 @@ html {
     position: relative;
     transition: transform 0.4s ease;
     clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
+}
+
+.events .events-container .events-grid .event-item .event-bottom .event-cta a{
+    color: white;
+    text-decoration: none;
 }
 
 .events .events-container .events-grid .event-item .event-bottom .event-cta-bg {

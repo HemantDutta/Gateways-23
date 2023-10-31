@@ -344,14 +344,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/hack.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
+                                    <img src="assets/eventImgs/be.webp" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
                                     <span className="hover-text" data-atropos-offset="5">Beyond Earth</span>
                                     <span className="hover-text2" data-atropos-offset="5">Beyond Earth</span>
                                     <div className="event-top" data-atropos-offset="-5">
-                                        <span>6 Hour Exciting <span className="event-name">Hackathon</span></span>
+                                        <span>12 Hour Exciting <span className="event-name">Hackathon</span></span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"be"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -362,14 +362,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-even">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="IT Quiz"/>
+                                    <img src="assets/eventImgs/itq.png" className="event-bg-img" data-atropos-offset="-5" alt="IT Quiz"/>
                                     <span className="hover-text" data-atropos-offset="5">AstroBytes</span>
                                     <span className="hover-text2" data-atropos-offset="5">AstroBytes</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Challenge your IT Knowledge in our <span className="event-name">IT Quiz</span></span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"itq"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -380,14 +380,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="UI/UX"/>
+                                    <img src="assets/eventImgs/ui_ux.jpg" className="event-bg-img" data-atropos-offset="-5" alt="UI/UX"/>
                                     <span className="hover-text" data-atropos-offset="5">ASTRAL AESTHETICS</span>
                                     <span className="hover-text2" data-atropos-offset="5">ASTRAL AESTHETICS</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Unlock your imagination in our <span className="event-name">UI/UX</span> event</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"ui_ux"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -398,14 +398,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/hack.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
+                                    <img src="assets/eventImgs/cdd.png" className="event-bg-img" data-atropos-offset="-5" alt="Hackathon"/>
                                     <span className="hover-text" data-atropos-offset="5">Stellar Perplexity</span>
                                     <span className="hover-text2" data-atropos-offset="5">Stellar Perplexity</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Crack the cosmic code in our <span className="event-name">Coding & Debugging</span> event</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"cdd"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -416,14 +416,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-even">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/th.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Photography"/>
+                                    <img src="assets/eventImgs/photo.png" className="event-bg-img" data-atropos-offset="-5" alt="Photography"/>
                                     <span className="hover-text" data-atropos-offset="5">Cosmic Capture</span>
                                     <span className="hover-text2" data-atropos-offset="5">Cosmic Capture</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Capture the cosmos in our <span className="event-name">photography</span> event</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"photo"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -434,14 +434,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Treasure Hunt"/>
+                                    <img src="assets/eventImgs/th.png" className="event-bg-img" data-atropos-offset="-5" alt="Treasure Hunt"/>
                                     <span className="hover-text" data-atropos-offset="5">Cosmic Quest</span>
                                     <span className="hover-text2" data-atropos-offset="5">Cosmic Quest</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Ready to embark on a <span className="event-name">Treasure Hunt</span> that spans the cosmos?</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"th"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -452,14 +452,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="IT Manager"/>
+                                    <img src="assets/eventImgs/itm.jpg" className="event-bg-img" data-atropos-offset="-5" alt="IT Manager"/>
                                     <span className="hover-text" data-atropos-offset="5">Space Xperience</span>
                                     <span className="hover-text2" data-atropos-offset="5">Space Xperience</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>The Ultimate <span className="event-name">IT Manager</span> Challenge</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"itm"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -470,14 +470,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Gaming"/>
+                                    <img src="assets/eventImgs/game.png" className="event-bg-img" data-atropos-offset="-5" alt="Gaming"/>
                                     <span className="hover-text" data-atropos-offset="5">Quasar Odyssey</span>
                                     <span className="hover-text2" data-atropos-offset="5">Quasar Odyssey</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Are you the Cosmic Champion of the <span className="event-name">Gaming</span> universe?</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"game"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -488,14 +488,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Capture The Flag"/>
+                                    <img src="assets/eventImgs/ctf.png" className="event-bg-img" data-atropos-offset="-5" alt="Capture The Flag"/>
                                     <span className="hover-text" data-atropos-offset="5">Starlight Flag pursuit</span>
                                     <span className="hover-text2" data-atropos-offset="5">Starlight Flag pursuit</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Decode Celestial Mysteries in our <span className="event-name">Capture The Flag</span> event</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"ctf"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>
@@ -506,14 +506,14 @@ export const PublicHome = () => {
                             >
                                 <div className="event-item event-odd">
                                     <div className="event-bg" data-atropos-offset="5"/>
-                                    <img src="assets/eventImgs/se.jpg" className="event-bg-img" data-atropos-offset="-5" alt="Prompt Engineering"/>
+                                    <img src="assets/eventImgs/prompt.png" className="event-bg-img" data-atropos-offset="-5" alt="Prompt Engineering"/>
                                     <span className="hover-text" data-atropos-offset="5">Celestial Conversations</span>
                                     <span className="hover-text2" data-atropos-offset="5">Celestial Conversations</span>
                                     <div className="event-top" data-atropos-offset="-5">
                                         <span>Chat With The Stars in our <span className="event-name">Prompt Engineering</span> event</span>
                                     </div>
                                     <div className="event-bottom" data-atropos-offset="5">
-                                        <button className="event-cta">Register</button>
+                                        <button className="event-cta"><Link to={"/event"} state={"prompt"}>Register</Link></button>
                                         <div className="event-cta-bg"/>
                                     </div>
                                 </div>

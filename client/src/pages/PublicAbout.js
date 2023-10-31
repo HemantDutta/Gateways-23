@@ -18,6 +18,7 @@ export const PublicAbout = () => {
 
     //Animations
     useLayoutEffect(() => {
+        window.scrollTo(0,0);
         const tl = gsap.timeline({
             // scrollTrigger: {
             //     trigger: aboutGW.current,
