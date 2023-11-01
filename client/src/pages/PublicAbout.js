@@ -147,17 +147,17 @@ export const PublicAbout = () => {
                     </div>
                     <div className="about-cards" ref={aboutCards}>
                         <div className="card-item">
-                            <img src="assets/eventImgs/th.jpg" alt=""/>
+                            <img src="assets/eventImgs/th.png" alt=""/>
                             <span>2</span>
                             <span>Days</span>
                         </div>
                         <div className="card-item">
-                            <img src="assets/eventImgs/th.jpg" alt=""/>
+                            <img src="assets/eventImgs/be.webp" alt=""/>
                             <span>11</span>
                             <span>Events</span>
                         </div>
                         <div className="card-item">
-                            <img src="assets/eventImgs/th.jpg" alt=""/>
+                            <img src="assets/eventImgs/itq.png" alt=""/>
                             <span>8+</span>
                             <span>Colleges</span>
                         </div>

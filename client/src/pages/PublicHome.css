@@ -25,13 +25,20 @@ html {
     filter: blur(50px);
 }
 
-.public-home .hero .hero-container .hero-left span, .about .about-container .about-header, .events .events-container .events-header, .sponsors .sponsors-container .sponsor-header, .guests .guests-container .guests-header, .events .events-container .events-grid .event-item span.hover-text, .events .events-container .events-grid .event-item span.hover-text2 {
+@media screen and (max-width: 991px) {
+    .public-home .blob{
+        display: none;
+    }
+}
+
+.public-home .hero .hero-container .hero-left span, .about .about-container .about-header, .events .events-container .events-header, .sponsors .sponsors-container .sponsor-header, .guests .guests-container .guests-header, .events .events-container .events-grid .event-item span.hover-text, .events .events-container .events-grid .event-item span.hover-text2, .rules .rules-container .rules-header {
     font-family: 'Audiowide', cursive;
 }
 
 /*==========Hero Section==========*/
 .public-home .hero {
     position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .public-home .hero .hero-container {
@@ -181,6 +188,10 @@ html {
         height: 380px;
         margin-top: 150px;
     }
+
+    .public-home .hero .t-minus {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -231,13 +242,13 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-    .about .about-container{
+    .about .about-container {
         padding: 48px 32px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .about .about-container{
+    .about .about-container {
         padding: 48px 16px;
     }
 }
@@ -263,15 +274,15 @@ html {
 }
 
 @keyframes navbarUnderlay {
-    0%{
+    0% {
         background-position: 0 50%;
     }
 
-    50%{
+    50% {
         background-position: 100% 50%;
     }
 
-    100%{
+    100% {
         background-position: 0 50%;
     }
 }
@@ -309,7 +320,7 @@ html {
 }
 
 @media screen and (max-width: 991px) {
-    .about .about-container .about-content{
+    .about .about-container .about-content {
         flex-direction: column-reverse;
     }
 }
@@ -327,7 +338,7 @@ html {
 }
 
 @media screen and (max-width: 676px) {
-    .about .about-container .about-content .about-text{
+    .about .about-container .about-content .about-text {
         font-size: 18px;
     }
 }
@@ -340,7 +351,7 @@ html {
     width: max-content;
 }
 
-.about .about-container .about-content .about-text a:after{
+.about .about-container .about-content .about-text a:after {
     position: absolute;
     content: "";
     height: 4px;
@@ -354,7 +365,7 @@ html {
     transition: transform 0.4s ease;
 }
 
-.about .about-container .about-content .about-text a:hover:after{
+.about .about-container .about-content .about-text a:hover:after {
     transform: scale(1);
     transform-origin: left;
 }
@@ -370,12 +381,135 @@ html {
 }
 
 @media screen and (max-width: 400px) {
-    .about .about-container .about-content .about-media img{
+    .about .about-container .about-content .about-media img {
         scale: 0.8;
     }
 }
 
 /*==========About Section End==========*/
+
+/*==========Rules Section==========*/
+
+.rules {
+    position: relative;
+    min-height: 100vh;
+    z-index: 115;
+    background-size: cover;
+}
+
+.rules .rules-container {
+    padding: 48px 72px;
+    position: relative;
+    z-index: 115;
+}
+
+@media screen and (max-width: 600px) {
+    .rules .rules-container {
+        padding: 48px 32px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .rules .rules-container {
+        padding: 48px 16px;
+    }
+}
+
+.rules .rules-container .rules-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: hidden;
+}
+
+.rules .rules-container .rules-header span {
+    color: white;
+    font-size: 76px;
+    letter-spacing: 15px;
+}
+
+@media screen and (max-width: 991px) {
+    .rules .rules-container .rules-header {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .rules .rules-container .rules-header span {
+        font-size: 52px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rules .rules-container .rules-header span {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .rules .rules-container .rules-header span {
+        font-size: 24px;
+    }
+}
+
+.rules .rules-container .rules-content {
+    position: relative;
+    z-index: 115;
+    padding-top: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    font-size: 20px;
+}
+
+.rules .rules-container .rules-content .rule-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 115;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    scale: 0.9;
+    border-bottom: 4px solid #fe7c62;
+}
+
+@media screen and (max-width: 1280px) {
+    .rules .rules-container .rules-content .rule-item{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .rules .rules-container .rules-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .rules .rules-container .rules-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+.rules .rules-container .rules-content .rule-item span {
+    position: relative;
+    z-index: 115;
+}
+
+.rules .rules-container .rules-content .rule-item span.sno {
+    background: linear-gradient(90deg, #fe7c62, #f33456, #974de0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3em;
+}
+
+/*==========Rules Section End==========*/
 
 /*==========Events Section==========*/
 
@@ -683,7 +817,7 @@ html {
     clip-path: polygon(0 0.8em, 0.8em 0, 100% 0, 100% calc(100% - 0.8em), calc(100% - 0.8em) 100%, 0 100%);
 }
 
-.events .events-container .events-grid .event-item .event-bottom .event-cta a{
+.events .events-container .events-grid .event-item .event-bottom .event-cta a {
     color: white;
     text-decoration: none;
 }

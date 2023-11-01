@@ -16,6 +16,7 @@ export const PublicHome = () => {
 
     //states
     const [bgEffect, setBgEffect] = useState(null);
+    const [preLoad, setPreLoad] = useState(true);
 
     //Refs
     const heroRef = useRef(null);
@@ -26,6 +27,7 @@ export const PublicHome = () => {
     const heroImg = useRef(null);
     const guest = useRef(null);
     const about = useRef(null);
+    const rules = useRef(null);
 
     //BG Effect Loader
     useEffect(() => {
@@ -81,6 +83,11 @@ export const PublicHome = () => {
 
     //Preloader Handler
     function preLoader() {
+        let now = new Date();
+        let time = now.getTime();
+        time += 1800 * 1000;
+        now.setTime(time);
+        document.cookie = `preloader=true; expires= ${now.toUTCString()}; path=/`;
         const tl = gsap.timeline();
         tl.from(heroImg.current, {
             autoAlpha: 0,
@@ -94,11 +101,36 @@ export const PublicHome = () => {
             })
     }
 
+    //Cookie getter
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    //Check Preloader
+    useEffect(()=>{
+        let preCookie = getCookie("preloader");
+        if(preCookie) setPreLoad(false);
+        else setPreLoad(true);
+    },[])
+
     //Hero to Events Animation
     useLayoutEffect(() => {
         gsap.to(heroRef.current, {
             y: "20%",
             autoAlpha: 0,
+            clipPath: "polygon(0 0, 100% 0%, 100% 50%, 0 50%)",
             filter: "blur(5px)",
             scrollTrigger: {
                 trigger: heroContent.current,
@@ -160,6 +192,28 @@ export const PublicHome = () => {
         }, 0)
     }, [])
 
+    //Rules Animation
+    useLayoutEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: rules.current,
+            },
+        });
+
+        tl.from(".rules-header", {
+            yPercent: 100,
+            autoAlpha: 0,
+            duration: 0.6
+        })
+            .from(".rule-item", {
+                autoAlpha: 0,
+                y: 20,
+                filter: "blur(5px)",
+                duration: 0.4,
+                stagger: 0.1
+            })
+    }, [])
+
     //Event Section Animation
     useLayoutEffect(() => {
         const tl = gsap.timeline({
@@ -178,9 +232,9 @@ export const PublicHome = () => {
                 autoAlpha: 0,
                 y: 100,
                 filter: "blur(5px)",
-                stagger: 0.2,
+                stagger: 0.1,
                 duration: 0.6,
-            })
+            }, 0)
     }, [])
 
     //Sponsor Section Animation
@@ -249,7 +303,10 @@ export const PublicHome = () => {
     return (
         <>
             {/*Preloader*/}
-            {/*<PreLoader preHandler={preLoader}/>*/}
+            {
+                preLoad &&
+                <PreLoader preHandler={preLoader}/>
+            }
             {/*Preloader End*/}
             {/*  Header  */}
             <PublicNavbar active="home"/>
@@ -311,6 +368,66 @@ export const PublicHome = () => {
                     </div>
                 </section>
                 {/*About End*/}
+                {/*Rules*/}
+                <section className="rules" id="rules" ref={rules}>
+                    <div className="rules-container">
+                        <div className="rules-header">
+                            <span>Rules &</span>
+                            <span>Guidelines</span>
+                        </div>
+                        <div className="rules-content">
+                            <div className="rule-item">
+                                <span className="sno">1</span>
+                                <span className="rule">Any student pursuing postgraduate in computer science, data science, information technology or related fields can participate.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">2</span>
+                                <span className="rule">Gateways 2023 is a 2 days Technical Fest and participants are requested to plan adhering to the same.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">3</span>
+                                <span className="rule">Participants must bring a permission letter and ID card from their institution to participate.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">4</span>
+                                <span className="rule">Participants are requested to register through the website.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">5</span>
+                                <span className="rule">Students are required to follow the decorum of the event. Failing to adhere would lead to disqualification.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">6</span>
+                                <span className="rule">Participants are advised to clarify their doubts with the respective event coordinators before the event.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">7</span>
+                                <span className="rule">Participants are requested to be present in Formal Dress Code at the venue of their events 15 minutes before the event starts.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">8</span>
+                                <span className="rule">If eliminated, participants are welcome to participate in other events, keeping the time constraints in mind.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">9</span>
+                                <span className="rule">Participants can opt for multiple events keeping the time constraints in mind.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">10</span>
+                                <span className="rule">The decisions made by the judges will be final.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">11</span>
+                                <span className="rule">Participants will be held responsible for any damage caused by their actions during the fest to Christ University Property.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">12</span>
+                                <span className="rule">Details about Stellar Shift will be provided on-spot.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/*Rules End*/}
                 {/*  Events  */}
                 <section className="events" id="events" ref={eventTrigger}>
                     <div className="blob">
@@ -528,96 +645,96 @@ export const PublicHome = () => {
                 </section>
                 {/*  Events End  */}
                 {/*  Sponsors  */}
-                <section className="sponsors" id="sponsors" ref={sponsorTrigger}>
-                    <div className="blob">
-                        <img src="/assets/blob3.svg" alt="Blob"/>
-                    </div>
-                    <div className="blob glow">
-                        <img src="/assets/blob3.svg" alt="Blob"/>
-                    </div>
-                    <div className="sponsors-container">
-                        <div className="sponsor-header">
-                            <span>Our</span>
-                            <span>Sponsors</span>
-                        </div>
-                        <div className="sponsor-main-flex">
-                            <div className="sponsor-item-main">
-                                <div className="top-blur"/>
-                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
-                                <span className="sponsor-name">Name</span>
-                            </div>
-                            <div className="sponsor-item-main chief-sponsor">
-                                <div className="top-blur"/>
-                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
-                                <span className="sponsor-name">Name</span>
-                            </div>
-                            <div className="sponsor-item-main">
-                                <div className="top-blur"/>
-                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
-                                <span className="sponsor-name">Name</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/*<section className="sponsors" id="sponsors" ref={sponsorTrigger}>*/}
+                {/*    <div className="blob">*/}
+                {/*        <img src="/assets/blob3.svg" alt="Blob"/>*/}
+                {/*    </div>*/}
+                {/*    <div className="blob glow">*/}
+                {/*        <img src="/assets/blob3.svg" alt="Blob"/>*/}
+                {/*    </div>*/}
+                {/*    <div className="sponsors-container">*/}
+                {/*        <div className="sponsor-header">*/}
+                {/*            <span>Our</span>*/}
+                {/*            <span>Sponsors</span>*/}
+                {/*        </div>*/}
+                {/*        <div className="sponsor-main-flex">*/}
+                {/*            <div className="sponsor-item-main">*/}
+                {/*                <div className="top-blur"/>*/}
+                {/*                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>*/}
+                {/*                <span className="sponsor-name">Name</span>*/}
+                {/*            </div>*/}
+                {/*            <div className="sponsor-item-main chief-sponsor">*/}
+                {/*                <div className="top-blur"/>*/}
+                {/*                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>*/}
+                {/*                <span className="sponsor-name">Name</span>*/}
+                {/*            </div>*/}
+                {/*            <div className="sponsor-item-main">*/}
+                {/*                <div className="top-blur"/>*/}
+                {/*                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>*/}
+                {/*                <span className="sponsor-name">Name</span>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
                 {/*  Sponsors End  */}
                 {/*  Guests  */}
-                <section className="guests" id="guests" ref={guest}>
-                    <div className="blob">
-                        <img src="/assets/blob2.svg" alt="Blob"/>
-                    </div>
-                    <div className="blob glow">
-                        <img src="/assets/blob2.svg" alt="Blob"/>
-                    </div>
-                    <div className="guests-container">
-                        <div className="guests-header">
-                            <span>Meet</span>
-                            <span>our Guests</span>
-                        </div>
-                        <div className="guests-grid">
-                            <div className="guest-item guest-chief">
-                                <div className="guest-item-framing-left"/>
-                                <div className="guest-item-framing-right"/>
-                                <div className="guest-content">
-                                    <div className="guest-img">
-                                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="guest-img-bg" alt="Guest name"/>
-                                    </div>
-                                    <div className="guest-text">
-                                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="guest-img-fg" alt="Guest name"/>
-                                        <span className="guestName">Guest Name</span>
-                                        <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque earum esse eum inventore natus officiis perferendis repudiandae vitae. Iure!</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="guest-item guest-chief-mb">
-                                <div className="guest-item-framing-left"/>
-                                <div className="guest-item-framing-right"/>
-                                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>
-                                <div className="guest-content">
-                                    <span className="guestName">Guest Name</span>
-                                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
-                                </div>
-                            </div>
-                            <div className="guest-item">
-                                <div className="guest-item-framing-left"/>
-                                <div className="guest-item-framing-right"/>
-                                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>
-                                <div className="guest-content">
-                                    <span className="guestName">Guest Name</span>
-                                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
-                                </div>
-                            </div>
-                            <div className="guest-item">
-                                <div className="guest-item-framing-left"/>
-                                <div className="guest-item-framing-right"/>
-                                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>
-                                <div className="guest-content">
-                                    <span className="guestName">Guest Name</span>
-                                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/*<section className="guests" id="guests" ref={guest}>*/}
+                {/*    <div className="blob">*/}
+                {/*        <img src="/assets/blob2.svg" alt="Blob"/>*/}
+                {/*    </div>*/}
+                {/*    <div className="blob glow">*/}
+                {/*        <img src="/assets/blob2.svg" alt="Blob"/>*/}
+                {/*    </div>*/}
+                {/*    <div className="guests-container">*/}
+                {/*        <div className="guests-header">*/}
+                {/*            <span>Meet</span>*/}
+                {/*            <span>our Guests</span>*/}
+                {/*        </div>*/}
+                {/*        <div className="guests-grid">*/}
+                {/*            <div className="guest-item guest-chief">*/}
+                {/*                <div className="guest-item-framing-left"/>*/}
+                {/*                <div className="guest-item-framing-right"/>*/}
+                {/*                <div className="guest-content">*/}
+                {/*                    <div className="guest-img">*/}
+                {/*                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="guest-img-bg" alt="Guest name"/>*/}
+                {/*                    </div>*/}
+                {/*                    <div className="guest-text">*/}
+                {/*                        <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="guest-img-fg" alt="Guest name"/>*/}
+                {/*                        <span className="guestName">Guest Name</span>*/}
+                {/*                        <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cumque earum esse eum inventore natus officiis perferendis repudiandae vitae. Iure!</span>*/}
+                {/*                    </div>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*            <div className="guest-item guest-chief-mb">*/}
+                {/*                <div className="guest-item-framing-left"/>*/}
+                {/*                <div className="guest-item-framing-right"/>*/}
+                {/*                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>*/}
+                {/*                <div className="guest-content">*/}
+                {/*                    <span className="guestName">Guest Name</span>*/}
+                {/*                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*            <div className="guest-item">*/}
+                {/*                <div className="guest-item-framing-left"/>*/}
+                {/*                <div className="guest-item-framing-right"/>*/}
+                {/*                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>*/}
+                {/*                <div className="guest-content">*/}
+                {/*                    <span className="guestName">Guest Name</span>*/}
+                {/*                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*            <div className="guest-item">*/}
+                {/*                <div className="guest-item-framing-left"/>*/}
+                {/*                <div className="guest-item-framing-right"/>*/}
+                {/*                <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Guest name"/>*/}
+                {/*                <div className="guest-content">*/}
+                {/*                    <span className="guestName">Guest Name</span>*/}
+                {/*                    <span className="guestDes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</span>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
                 {/*  Guests End  */}
             </div>
             {/*  Footer  */}

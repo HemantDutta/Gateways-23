@@ -19,6 +19,12 @@
     filter: blur(50px);
 }
 
+@media screen and (max-width: 991px) {
+    .about-page .blob{
+        display: none;
+    }
+}
+
 .about-page .blob:nth-child(1), .about-page .blob.glow:nth-child(2) {
     right: -10%;
     bottom: 25%;
@@ -60,6 +66,7 @@
 
 .about-page .about-container .about-header .head-text{
     font-size: 56px;
+    font-family: 'Audiowide', cursive;
 }
 
 .about-page .about-container .about-header .head-tag{
@@ -95,6 +102,7 @@
     color: white;
     text-align: justify;
     flex-basis: 60%;
+    font-size: 18px;
 }
 
 @media screen and (max-width: 991px) {

@@ -79,7 +79,7 @@ nav .navbar-container .navbar-main .navbar-left .navbar-social-links{
     gap: 32px;
 }
 
-nav .navbar-container .navbar-main .navbar-left .navbar-social-links button{
+nav .navbar-container .navbar-main .navbar-left .navbar-social-links a{
     border-radius: 100%;
     aspect-ratio: 1/1;
     color: white;
@@ -91,22 +91,27 @@ nav .navbar-container .navbar-main .navbar-left .navbar-social-links button{
     transition: all 0.2s ease;
 }
 
-nav .navbar-container .navbar-main .navbar-left .navbar-social-links button:nth-child(1){
+nav .navbar-container .navbar-main .navbar-left .navbar-social-links a:nth-child(1){
     outline: 2px inset #fe7c62;
 }
 
-nav .navbar-container .navbar-main .navbar-left .navbar-social-links button:nth-child(2){
+nav .navbar-container .navbar-main .navbar-left .navbar-social-links a:nth-child(2){
     outline: 2px inset #f33456;
 }
 
-nav .navbar-container .navbar-main .navbar-left .navbar-social-links button:nth-child(3){
+nav .navbar-container .navbar-main .navbar-left .navbar-social-links a:nth-child(3){
     outline: 2px inset #974de0;
 }
 
-nav .navbar-container .navbar-main .navbar-left .navbar-social-links button:hover{
+nav .navbar-container .navbar-main .navbar-left .navbar-social-links a:hover{
     background-color: #fff;
     color: black;
     outline-offset: 5px;
+}
+
+nav .navbar-container .navbar-main .navbar-left .navbar-social-links a:focus-within{
+    background-color: #fff;
+    color: black;
 }
 
 nav .navbar-container .navbar-main .navbar-right{
@@ -331,7 +336,7 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     padding: 10px 0;
 }
 
-.sidebar .sidebar-container .sidebar-socials button{
+.sidebar .sidebar-container .sidebar-socials a{
     border-radius: 100%;
     aspect-ratio: 1/1;
     color: white;
@@ -343,15 +348,15 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     transition: all 0.2s ease;
 }
 
-.sidebar .sidebar-container .sidebar-socials button:nth-child(1){
+.sidebar .sidebar-container .sidebar-socials a:nth-child(1){
     outline: 2px inset #fe7c62;
 }
 
-.sidebar .sidebar-container .sidebar-socials button:nth-child(2){
+.sidebar .sidebar-container .sidebar-socials a:nth-child(2){
     outline: 2px inset #f33456;
 }
 
-.sidebar .sidebar-container .sidebar-socials button:hover{
+.sidebar .sidebar-container .sidebar-socials a:hover{
     background-color: #fff;
     color: black;
     outline-offset: 5px;

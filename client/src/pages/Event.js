@@ -23,12 +23,13 @@ export const Event = () => {
                 rounds: 3,
             },
             heads: ["Akash Goyal | 9602716766", "Prajwal BK | 9113272654", "Rajendran | 7348875942", "Shilpi | 9160113394"],
-            rules: ["No using of mobile phones – penalty of 20 points", "2 to 10 points for the correct answer (depending on the question and round)", "If there is a draw (two or three teams scored the same number of points), one more round of rapid-fire quiz can be conducted."]
+            rules: ["No using of mobile phones – penalty of 20 points", "2 to 10 points for the correct answer (depending on the question and round)", "If there is a draw (two or three teams scored the same number of points), one more round of rapid-fire quiz can be conducted."],
+            reg: "https://forms.gle/cBPSrYjGQKRhKzg88"
         },
         cdd: {
             imgSrc: "cdd.png",
             name: "Stellar Perplexity",
-            tag: "Space Tech (IT) Quiz",
+            tag: "Coding & Debugging Event",
             teamSize: "Upto 2 Members",
             prize: [5000, 1500, 750],
             about: "In this event there will be three rounds, and one tie breaker round if required. If there are less number of participants there will be no elimination. Minimum 5 teams are required in the final round. The description of each round is as follows:-Encryption Round -> Aptitude questions will be given whose answer will be numerical and will act as a key. They have to find the key and do a basic right Shift operation on the cider text to get the plain text. The plain text will be like a question the answer to which will be the password of the next Encryption question.Debugging round -> Time will be under consideration. Marks on basis of number of bugs have been removed. We can have a set of codes or programs which will have multiple bugs. They have to remove all to progress to the next debug question.Blind Coding -> Person who is closest to the output result will be the winner.Tie breaker -> Whichever team finishes first will win.",
@@ -38,7 +39,8 @@ export const Event = () => {
                 rounds: 4,
             },
             heads: ["Vasav Mittal | 9056100929", "Jagriti Rai | 9511195836", "Oishi Halder | 6290059940", "Himanshu | 876231515"],
-            rules: ["N/A"]
+            rules: ["N/A"],
+            reg: "https://forms.gle/nJYBxCnHwpydHG2j9"
         },
         ui_ux: {
             imgSrc: "ui_ux.jpg",
@@ -53,7 +55,8 @@ export const Event = () => {
                 rounds: 2,
             },
             heads: ["Alen Kottaram | 9847588000", "Raison Sabu | 9718146763"],
-            rules: ["N/A"]
+            rules: ["N/A"],
+            reg: "https://forms.gle/hb8xohpfwUVfhAtx6"
         },
         itm: {
             imgSrc: "itm.jpg",
@@ -79,7 +82,8 @@ export const Event = () => {
                 rounds: 4,
             },
             heads: ["Neil Manoj C | +91 81130 68373", "Shawn Thomas | +91 85908 51162", "Adarsh Dash | +91 70779 97204", "Elizabeth | +91 6282 518 911"],
-            rules: ["N/A"]
+            rules: ["N/A"],
+            reg: "https://forms.gle/oK8oKRwdpvsxaCgK6"
         },
         game: {
             imgSrc: "game.png",
@@ -97,7 +101,8 @@ export const Event = () => {
                 rounds: "Variable",
             },
             heads: ["Samson Andrew Fernandez | 9745521159", "Tirthajoti Sinha | 9482011600", "Alwin Thomas", "Ansh Bhandhari"],
-            rules: ["All the Gaming Gears should be carried by yourself, No gears will be provided by Us.", "Gamers should carry their College ID Card for verification.", "All Weapons / Agents / Abilities are allowed unless currently disabled in Ranked Play.", "Maps will be selected by map ban pick system.", "Matches will be Custom Unrated.", "Two Matches with one team, if tied Swiftplay as the Tie breaker.", "One team can have one Substitute.", "Atleast One agent must be selected from the given List* which is related to the Gateways theme.", "Teams which failed to include at-least one Agent from the list: Either the Match is replayed or the team will get disqualified.", "All the Games will be played in custom unrated and at the end of the match, Points will be assigned for MVP, Kills, Assist, Highest Combat Score", "Highest KD", "Lowest Deaths", "All participants are expected to maintain a high standard of respect, kindness, and sportsmanship throughout the tournament.", "Players who excessively Bad Manner or have poor sportsmanship as determined by Wellness staff will receive a warning.", "After the both Custom Unrated Match Team Captain should take Screenshot of the Post Match scoreboard to keep track of the player performances.", "Any instance of cheating will result in an immediate removal from the tournament.  Cheating includes but is not limited to: Hacking, Ghosting, Exploiting Bugs and Glitches, Use of a 3rd party program that gives one player an unfair advantage over another.", "List of Agents for Gateways: Astra (Controller), Deadlock (Sentinel), Fade (Initiator), Neon (Duelist), Yoru (Duelist)"]
+            rules: ["All the Gaming Gears should be carried by yourself, No gears will be provided by Us.", "Gamers should carry their College ID Card for verification.", "All Weapons / Agents / Abilities are allowed unless currently disabled in Ranked Play.", "Maps will be selected by map ban pick system.", "Matches will be Custom Unrated.", "Two Matches with one team, if tied Swiftplay as the Tie breaker.", "One team can have one Substitute.", "Atleast One agent must be selected from the given List* which is related to the Gateways theme.", "Teams which failed to include at-least one Agent from the list: Either the Match is replayed or the team will get disqualified.", "All the Games will be played in custom unrated and at the end of the match, Points will be assigned for MVP, Kills, Assist, Highest Combat Score", "Highest KD", "Lowest Deaths", "All participants are expected to maintain a high standard of respect, kindness, and sportsmanship throughout the tournament.", "Players who excessively Bad Manner or have poor sportsmanship as determined by Wellness staff will receive a warning.", "After the both Custom Unrated Match Team Captain should take Screenshot of the Post Match scoreboard to keep track of the player performances.", "Any instance of cheating will result in an immediate removal from the tournament.  Cheating includes but is not limited to: Hacking, Ghosting, Exploiting Bugs and Glitches, Use of a 3rd party program that gives one player an unfair advantage over another.", "List of Agents for Gateways: Astra (Controller), Deadlock (Sentinel), Fade (Initiator), Neon (Duelist), Yoru (Duelist)"],
+            reg: "https://forms.gle/aZoap5rDHDCuTJnq8"
         },
         prompt: {
             imgSrc: "prompt.png",
@@ -112,7 +117,8 @@ export const Event = () => {
                 rounds: 3,
             },
             heads: ["Anurag Parashar Sarmah | 6001059943", "Harsh Vardhan Singh | 9523835835", "Visesh Agarwal | 7717769254", "Sumit Agarwal"],
-            rules: ["N/A"]
+            rules: ["N/A"],
+            reg: "https://forms.gle/xWaFWrkNuPh8KJk58"
         },
         photo: {
             imgSrc: "photo.png",
@@ -128,7 +134,8 @@ export const Event = () => {
                 rounds: 1,
             },
             heads: ["Kenneth Louis Alvares | 6001059943", "Aditya  | 9523835835", "Samuel Raj"],
-            rules: ["N/A"]
+            rules: ["N/A"],
+            reg: "https://forms.gle/2VVb4oJ8pXrdDtim7"
         },
         ctf: {
             imgSrc: "ctf.png",
@@ -143,7 +150,8 @@ export const Event = () => {
                 rounds: 1,
             },
             heads: ["Punith Raj S P", "Sarthak Mathur  | 9122571501", "Rohan Shaw | 8910154055", "Vinay Kumar Reddy"],
-            rules: ["N/A"]
+            rules: ["N/A"],
+            reg: "https://forms.gle/syCoVSxqr1X9jZcn9"
         },
         th: {
             imgSrc: "th.png",
@@ -158,7 +166,8 @@ export const Event = () => {
                 rounds: 3,
             },
             heads: ["Satyam Jhawar | 8812943298", "Pearl Dsilva", "Mahua Saikia", "Chandra Mani Pandey | 7023754529"],
-            rules: ["No usage of Phones allowed in the first and the last round. If found using a phone in the first and the last round, the respective team will be eliminated.", "Damage to the symbols provided in the rounds will lead to elimination.", "Debating with the officials or any kind of misbehavior with the organizers will not be tolerated.", "Do not reveal your answers/clues to other teams.", "Team members must stay together during the entire Treasure Hunt and are encouraged to work together to solve clues and retrieve the locations.", "Copying or stealing from other teams is not permissible.", "Interfering with other teams will not be tolerated.", "Officials decisions will be full and final.", "Officials decisions will be full and final."]
+            rules: ["No usage of Phones allowed in the first and the last round. If found using a phone in the first and the last round, the respective team will be eliminated.", "Damage to the symbols provided in the rounds will lead to elimination.", "Debating with the officials or any kind of misbehavior with the organizers will not be tolerated.", "Do not reveal your answers/clues to other teams.", "Team members must stay together during the entire Treasure Hunt and are encouraged to work together to solve clues and retrieve the locations.", "Copying or stealing from other teams is not permissible.", "Interfering with other teams will not be tolerated.", "Officials decisions will be full and final.", "Officials decisions will be full and final."],
+            reg: "https://forms.gle/d7YZWFuJRV8P96tJ8"
         },
         be: {
             imgSrc: "be.webp",
@@ -177,7 +186,8 @@ export const Event = () => {
                 time: "7:00 AM to 7:00 PM"
             },
             heads: ["Joel John Joseph | 9035845934", "Vishnu Swaroop P S", "Rose Michelle Mathew", "Samuel Raj"],
-            rules: ["N/A"]
+            rules: ["N/A"],
+            reg: "https://forms.gle/PT6cpGt2TcKJE9Dx7"
         },
     }
 
@@ -216,7 +226,7 @@ export const Event = () => {
                             </div>
                         </div>
                         <div className="event-reg">
-                            <button type="button" className="event-cta"><a href="#" target="_blank">Register</a></button>
+                            <button type="button" className="event-cta"><a href={curr.reg} target="_blank" rel="noreferrer">Register</a></button>
                             <div className="event-cta-bg"/>
                         </div>
                     </div>

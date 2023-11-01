@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: space-between;
     overflow-x: hidden;
+    gap: 32px;
 }
 
 @media screen and (max-width: 991px) {
@@ -133,6 +134,9 @@
     font-size: 24px;
     color: white;
     font-family: 'Audiowide', cursive;
+    background: linear-gradient(90deg, #fe7c62, #f33456, #974de0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .event-page .event-container .event-content p {
@@ -164,7 +168,7 @@
     }
 
     .event-page .event-container .event-banner .event-tops .event-name {
-        font-size: 56px;
+        font-size: 46px;
     }
 }
 

@@ -92,8 +92,8 @@ export const PublicNavbar = ({active}) => {
                                 <a href="https://christuniversity.in/" target="_blank" rel="noreferrer"><img src="assets/cu_white_logo.png" alt=""/></a>
                             </div>
                             <div className="navbar-social-links">
-                                <button><i className="fa-brands fa-linkedin-in"/></button>
-                                <button><i className="fa-brands fa-instagram"/></button>
+                                <a href="https://www.linkedin.com/in/gateways2022" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"/></a>
+                                <a href="https://instagram.com/2023gateways" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"/></a>
                             </div>
                         </div>
                         <div className="navbar-right">
@@ -141,8 +141,8 @@ export const PublicNavbar = ({active}) => {
                         </ul>
                     </div>
                     <div className="sidebar-socials">
-                        <button className="sideAnim"><i className="fa-brands fa-linkedin-in"/></button>
-                        <button className="sideAnim"><i className="fa-brands fa-instagram"/></button>
+                        <a href="https://www.linkedin.com/in/gateways2022" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"/></a>
+                        <a href="https://instagram.com/2023gateways" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"/></a>
                     </div>
                     <div className="sidebar-brochure">
                         <button type="button" className="sideAnim"><a href="https://heyzine.com/flip-book/7293662a40.html" target="_blank" rel="noreferrer">View Brochure</a></button>

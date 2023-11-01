@@ -28,13 +28,13 @@ export const Footer = ({active}) => {
                             }
                             <li className="nav-link"><Link to={"/about"} className={active==="about"?"active":""}>About</Link></li>
                             <li className="nav-btn">
-                                <button type="button">Brochure&nbsp;<i className="fa-solid fa-download"/></button>
+                                <button type="button"><a href="https://drive.google.com/file/d/1raWKyBgHjIoMVKT1HieozQhjdGfdejkG/view?usp=sharing" target="_blank" rel="noreferrer">Brochure&nbsp;<i className="fa-solid fa-download"/></a></button>
                             </li>
                         </ul>
                     </div>
                     <div className="footer-bottom">
                         <span>&copy;&nbsp;Gateways 2023</span>
-                        <span>+91 XXXXX XXXXX</span>
+                        <span>+91 9741311744</span>
                         <span>gateways@cs.christuniversity.in</span>
                     </div>
                 </div>

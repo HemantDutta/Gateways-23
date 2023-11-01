@@ -4,6 +4,7 @@ footer{
     border-radius: 20px;
     display: grid;
     place-items: center;
+    z-index: 115;
 }
 
 footer .footer-container{
