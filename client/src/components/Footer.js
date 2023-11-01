@@ -24,7 +24,7 @@ export const Footer = ({active}) => {
                             }
                             {
                                 active !== "home" &&
-                                <li className="nav-link"><Link to={"/#events"} className={active==="events"?"active":""}>Events</Link></li>
+                                <li className="nav-link"><Link to={"/"} state={true} className={active==="events"?"active":""}>Events</Link></li>
                             }
                             <li className="nav-link"><Link to={"/about"} className={active==="about"?"active":""}>About</Link></li>
                             <li className="nav-btn">

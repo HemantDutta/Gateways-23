@@ -105,11 +105,11 @@ export const PublicNavbar = ({active}) => {
                                 }
                                 {
                                     active !== "home" &&
-                                    <li className="nav-link"><Link to={"/#events"} className={active === "events" ? "active" : ""}>Events</Link></li>
+                                    <li className="nav-link"><Link to={"/"} state={true} className={active === "events" ? "active" : ""}>Events</Link></li>
                                 }
                                 <li className="nav-link"><Link to={"/about"} className={active === "about" ? "active" : ""}>About</Link></li>
                                 <li className="nav-btn">
-                                    <button type="button"><a className="broch" href="https://heyzine.com/flip-book/7293662a40.html" rel={"noreferrer"} target={"_blank"}>View&nbsp;Brochure</a></button>
+                                    <button type="button"><a className="broch" href="https://heyzine.com/flip-book/90b792eb10.html" rel={"noreferrer"} target={"_blank"}>View&nbsp;Brochure</a></button>
                                 </li>
                                 <li className="menu-btn" onClick={toggleSidebar}>
                                     <span></span>
@@ -135,7 +135,7 @@ export const PublicNavbar = ({active}) => {
                             }
                             {
                                 active !== "home" &&
-                                <li onClick={toggleSidebar}><Link to={"/#events"} className="sideAnim">Events</Link></li>
+                                <li onClick={toggleSidebar}><Link to={"/"} state={true} className="sideAnim">Events</Link></li>
                             }
                             <li onClick={toggleSidebar}><Link to={"/about"} className="sideAnim">About</Link></li>
                         </ul>

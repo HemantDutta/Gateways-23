@@ -6,10 +6,13 @@ import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import Atropos from "atropos/react";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {Footer} from "../components/Footer";
 
 export const PublicHome = () => {
+
+    //Event State
+    let scrollEvent = useLocation().state ?? false;
 
     //Register Scroll Trigger
     gsap.registerPlugin(ScrollTrigger);
@@ -118,11 +121,13 @@ export const PublicHome = () => {
         return "";
     }
 
-    //Check Preloader
+    //Check Preloader && Scroll Event Checker
     useEffect(()=>{
         let preCookie = getCookie("preloader");
         if(preCookie) setPreLoad(false);
         else setPreLoad(true);
+
+        if(scrollEvent) document.getElementById("events").scrollIntoView();
     },[])
 
     //Hero to Events Animation
