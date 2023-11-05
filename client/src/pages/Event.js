@@ -39,7 +39,7 @@ export const Event = () => {
                 rounds: 4,
             },
             heads: ["Vasav Mittal | 9056100929", "Jagriti Rai | 9511195836", "Oishi Halder | 6290059940", "Himanshu | 876231515"],
-            rules: ["N/A"],
+            rules: ["Teams of 2 participants each.", "Mobile phones are required for the Encryption Round.", "Qualification is based on marks and time in each round."],
             reg: "https://forms.gle/nJYBxCnHwpydHG2j9"
         },
         ui_ux: {
