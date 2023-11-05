@@ -411,22 +411,26 @@ export const PublicHome = () => {
                             </div>
                             <div className="rule-item">
                                 <span className="sno">8</span>
-                                <span className="rule">If eliminated, participants are welcome to participate in other events, keeping the time constraints in mind.</span>
+                                <span className="rule">Registration Fess is non-refundable under any circumstances.</span>
                             </div>
                             <div className="rule-item">
                                 <span className="sno">9</span>
-                                <span className="rule">Participants can opt for multiple events keeping the time constraints in mind.</span>
+                                <span className="rule">If eliminated, participants are welcome to participate in other events, keeping the time constraints in mind.</span>
                             </div>
                             <div className="rule-item">
                                 <span className="sno">10</span>
-                                <span className="rule">The decisions made by the judges will be final.</span>
+                                <span className="rule">Participants can opt for multiple events keeping the time constraints in mind.</span>
                             </div>
                             <div className="rule-item">
                                 <span className="sno">11</span>
-                                <span className="rule">Participants will be held responsible for any damage caused by their actions during the fest to Christ University Property.</span>
+                                <span className="rule">The decisions made by the judges will be final.</span>
                             </div>
                             <div className="rule-item">
                                 <span className="sno">12</span>
+                                <span className="rule">Participants will be held responsible for any damage caused by their actions during the fest to Christ University Property.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">13</span>
                                 <span className="rule">Details about Stellar Shift will be provided on-spot.</span>
                             </div>
                         </div>
