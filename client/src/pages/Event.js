@@ -55,7 +55,7 @@ export const Event = () => {
                 rounds: 2,
             },
             heads: ["Alen Kottaram | 9847588000", "Raison Sabu | 9718146763"],
-            rules: ["N/A"],
+            rules: ["Rules will be provided during the event", "PCs with VS Code will be provided.", "Internet will not be provided."],
             reg: "https://forms.gle/hb8xohpfwUVfhAtx6"
         },
         itm: {
@@ -100,7 +100,7 @@ export const Event = () => {
                 duration: "8 Hours Combined",
                 rounds: "Variable",
             },
-            heads: ["Samson Andrew Fernandez | 9745521159", "Tirthajoti Sinha | 9482011600", "Alwin Thomas", "Ansh Bhandhari"],
+            heads: ["Samson Andrew Fernandez | 9745521159", "Tirthajoti Sinha | 9482011600", "Alwin Thomas", "Ansh Bhandari"],
             rules: ["All the Gaming Gears should be carried by yourself, No gears will be provided by Us.", "Gamers should carry their College ID Card for verification.", "All Weapons / Agents / Abilities are allowed unless currently disabled in Ranked Play.", "Maps will be selected by map ban pick system.", "Matches will be Custom Unrated.", "Two Matches with one team, if tied Swiftplay as the Tie breaker.", "One team can have one Substitute.", "Atleast One agent must be selected from the given List* which is related to the Gateways theme.", "Teams which failed to include at-least one Agent from the list: Either the Match is replayed or the team will get disqualified.", "All the Games will be played in custom unrated and at the end of the match, Points will be assigned for MVP, Kills, Assist, Highest Combat Score", "Highest KD", "Lowest Deaths", "All participants are expected to maintain a high standard of respect, kindness, and sportsmanship throughout the tournament.", "Players who excessively Bad Manner or have poor sportsmanship as determined by Wellness staff will receive a warning.", "After the both Custom Unrated Match Team Captain should take Screenshot of the Post Match scoreboard to keep track of the player performances.", "Any instance of cheating will result in an immediate removal from the tournament.  Cheating includes but is not limited to: Hacking, Ghosting, Exploiting Bugs and Glitches, Use of a 3rd party program that gives one player an unfair advantage over another.", "List of Agents for Gateways: Astra (Controller), Deadlock (Sentinel), Fade (Initiator), Neon (Duelist), Yoru (Duelist)"],
             reg: "https://forms.gle/aZoap5rDHDCuTJnq8"
         },
@@ -166,7 +166,7 @@ export const Event = () => {
                 rounds: 3,
             },
             heads: ["Satyam Jhawar | 8812943298", "Pearl Dsilva", "Mahua Saikia", "Chandra Mani Pandey | 7023754529"],
-            rules: ["No usage of Phones allowed in the first and the last round. If found using a phone in the first and the last round, the respective team will be eliminated.", "Damage to the symbols provided in the rounds will lead to elimination.", "Debating with the officials or any kind of misbehavior with the organizers will not be tolerated.", "Do not reveal your answers/clues to other teams.", "Team members must stay together during the entire Treasure Hunt and are encouraged to work together to solve clues and retrieve the locations.", "Copying or stealing from other teams is not permissible.", "Interfering with other teams will not be tolerated.", "Officials decisions will be full and final.", "Officials decisions will be full and final."],
+            rules: ["No usage of Phones allowed in the first and the last round. If found using a phone in the first and the last round, the respective team will be eliminated.", "Damage to the symbols provided in the rounds will lead to elimination.", "Debating with the officials or any kind of misbehavior with the organizers will not be tolerated.", "Do not reveal your answers/clues to other teams.", "Team members must stay together during the entire Treasure Hunt and are encouraged to work together to solve clues and retrieve the locations.", "Copying or stealing from other teams is not permissible.", "Interfering with other teams will not be tolerated.", "Officials decisions will be full and final."],
             reg: "https://forms.gle/d7YZWFuJRV8P96tJ8"
         },
         be: {

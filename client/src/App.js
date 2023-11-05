@@ -1,9 +1,8 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {PublicHome} from "./pages/PublicHome";
-import EventDetails from "./pages/EventDetails";
-import {Events} from "./pages/Events";
 import {PublicAbout} from "./pages/PublicAbout";
 import {Event} from "./pages/Event";
+import {Contact} from "./pages/Contact";
 
 function App() {
     return (
@@ -13,6 +12,7 @@ function App() {
                     <Route path={"/"} element={<PublicHome/>}/>
                     <Route path={"/about"} element={<PublicAbout/>}/>
                     <Route path={"/event"} element={<Event/>}/>
+                    <Route path={"/contact"} element={<Contact/>}/>
                 </Routes>
             </BrowserRouter>
         </>

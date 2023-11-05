@@ -842,6 +842,14 @@ html {
     background: linear-gradient(45deg, #fe7c62, #f33456, #f33456, #974de0);
 }
 
+@media screen and (max-width: 1650px) {
+    .events .events-container .events-grid .event-item .event-bottom .event-cta {
+        font-size: 18px;
+        width: 54%;
+        height: 59%;
+    }
+}
+
 @media screen and (max-width: 1420px) {
     .events .events-container .events-grid {
         grid-template-columns: repeat(2, 1fr);

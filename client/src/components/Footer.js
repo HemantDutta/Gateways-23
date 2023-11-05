@@ -37,6 +37,11 @@ export const Footer = ({active}) => {
                         <span>+91 9741311744</span>
                         <span>gateways@cs.christuniversity.in</span>
                     </div>
+                    <div className="dev-name">
+                        <span>Developed by:</span>
+                        <a href="https://www.linkedin.com/in/hemantduttahd/" target="_blank" rel="noreferrer">Hemant Dutta</a>
+                        <a href="https://github.com/HemantDutta" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"/></a>
+                    </div>
                 </div>
             </footer>
         </>
