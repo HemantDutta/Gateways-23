@@ -149,7 +149,7 @@ export const Event = () => {
                 duration: "1.5 Hours Combined",
                 rounds: 1,
             },
-            heads: ["Punith Raj S P", "Sarthak Mathur  | 9122571501", "Rohan Shaw | 8910154055", "Vinay Kumar Reddy"],
+            heads: ["Punith Raj S P | 7899617898", "Sarthak Mathur  | 9122571501", "Rohan Shaw | 8910154055", "Vinay Kumar Reddy | 8296755149"],
             rules: ["N/A"],
             reg: "https://forms.gle/syCoVSxqr1X9jZcn9"
         },
