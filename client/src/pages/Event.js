@@ -81,8 +81,8 @@ export const Event = () => {
                 duration: "5 Hours Combined",
                 rounds: 4,
             },
-            heads: ["Neil Manoj C | +91 81130 68373", "Shawn Thomas | +91 85908 51162", "Adarsh Dash | +91 70779 97204", "Elizabeth | +91 6282 518 911"],
-            rules: ["N/A"],
+            heads: ["Neil Manoj C | +91 81130 68373", "SHAWN BIJU THOMAS | +91 85908 51162", "ADARSH KUMAR DASH | +91 70779 97204", "ELIZABETH GEORGE | +91 6282 518 911"],
+            rules: ["Participants must adhere to a code of conduct that promotes ethical behavior, sportsmanship, and respect for others."],
             reg: "https://forms.gle/oK8oKRwdpvsxaCgK6"
         },
         game: {
