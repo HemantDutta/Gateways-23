@@ -820,6 +820,10 @@ html {
 .events .events-container .events-grid .event-item .event-bottom .event-cta a {
     color: white;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .events .events-container .events-grid .event-item .event-bottom .event-cta-bg {

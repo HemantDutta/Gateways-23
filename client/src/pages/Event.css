@@ -99,6 +99,10 @@
 .event-page .event-container .event-banner .event-reg .event-cta a {
     color: white;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .event-page .event-container .event-banner .event-reg .event-cta-bg {
