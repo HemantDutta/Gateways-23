@@ -128,13 +128,14 @@ export const Event = () => {
             prize: [5000, 3000, 1000],
             about: "Get ready for an amazing adventure where ordinary things turn into something truly special. \"Cosmic Capture\" is your chance to use your camera and your creative skills. During the event, take a cool picture around our campus, and then use AI and other tools to make it look like it's from outer space!\n" +
                 "Picture yourself in the cosmos, let your imagination run wild, and give your photo a cosmic makeover. We'll pick the winners based on how well they change their pictures, how creative they are, how well they fit our space theme, and the story behind each picture.\n",
-            pre: ["N/A"],
+            pre: ["Participant needs to use their phone to capture the photograph.", "Carry their laptops for modification and documentation."],
             details: {
                 duration: "2 days | Entire Day",
                 rounds: 1,
             },
-            heads: ["Kenneth Louis Alvares | 6001059943", "Aditya  | 9523835835", "Samuel Raj"],
-            rules: ["N/A"],
+            heads: ["Kenneth Louis Alvares | 9100583274", "Adithya Palamittam | 7760578910", "Samuel Raj"],
+
+            rules: ["No participant can take part in the event after 11:59 am on 8th December, 2023.", "Participants need to use their phones to capture the photograph", "The image should be altered with any AI tools the participant is comfortable with and has access to. (Canva Magic Edit)", "Participants need to carry their own devices to make modifications to their photographs to best fit the theme of the event (Cosmic Capture, space related).", "Participants need to create a document that contains: a) Original Picture (b) A screen shot of the date and time stamp of the photograph (c) The resultant image generated using AI on the Photograph", "A form will be sent to all the participants where they have to fill the following: a) Name (b) College Name (c) Phone number (d) Title of the image (e) Document (f) AI tools used"],
             reg: "https://forms.gle/2VVb4oJ8pXrdDtim7"
         },
         ctf: {
