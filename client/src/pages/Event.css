@@ -148,6 +148,25 @@
     color: white;
 }
 
+.event-page .event-container .event-content .event-prize p {
+    font-size: 46px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: bold;
+}
+
+.event-page .event-container .event-content .event-prize p > * {
+    flex: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .event-page .event-container .event-content .event-prize p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 .event-page .event-container .event-content .event-about, .event-page .event-container .event-content .event-rules, .event-page .event-container .event-content .event-pre {
     grid-column: 1/3;
 }
@@ -167,7 +186,7 @@
         padding: 48px 16px;
     }
 
-    .event-page .event-container .event-banner{
+    .event-page .event-container .event-banner {
         padding: 180px 16px 48px;
     }
 
@@ -181,7 +200,7 @@
         font-size: 36px;
     }
 
-    .event-page .event-container .event-banner .event-reg{
+    .event-page .event-container .event-banner .event-reg {
         height: 80px;
         width: 300px;
     }

@@ -31,7 +31,7 @@ export const Event = () => {
             name: "Stellar Perplexity",
             tag: "Coding & Debugging Event",
             teamSize: "Upto 2 Members",
-            prize: [5000, 1500, 750],
+            prize: [4000, 2000, 1000],
             about: "In this event there will be three rounds, and one tie breaker round if required. If there are less number of participants there will be no elimination. Minimum 5 teams are required in the final round. The description of each round is as follows:-Encryption Round -> Aptitude questions will be given whose answer will be numerical and will act as a key. They have to find the key and do a basic right Shift operation on the cider text to get the plain text. The plain text will be like a question the answer to which will be the password of the next Encryption question.Debugging round -> Time will be under consideration. Marks on basis of number of bugs have been removed. We can have a set of codes or programs which will have multiple bugs. They have to remove all to progress to the next debug question.Blind Coding -> Person who is closest to the output result will be the winner.Tie breaker -> Whichever team finishes first will win.",
             pre: ["Programming Knowledge"],
             details: {
@@ -47,9 +47,9 @@ export const Event = () => {
             name: "Astral Aesthetics",
             tag: "UI/UX Event",
             teamSize: "Upto 2 Members",
-            prize: [5000, 3000, 1000],
+            prize: [3000, 2000, 1000],
             about: "Prepare to embark on an awe-inspiring design odyssey that transcends the boundaries of the ordinary! Join us at Astral Aesthetics, where the captivating convergence of UI/UX design with the captivating mysteries of the cosmos beckons. Embrace the boundless potential of your creative spirit as you venture into the uncharted domains of HTML, CSS, and JavaScript. This is your chance to unleash the full breadth of your artistic prowess, illuminating the digital landscape like a dazzling constellation against the dark expanse. Are you poised and ready to etch your distinctive legacy into the ever-expanding universe of web design? Seize this cosmic opportunity and let your ingenuity shine brighter than the stars!",
-            pre: ["HTML", "CSS", "JavaScript"],
+            pre: ["HTML", "CSS", "JavaScript [Optional]"],
             details: {
                 duration: "2 Hours Combined",
                 rounds: 2,
@@ -60,7 +60,7 @@ export const Event = () => {
         },
         itm: {
             imgSrc: "itm.jpg",
-            name: "SPACEXPERIENCE",
+            name: "SPACE XPERIENCE",
             tag: "IT MANAGER EVENT",
             teamSize: "Individual Participation",
             prize: [3000, 2000, 1000],
@@ -237,9 +237,7 @@ export const Event = () => {
                         </div>
                         <div className="event-prize">
                             <span className="header">Prize Money</span>
-                            <p>1st Prize: ₹{curr.prize[0]}</p>
-                            <p>2nd Prize: ₹{curr.prize[1]}</p>
-                            <p>3rd Prize: ₹{curr.prize[2]}</p>
+                            <p><img src="/assets/prize.png" alt="Prize"/>Exciting Cash Prizes</p>
                         </div>
                         <div className="event-pre">
                             <span className="header">Pre-requisites</span>

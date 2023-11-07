@@ -433,6 +433,10 @@ export const PublicHome = () => {
                                 <span className="sno">13</span>
                                 <span className="rule">Details about Stellar Shift will be provided on-spot.</span>
                             </div>
+                            <div className="rule-item">
+                                <span className="sno">14</span>
+                                <span className="rule">Accommodation will be provided on First-Come-First-Serve Basis.</span>
+                            </div>
                         </div>
                     </div>
                 </section>
