@@ -648,6 +648,24 @@ export const PublicHome = () => {
                                     </div>
                                 </div>
                             </Atropos>
+                            <Atropos
+                                activeOffset={40}
+                                shadowScale={1.5}
+                            >
+                                <div className="event-item event-odd">
+                                    <div className="event-bg" data-atropos-offset="5"/>
+                                    <img src="assets/eventImgs/ss.png" className="event-bg-img" data-atropos-offset="-5" alt="Surprise Event"/>
+                                    <span className="hover-text" data-atropos-offset="5">Stellar Shift</span>
+                                    <span className="hover-text2" data-atropos-offset="5">Stellar Shift</span>
+                                    <div className="event-top" data-atropos-offset="-5">
+                                        <span>Don't miss our stellar <span className="event-name">Surprise Event</span></span>
+                                    </div>
+                                    <div className="event-bottom" data-atropos-offset="5">
+                                        <button className="event-cta"><Link to={"/event"} state={"ss"}>Register</Link></button>
+                                        <div className="event-cta-bg"/>
+                                    </div>
+                                </div>
+                            </Atropos>
                         </div>
                         {/*<div className="event-show-all">*/}
                         {/*    <Link to={"/events"}>*/}

@@ -190,6 +190,23 @@ export const Event = () => {
             rules: ["N/A"],
             reg: "https://forms.gle/PT6cpGt2TcKJE9Dx7"
         },
+        ss: {
+            imgSrc: "ss.png",
+            name: "Stellar Shift",
+            tag: "Surprise Event",
+            teamSize: "Individual Participation",
+            prize: [5000, 3000, 1000],
+            about: "Prepare for a breathtaking odyssey through the unknown in Stellar Shift, a captivating surprise event within our Interstellar Tech Fest." +
+            "This enigmatic journey comprises multiple undisclosed rounds that promise to amaze, entertain, and challenge your limits. The thrill of anticipation awaits as you enter a world where each moment unfolds as a delightful surprise. Don't miss this opportunity to experience the extraordinary—and let the cosmos reveal its secrets!",
+            pre: ["N/A"],
+            details: {
+                duration: "2 Hours",
+                rounds: 4,
+            },
+            heads: ["Rishabh | 8318045287", "Siddharth Raj | 8210037596", "Anshika | 7384531964", "Aryan | "],
+            rules: ["N/A"],
+            reg: "https://forms.gle/FJAMBwMBsNTtmPET9"
+        },
     }
 
     //States
