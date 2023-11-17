@@ -148,6 +148,11 @@
     color: white;
 }
 
+.event-page .event-container .event-content li {
+    color: white;
+    font-size: 18px;
+}
+
 .event-page .event-container .event-content .event-prize p {
     font-size: 46px;
     display: flex;
