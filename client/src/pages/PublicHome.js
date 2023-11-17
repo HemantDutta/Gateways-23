@@ -691,8 +691,8 @@ export const PublicHome = () => {
                         <div className="sponsor-main-flex">
                             <div className="sponsor-item-main">
                                 <div className="top-blur"/>
-                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
-                                <span className="sponsor-name">Coming soon...</span>
+                                <img src="assets/serb_logo.png" alt="Sponsor Logo"/>
+                                <span className="sponsor-name">SERB India</span>
                             </div>
                             <div className="sponsor-item-main chief-sponsor">
                                 <div className="top-blur"/>
