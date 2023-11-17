@@ -6,7 +6,7 @@ import {useLocation} from "react-router-dom";
 export const Event = () => {
 
     //Getting Event name
-    let eventName = useLocation().state || "itq";
+    let eventName = useLocation().state || "be";
 
     //Event Details
     const events = {

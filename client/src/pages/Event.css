@@ -148,6 +148,10 @@
     color: white;
 }
 
+.event-page .event-container .event-content ul {
+    list-style-type: decimal;
+}
+
 .event-page .event-container .event-content li {
     color: white;
     font-size: 18px;
