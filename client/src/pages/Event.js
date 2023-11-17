@@ -197,7 +197,7 @@ export const Event = () => {
             teamSize: "Individual Participation",
             prize: [5000, 3000, 1000],
             about: "Prepare for a breathtaking odyssey through the unknown in Stellar Shift, a captivating surprise event within our Interstellar Tech Fest." +
-            "This enigmatic journey comprises multiple undisclosed rounds that promise to amaze, entertain, and challenge your limits. The thrill of anticipation awaits as you enter a world where each moment unfolds as a delightful surprise. Don't miss this opportunity to experience the extraordinary—and let the cosmos reveal its secrets!",
+                "This enigmatic journey comprises multiple undisclosed rounds that promise to amaze, entertain, and challenge your limits. The thrill of anticipation awaits as you enter a world where each moment unfolds as a delightful surprise. Don't miss this opportunity to experience the extraordinary—and let the cosmos reveal its secrets!",
             pre: ["N/A"],
             details: {
                 duration: "2 Hours",
@@ -273,23 +273,41 @@ export const Event = () => {
                             <span className="header">Team Size</span>
                             <p>{curr.teamSize}</p>
                         </div>
-                        <div className="event-rules">
-                            <span className="header">Rules</span>
-                            {
-                                curr.rules.map(((value, index) => {
-                                    return(
-                                        <>
-                                            <p key={index}> - {value}</p>
-                                        </>
-                                    )
-                                }))
-                            }
-                        </div>
+                        {
+                            curr.name === "QUASAR ODYSSEY" &&
+                            <div className="event-rules">
+                                <span className="header">Rules</span>
+                                {
+                                    curr.rules.map(((value, index) => {
+                                        return (
+                                            <>
+                                                <p key={index}> - {value}</p>
+                                            </>
+                                        )
+                                    }))
+                                }
+                            </div>
+                        }
+                        {
+                            curr.name !== "QUASAR ODYSSEY" &&
+                            <div className="event-rules">
+                                <span className="header">Rules</span>
+                                {
+                                    curr.rules.map(((value, index) => {
+                                        return (
+                                            <>
+                                                <p key={index}> - {value}</p>
+                                            </>
+                                        )
+                                    }))
+                                }
+                            </div>
+                        }
                         <div className="event-det">
                             <span className="header">Details</span>
                             {
-                                Object.keys(curr.details).map((key)=>{
-                                    return(
+                                Object.keys(curr.details).map((key) => {
+                                    return (
                                         <>
                                             <p key={key}>{key.toLocaleUpperCase()}: {curr.details[key]}</p>
                                         </>

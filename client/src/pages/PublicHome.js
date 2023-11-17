@@ -676,37 +676,37 @@ export const PublicHome = () => {
                 </section>
                 {/*  Events End  */}
                 {/*  Sponsors  */}
-                {/*<section className="sponsors" id="sponsors" ref={sponsorTrigger}>*/}
-                {/*    <div className="blob">*/}
-                {/*        <img src="/assets/blob3.svg" alt="Blob"/>*/}
-                {/*    </div>*/}
-                {/*    <div className="blob glow">*/}
-                {/*        <img src="/assets/blob3.svg" alt="Blob"/>*/}
-                {/*    </div>*/}
-                {/*    <div className="sponsors-container">*/}
-                {/*        <div className="sponsor-header">*/}
-                {/*            <span>Our</span>*/}
-                {/*            <span>Sponsors</span>*/}
-                {/*        </div>*/}
-                {/*        <div className="sponsor-main-flex">*/}
-                {/*            <div className="sponsor-item-main">*/}
-                {/*                <div className="top-blur"/>*/}
-                {/*                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>*/}
-                {/*                <span className="sponsor-name">Name</span>*/}
-                {/*            </div>*/}
-                {/*            <div className="sponsor-item-main chief-sponsor">*/}
-                {/*                <div className="top-blur"/>*/}
-                {/*                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>*/}
-                {/*                <span className="sponsor-name">Name</span>*/}
-                {/*            </div>*/}
-                {/*            <div className="sponsor-item-main">*/}
-                {/*                <div className="top-blur"/>*/}
-                {/*                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>*/}
-                {/*                <span className="sponsor-name">Name</span>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
+                <section className="sponsors" id="sponsors" ref={sponsorTrigger}>
+                    <div className="blob">
+                        <img src="/assets/blob3.svg" alt="Blob"/>
+                    </div>
+                    <div className="blob glow">
+                        <img src="/assets/blob3.svg" alt="Blob"/>
+                    </div>
+                    <div className="sponsors-container">
+                        <div className="sponsor-header">
+                            <span>Our</span>
+                            <span>Sponsors</span>
+                        </div>
+                        <div className="sponsor-main-flex">
+                            <div className="sponsor-item-main">
+                                <div className="top-blur"/>
+                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
+                                <span className="sponsor-name">Coming soon...</span>
+                            </div>
+                            <div className="sponsor-item-main chief-sponsor">
+                                <div className="top-blur"/>
+                                <img src="assets/TBH_logo.png" alt="TechByHeart"/>
+                                <span className="sponsor-name">TECHBYHEART</span>
+                            </div>
+                            <div className="sponsor-item-main">
+                                <div className="top-blur"/>
+                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
+                                <span className="sponsor-name">Coming soon...</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 {/*  Sponsors End  */}
                 {/*  Guests  */}
                 {/*<section className="guests" id="guests" ref={guest}>*/}
