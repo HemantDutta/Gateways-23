@@ -255,7 +255,10 @@ export const Event = () => {
                         </div>
                         <div className="event-prize">
                             <span className="header">Prize Money</span>
-                            <p><img src="/assets/prize.png" alt="Prize"/>Exciting Cash Prizes</p>
+                            {/*<p><img src="/assets/prize.png" alt="Prize"/>Exciting Cash Prizes</p>*/}
+                            <p className="first">1st: ₹{curr.prize[0]}</p>
+                            <p className="second">2nd: ₹{curr.prize[1]}</p>
+                            <p className="third">3rd: ₹{curr.prize[2]}</p>
                         </div>
                         <div className="event-pre">
                             <span className="header">Pre-requisites</span>

@@ -165,6 +165,52 @@
     font-weight: bold;
 }
 
+.event-page .event-container .event-content .event-prize p.first, .event-page .event-container .event-content .event-prize p.second, .event-page .event-container .event-content .event-prize p.third {
+    font-size: 24px;
+    width: max-content;
+}
+
+.event-page .event-container .event-content .event-prize p.first {
+    background: linear-gradient(90deg, #ebd197, #b48811, #a2790d, #bb9b49, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: navbarUnderlay 5s ease infinite alternate;
+    animation-delay: 1s;
+}
+
+.event-page .event-container .event-content .event-prize p.second {
+    background: linear-gradient(90deg, #70706F, #7D7D7A, #8E8D8D, #A1A2A3, #B3B6B5, #BEC0C2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: navbarUnderlay 5s ease infinite alternate;
+    animation-delay: 2s;
+}
+
+.event-page .event-container .event-content .event-prize p.third {
+    background: linear-gradient(90deg, #804A00, #895E1A, #9C7A3C, #B08D57, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: navbarUnderlay 5s ease infinite alternate;
+    animation-delay: 3s;
+}
+
+@keyframes navbarUnderlay {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 .event-page .event-container .event-content .event-prize p > * {
     flex: 1;
 }
