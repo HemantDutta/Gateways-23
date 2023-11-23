@@ -14,8 +14,8 @@ export const Event = () => {
             imgSrc: "itq.png",
             name: "AstroBytes",
             tag: "Space Tech (IT) Quiz",
-            teamSize: "Upto 2 Members",
-            prize: [2500, 1500, 750],
+            teamSize: "2 Members",
+            prize: [4000, 2000, 1000],
             about: "Astrobytes: Where Space Meets Code, the ultimate IT quiz that will take you on an interstellar journey through the cosmos while challenging your programming prowess! Prepare to embark on a celestial adventure where the infinite reaches of space collide with the boundless possibilities of programming.",
             pre: ["N/A"],
             details: {
@@ -181,6 +181,7 @@ export const Event = () => {
                 "Unleash your creativity, collaborate with like-minded space aficionados, and let your imagination soar. Dive into the cosmos of possibilities, all while competing for exciting prizes and the chance to have your solutions recognized in the realm of space technology. Are you ready to break free from the gravitational pull of ordinary hackathons? Prepare to elevate your coding expertise, reach for the cosmos, and make your mark Beyond Earth.",
             pre: ["N/A"],
             details: {
+                mode: "Online",
                 duration: "12 Hours",
                 rounds: 3,
                 date: "3rd December 2023",
@@ -280,20 +281,20 @@ export const Event = () => {
                             curr.name === "QUASAR ODYSSEY" &&
                             <div className="event-rules">
                                 <span className="header">Rules</span>
-                                <p>All the Gaming Gears should be carried by yourself, No gears will be provided by Christ University.</p>
-                                <p>Gamers should carry their College ID Card for verification.</p>
-                                <p>Matches will be played in Custom Unrated.</p>
-                                <p>Two Matches will be played with one team, Tie breaker can be Swiftplay.</p>
-                                <p>The tiebreaker game mode may change according to the time constraints.</p>
-                                <p>The Map Ban Pick system will select maps.</p>
-                                <p>One team can have a total of 6 members where one is a Substitute.</p>
-                                <p>All Weapons / Agents / Abilities are allowed unless currently disabled in Ranked Play.</p>
-                                <p>At least one agent related to the Gateways theme must be selected from the given List.</p>
-                                <p>Teams that failed to include at least one Agent from the list:</p>
+                                <p>• All the Gaming Gears should be carried by yourself, No gears will be provided by Christ University.</p>
+                                <p>• Gamers should carry their College ID Card for verification.</p>
+                                <p>• Matches will be played in Custom Unrated.</p>
+                                <p>• Two Matches will be played with one team, Tie breaker can be Swiftplay.</p>
+                                <p>• The tiebreaker game mode may change according to the time constraints.</p>
+                                <p>• The Map Ban Pick system will select maps.</p>
+                                <p>• One team can have a total of 6 members where one is a Substitute.</p>
+                                <p>• All Weapons / Agents / Abilities are allowed unless currently disabled in Ranked Play.</p>
+                                <p>• At least one agent related to the Gateways theme must be selected from the given List.</p>
+                                <p>• Teams that failed to include at least one Agent from the list:</p>
                                 <ul>
                                     <li>Either the Match is replayed or the team will get disqualified.</li>
                                 </ul>
-                                <p>All the Games will be played in custom unrated, and at the end of the match, Points will be assigned for the MVP, by considering: </p>
+                                <p>• All the Games will be played in custom unrated, and at the end of the match, Points will be assigned for the MVP, by considering: </p>
                                 <ul>
                                     <li>Kills</li>
                                     <li>Assist</li>
@@ -301,8 +302,8 @@ export const Event = () => {
                                     <li>Highest K/D</li>
                                     <li>Lowest Deaths</li>
                                 </ul>
-                                <p>Players who have excessively Bad Manners or have poor sportsmanship, as determined by Wellness staff, will receive a warning.</p>
-                                <p>This is included but not limited to: </p>
+                                <p>• Players who have excessively Bad Manners or have poor sportsmanship, as determined by Wellness staff, will receive a warning.</p>
+                                <p>• This is included but not limited to: </p>
                                 <ul>
                                     <li>Treating opponents, teammates, and tournament staff with courtesy and fairness.</li>
                                     <li>Trolling or intentionally throwing the game.</li>
@@ -312,16 +313,16 @@ export const Event = () => {
                                     <li>Offensive language</li>
                                     <li>Disruptive behavior</li>
                                 </ul>
-                                <p>Another instance beyond that warning will result in removal from the tournament.</p>
-                                <p>After each Custom Unrated Match, the Team Captain should take a Screenshot of the Post Match scoreboard to keep track of the player's performances.</p>
-                                <p>Any instance of cheating will result in an immediate removal from the tournament.  Cheating includes but is not limited to:</p>
+                                <p>• Another instance beyond that warning will result in removal from the tournament.</p>
+                                <p>• After each Custom Unrated Match, the Team Captain should take a Screenshot of the Post Match scoreboard to keep track of the player's performances.</p>
+                                <p>• Any instance of cheating will result in an immediate removal from the tournament.  Cheating includes but is not limited to:</p>
                                 <ul>
                                     <li>Hacking</li>
                                     <li>Ghosting</li>
                                     <li>Exploiting bugs and glitches</li>
                                     <li>Use of a 3rd party program that gives one player an unfair advantage over another.</li>
                                 </ul>
-                                <p>List of Agents for Gateways:</p>
+                                <p>• List of Agents for Gateways:</p>
                                 <ul>
                                     <li>Astra (Controller)</li>
                                     <li>Deadlock (Sentinel)</li>
@@ -339,7 +340,7 @@ export const Event = () => {
                                     curr.rules.map(((value, index) => {
                                         return (
                                             <>
-                                                <p key={index}> - {value}</p>
+                                                <p key={index}> • {value}</p>
                                             </>
                                         )
                                     }))

@@ -71,16 +71,6 @@ export const PublicNavbar = ({active}) => {
         }
     }
 
-    //Sidebar Animation
-    // useLayoutEffect(() => {
-    //     gsap.from(".sideAnim", {
-    //         yPercent: 200,
-    //         duration: 0.4,
-    //         delay: 0.2,
-    //         ease: "back.in",
-    //     })
-    // }, [sideActive])
-
     return (
         <>
             <nav id="navbar">
@@ -94,6 +84,10 @@ export const PublicNavbar = ({active}) => {
                             <div className="navbar-social-links">
                                 <a href="https://www.linkedin.com/in/gateways2022" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"/></a>
                                 <a href="https://instagram.com/2023gateways" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"/></a>
+                            </div>
+                            <div className="serb-sponsor">
+                                <span>Sponsored&nbsp;by</span>
+                                <span>DST SERB</span>
                             </div>
                         </div>
                         <div className="navbar-right">
@@ -109,7 +103,7 @@ export const PublicNavbar = ({active}) => {
                                 }
                                 <li className="nav-link"><Link to={"/about"} className={active === "about" ? "active" : ""}>About</Link></li>
                                 <li className="nav-btn">
-                                    <button type="button"><a className="broch" href="https://heyzine.com/flip-book/90b792eb10.html" rel={"noreferrer"} target={"_blank"}>View&nbsp;Brochure</a></button>
+                                    <button type="button"><a className="broch" href="https://heyzine.com/flip-book/628b52ff0e.html" rel={"noreferrer"} target={"_blank"}>View&nbsp;Brochure</a></button>
                                 </li>
                                 <li className="menu-btn" onClick={toggleSidebar}>
                                     <span></span>
@@ -145,7 +139,7 @@ export const PublicNavbar = ({active}) => {
                         <a href="https://instagram.com/2023gateways" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"/></a>
                     </div>
                     <div className="sidebar-brochure">
-                        <button type="button" className="sideAnim"><a href="https://heyzine.com/flip-book/7293662a40.html" target="_blank" rel="noreferrer">View Brochure</a></button>
+                        <button type="button" className="sideAnim"><a href="https://heyzine.com/flip-book/628b52ff0e.html" target="_blank" rel="noreferrer">View Brochure</a></button>
                     </div>
                 </div>
             </div>

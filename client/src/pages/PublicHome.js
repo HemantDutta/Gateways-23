@@ -109,7 +109,7 @@ export const PublicHome = () => {
         let name = cname + "=";
         let decodedCookie = decodeURIComponent(document.cookie);
         let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
+        for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') {
                 c = c.substring(1);
@@ -122,13 +122,13 @@ export const PublicHome = () => {
     }
 
     //Check Preloader && Scroll Event Checker
-    useEffect(()=>{
+    useEffect(() => {
         let preCookie = getCookie("preloader");
-        if(preCookie) setPreLoad(false);
+        if (preCookie) setPreLoad(false);
         else setPreLoad(true);
 
-        if(scrollEvent) document.getElementById("events").scrollIntoView();
-    },[])
+        if (scrollEvent) document.getElementById("events").scrollIntoView();
+    }, [])
 
     //Hero to Events Animation
     useLayoutEffect(() => {
@@ -354,6 +354,9 @@ export const PublicHome = () => {
                         <img src="/assets/curly.png" className="curly" alt="T-minus"/>
                         <img src="/assets/rocket.gif" alt="Rocket" className="rocket"/>
                     </div>
+                    <div className="serb-hero">
+                        <span>Sponsored&nbsp;by&nbsp;DST&nbsp;SERB</span>
+                    </div>
                 </section>
                 {/*  Hero End  */}
                 {/*About*/}
@@ -373,6 +376,52 @@ export const PublicHome = () => {
                     </div>
                 </section>
                 {/*About End*/}
+                {/*Gallery*/}
+                <section className="gallery" id="gallery">
+                    <div className="gallery-container">
+                        <div className="gallery-header">
+                            <span>Gallery</span>
+                        </div>
+                        <div className="gallery-content">
+                            <div className="gallery-item">
+                                <img src="/assets/gl1.webp" alt="Gallery Image 1"/>
+                            </div>
+                            <div className="gallery-item icon">
+                                <img src="/assets/planet.png" alt="Just planets"/>
+                                <span>Challenging Events</span>
+                            </div>
+                            <div className="gallery-item">
+                                <img src="/assets/gl2.webp" alt="Gallery Image 2"/>
+                            </div>
+                            <div className="gallery-item icon">
+                                <img src="/assets/rupees.png" alt="Cash Prize"/>
+                                <span>Exciting Cash Prizes</span>
+                            </div>
+                            <div className="gallery-item">
+                                <img src="/assets/gl5.webp" alt="Gallery Image 5"/>
+                            </div>
+                            <div className="gallery-item icon">
+                                <img src="/assets/stars.png" alt="shooting stars, make a wish"/>
+                                <span>Overall Trophy & Certificates</span>
+                            </div>
+                            <div className="gallery-item">
+                                <img src="/assets/gl3.webp" alt="Gallery Image 3"/>
+                            </div>
+                            <div className="gallery-item icon">
+                                <img src="/assets/galaxy.png" alt="another swirl thing"/>
+                                <span>National Participation</span>
+                            </div>
+                            <div className="gallery-item">
+                                <img src="/assets/gl4.webp" alt="Gallery Image 4"/>
+                            </div>
+                            <div className="gallery-item icon">
+                                <img src="/assets/gal2.png" alt="Cool purple swirl thing"/>
+                                <span>Stellar Performances</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/*Gallery End*/}
                 {/*Rules*/}
                 <section className="rules" id="rules" ref={rules}>
                     <div className="rules-container">

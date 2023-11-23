@@ -26,12 +26,12 @@ html {
 }
 
 @media screen and (max-width: 991px) {
-    .public-home .blob{
+    .public-home .blob {
         display: none;
     }
 }
 
-.public-home .hero .hero-container .hero-left span, .about .about-container .about-header, .events .events-container .events-header, .sponsors .sponsors-container .sponsor-header, .guests .guests-container .guests-header, .events .events-container .events-grid .event-item span.hover-text, .events .events-container .events-grid .event-item span.hover-text2, .rules .rules-container .rules-header {
+.public-home .hero .hero-container .hero-left span, .about .about-container .about-header, .events .events-container .events-header, .sponsors .sponsors-container .sponsor-header, .guests .guests-container .guests-header, .events .events-container .events-grid .event-item span.hover-text, .events .events-container .events-grid .event-item span.hover-text2, .rules .rules-container .rules-header, .gallery .gallery-container .gallery-header {
     font-family: 'Audiowide', cursive;
 }
 
@@ -166,6 +166,22 @@ html {
     height: 80%;
     object-fit: contain;
     filter: drop-shadow(0 0 50px #974de0) brightness(120%);
+}
+
+.public-home .hero .serb-hero {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .public-home .hero .serb-hero {
+        display: initial;
+    }
 }
 
 @media screen and (max-width: 1320px) {
@@ -388,6 +404,110 @@ html {
 
 /*==========About Section End==========*/
 
+/*==========Gallery Section==========*/
+
+.gallery {
+    position: relative;
+    min-height: 100vh;
+    z-index: 115;
+    background-size: cover;
+}
+
+.gallery .gallery-container {
+    padding: 48px 72px;
+    position: relative;
+    z-index: 115;
+}
+
+@media screen and (max-width: 600px) {
+    .gallery .gallery-container {
+        padding: 48px 32px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gallery .gallery-container {
+        padding: 48px 16px;
+    }
+}
+
+.gallery .gallery-container .gallery-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: hidden;
+}
+
+.gallery .gallery-container .gallery-header span {
+    color: white;
+    font-size: 76px;
+    letter-spacing: 15px;
+}
+
+@media screen and (max-width: 991px) {
+    .gallery .gallery-container .gallery-header {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .gallery .gallery-container .gallery-header span {
+        font-size: 52px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gallery .gallery-container .gallery-header span {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .gallery .gallery-container .gallery-header span {
+        font-size: 24px;
+    }
+}
+
+.gallery .gallery-container .gallery-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    place-items: center;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 16px;
+    border-radius: 50px;
+}
+
+.gallery .gallery-container .gallery-content .gallery-item {
+    height: 250px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.gallery .gallery-container .gallery-content .gallery-item:not(.icon) img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.gallery .gallery-container .gallery-content .gallery-item img {
+    transition: all 0.4s ease;
+}
+
+.gallery .gallery-container .gallery-content .gallery-item img:hover {
+    scale: 1.1;
+}
+
+/*==========Gallery Section End==========*/
+
 /*==========Rules Section==========*/
 
 .rules {
@@ -480,19 +600,19 @@ html {
 }
 
 @media screen and (max-width: 1280px) {
-    .rules .rules-container .rules-content .rule-item{
+    .rules .rules-container .rules-content .rule-item {
         justify-content: flex-start;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .rules .rules-container .rules-content{
+    .rules .rules-container .rules-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 520px) {
-    .rules .rules-container .rules-content{
+    .rules .rules-container .rules-content {
         grid-template-columns: 1fr;
     }
 }

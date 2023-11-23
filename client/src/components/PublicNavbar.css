@@ -62,6 +62,13 @@ nav .navbar-container .navbar-main .navbar-left{
     gap: 32px;
 }
 
+nav .navbar-container .navbar-main .navbar-left .serb-sponsor {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
 nav .navbar-container .navbar-main .navbar-left .navbar-cu-logo{
     height: 100%;
 }
@@ -208,7 +215,7 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     width: 26px;
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1260px){
     nav .navbar-container .navbar-main .navbar-right ul li.nav-link{
         display: none;
     }
@@ -218,12 +225,18 @@ nav .navbar-container .navbar-main .navbar-right ul li.menu-btn span:nth-child(3
     }
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 991px) {
     nav .navbar-container .navbar-main .navbar-left .navbar-social-links{
         display: none;
     }
 
     nav .navbar-container .navbar-main .navbar-right ul li button{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav .navbar-container .navbar-main .navbar-left .serb-sponsor {
         display: none;
     }
 }
