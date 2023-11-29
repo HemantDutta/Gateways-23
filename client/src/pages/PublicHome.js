@@ -173,97 +173,97 @@ export const PublicHome = () => {
     }, []);
 
     //About Section Animation
-    useLayoutEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: about.current,
-                start: "top center",
-            }
-        })
-
-        tl.from(".about-header span", {
-            yPercent: 100,
-            stagger: 0.2,
-            opacity: 0
-        })
-        tl.from(".about-content .about-text", {
-            yPercent: 20,
-            opacity: 0,
-            delay: 0.2
-        }, 0)
-        tl.from(".about-content .about-media img", {
-            filter: "blur(20px)",
-            delay: 0.3
-        }, 0)
-    }, [])
+    // useLayoutEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: about.current,
+    //             start: "top center",
+    //         }
+    //     })
+    //
+    //     tl.from(".about-header span", {
+    //         yPercent: 100,
+    //         stagger: 0.2,
+    //         opacity: 0
+    //     })
+    //     tl.from(".about-content .about-text", {
+    //         yPercent: 20,
+    //         opacity: 0,
+    //         delay: 0.2
+    //     }, 0)
+    //     tl.from(".about-content .about-media img", {
+    //         filter: "blur(20px)",
+    //         delay: 0.3
+    //     }, 0)
+    // }, [])
 
     //Rules Animation
-    useLayoutEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: rules.current,
-            },
-        });
-
-        tl.from(".rules-header", {
-            yPercent: 100,
-            autoAlpha: 0,
-            duration: 0.6
-        })
-            .from(".rule-item", {
-                autoAlpha: 0,
-                y: 20,
-                filter: "blur(5px)",
-                duration: 0.4,
-                stagger: 0.1
-            })
-    }, [])
+    // useLayoutEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: rules.current,
+    //         },
+    //     });
+    //
+    //     tl.from(".rules-header", {
+    //         yPercent: 100,
+    //         autoAlpha: 0,
+    //         duration: 0.6
+    //     })
+    //         .from(".rule-item", {
+    //             autoAlpha: 0,
+    //             y: 20,
+    //             filter: "blur(5px)",
+    //             duration: 0.4,
+    //             stagger: 0.1
+    //         })
+    // }, [])
 
     //Event Section Animation
-    useLayoutEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: eventTrigger.current,
-                start: "top center",
-            }
-        })
-
-        tl.from(".events-header span", {
-            yPercent: 100,
-            stagger: 0.2,
-            opacity: 0
-        })
-            .from(".atropos", {
-                autoAlpha: 0,
-                y: 100,
-                filter: "blur(5px)",
-                stagger: 0.1,
-                duration: 0.6,
-            }, 0)
-    }, [])
+    // useLayoutEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: eventTrigger.current,
+    //             start: "top center",
+    //         }
+    //     })
+    //
+    //     tl.from(".events-header span", {
+    //         yPercent: 100,
+    //         stagger: 0.2,
+    //         opacity: 0
+    //     })
+    //         .from(".atropos", {
+    //             autoAlpha: 0,
+    //             y: 100,
+    //             filter: "blur(5px)",
+    //             stagger: 0.1,
+    //             duration: 0.6,
+    //         }, 0)
+    // }, [])
 
     //Sponsor Section Animation
-    useLayoutEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: sponsorTrigger.current,
-                start: "top center",
-            }
-        });
-
-        tl.from(".sponsor-header span", {
-            yPercent: 100,
-            autoAlpha: 0,
-            duration: 0.6
-        })
-            .from(".sponsor-item-main", {
-                yPercent: 100,
-                filter: "blur(5px)",
-                stagger: 0.2,
-                duration: 0.6,
-                autoAlpha: 0
-            })
-    }, [])
+    // useLayoutEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: sponsorTrigger.current,
+    //             start: "top center",
+    //         }
+    //     });
+    //
+    //     tl.from(".sponsor-header span", {
+    //         yPercent: 100,
+    //         autoAlpha: 0,
+    //         duration: 0.6
+    //     })
+    //         .from(".sponsor-item-main", {
+    //             yPercent: 100,
+    //             filter: "blur(5px)",
+    //             stagger: 0.2,
+    //             duration: 0.6,
+    //             autoAlpha: 0
+    //         })
+    // }, [])
 
     //Sponsors Card Hover Effect
     useEffect(() => {
@@ -284,26 +284,26 @@ export const PublicHome = () => {
     }, [])
 
     //Guest Animation
-    useLayoutEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: guest.current,
-            },
-        });
-
-        tl.from(".guests-header", {
-            yPercent: 100,
-            autoAlpha: 0,
-            duration: 0.6
-        })
-            .from(".guest-item", {
-                autoAlpha: 0,
-                y: 20,
-                filter: "blur(5px)",
-                duration: 0.4,
-                stagger: 0.4
-            })
-    }, [])
+    // useLayoutEffect(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: guest.current,
+    //         },
+    //     });
+    //
+    //     tl.from(".guests-header", {
+    //         yPercent: 100,
+    //         autoAlpha: 0,
+    //         duration: 0.6
+    //     })
+    //         .from(".guest-item", {
+    //             autoAlpha: 0,
+    //             y: 20,
+    //             filter: "blur(5px)",
+    //             duration: 0.4,
+    //             stagger: 0.4
+    //         })
+    // }, [])
 
     return (
         <>
@@ -418,6 +418,9 @@ export const PublicHome = () => {
                                 <img src="/assets/gal2.png" alt="Cool purple swirl thing"/>
                                 <span>Stellar Performances</span>
                             </div>
+                            <div className="gallery-item gal6">
+                                <img src="/assets/gl6.webp" alt="Gallery Image 6"/>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -490,6 +493,21 @@ export const PublicHome = () => {
                     </div>
                 </section>
                 {/*Rules End*/}
+                {/*Featured Events*/}
+                <section className="feature" id="feature">
+                    <div className="header">
+                        <span>Featured</span>
+                        <span>Events</span>
+                    </div>
+                    <div className="content">
+                        <div className="feature-item">
+                            <video src="assets/eventImgs/prompt_eng_trailer.mp4" controls={true} autoPlay={false}/>
+                            <span className="title">Prompt Engineering</span>
+                            <Link to={"/event"} state={"prompt"} className="reg">Register here</Link>
+                        </div>
+                    </div>
+                </section>
+                {/*Featured Events End*/}
                 {/*  Events  */}
                 <section className="events" id="events" ref={eventTrigger}>
                     <div className="blob">
@@ -750,8 +768,21 @@ export const PublicHome = () => {
                             </div>
                             <div className="sponsor-item-main">
                                 <div className="top-blur"/>
-                                <img src="assets/gw_white_trans.png" alt="Sponsor Logo"/>
-                                <span className="sponsor-name">Coming soon...</span>
+                                <img src="assets/guvi.png" alt="Guvi"/>
+                                <span className="sponsor-name">Guvi</span>
+                            </div>
+                        </div>
+                        <div className="goodies-sponsor">
+                            <div className="header">
+                                <span>Goodies</span>
+                                <span>Sponsor</span>
+                            </div>
+                            <div className="content">
+                                <div className="sponsor-item-main">
+                                    <div className="top-blur"/>
+                                    <img src="assets/sb.png" alt="Guvi"/>
+                                    <a href="https://www.stickersbaba.com/" target="_blank" rel="noreferrer" className="sponsor-name">StickersBaba</a>
+                                </div>
                             </div>
                         </div>
                     </div>

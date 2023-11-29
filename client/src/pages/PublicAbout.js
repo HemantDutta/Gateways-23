@@ -158,7 +158,7 @@ export const PublicAbout = () => {
                         </div>
                         <div className="card-item">
                             <img src="assets/eventImgs/itq.png" alt=""/>
-                            <span>8+</span>
+                            <span>11+</span>
                             <span>Colleges</span>
                         </div>
                     </div>
