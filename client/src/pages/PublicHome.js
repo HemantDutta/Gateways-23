@@ -489,6 +489,18 @@ export const PublicHome = () => {
                                 <span className="sno">14</span>
                                 <span className="rule">Accommodation will be provided on First-Come-First-Serve Basis.</span>
                             </div>
+                            <div className="rule-item">
+                                <span className="sno">15</span>
+                                <span className="rule">The prize amount is subjected to change. The final prize amount that is to be distributed to the prize winners will be reflected on the website.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">16</span>
+                                <span className="rule">Christ University Students [Any Campus] can NOT participate in any events being held during GATEWAYS 2023 in Christ University, Bangalore Central Campus.</span>
+                            </div>
+                            <div className="rule-item">
+                                <span className="sno">17</span>
+                                <span className="rule">The final list of rules will be mentioned on the homepage of our website: gateways.christuniversity.in</span>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -768,8 +780,8 @@ export const PublicHome = () => {
                             </div>
                             <div className="sponsor-item-main">
                                 <div className="top-blur"/>
-                                <img src="assets/guvi.png" alt="Guvi"/>
-                                <span className="sponsor-name">Guvi</span>
+                                <img src="assets/gw_white_trans.png" alt="Coming soon..."/>
+                                <span className="sponsor-name">Coming Soon...</span>
                             </div>
                         </div>
                         <div className="goodies-sponsor">
@@ -780,7 +792,7 @@ export const PublicHome = () => {
                             <div className="content">
                                 <div className="sponsor-item-main">
                                     <div className="top-blur"/>
-                                    <img src="assets/sb.png" alt="Guvi"/>
+                                    <img src="assets/sb.png" alt="StickersBaba"/>
                                     <a href="https://www.stickersbaba.com/" target="_blank" rel="noreferrer" className="sponsor-name">StickersBaba</a>
                                 </div>
                             </div>
