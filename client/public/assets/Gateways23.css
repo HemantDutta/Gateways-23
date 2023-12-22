@@ -1,5 +1,5 @@
 /*Gateways 2023 StyleSheet*/
-
+/*Designed by Hemant Dutta https://github.com/HemantDutta*/
 *,
 *::before,
 *::after {
@@ -10,21 +10,29 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+
 *:focus {
     outline: none !important;
+}
+
+:root {
+    --clr-1: #FF90BC;
+    --clr-2: #FFC0D9;
+    --clr-3: #F9F9E0;
+    --clr-4: #8ACDD7;
+    --bg: #FAF3F0;
 }
 
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     overflow-x: hidden;
-    background-color: #000;
+    background-color: var(--bg);
     line-height: 1.5;
     letter-spacing: 2px;
     background-size: cover;
@@ -48,10 +56,122 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(166, 20, 197, 0.4);
-    border-radius: 20px;
+    background: #27272d;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #A614C5;
+    background: #10101f;
 }
+
+/*==========Common CSS==========*/
+
+.container {
+    height: 200vh;
+    padding: 0 76px;
+    margin: 50px 0;
+}
+
+/*==========Common CSS End==========*/
+
+/*==========Navbar==========*/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 76px;
+    transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+nav.hide {
+    transform: translateY(-100%);
+}
+
+nav .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navbar-container .left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav .navbar-container .left > * {
+    cursor: pointer;
+}
+
+nav .navbar-container .left img {
+    width: 100px;
+}
+
+nav .navbar-container .left span.logo {
+    font-size: 32px;
+    transition: transform 0.4s cubic-bezier(0.87, 0, 0.13, 1), opacity 2s ease;
+}
+
+nav .navbar-container .left span.logo.hide {
+    transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.4s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+nav .navbar-container .right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav .navbar-container .right a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .navbar-container .ham {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    nav .navbar-container .ham {
+        display: initial;
+    }
+
+    nav .navbar-container .right {
+        display: none;
+    }
+
+    nav {
+        padding: 24px 56px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav .navbar-container .left span.logo {
+        font-size: 24px;
+    }
+
+    nav .navbar-container .left img {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        padding: 24px 32px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    nav .navbar-container .left span.logo {
+        font-size: 20px;
+    }
+
+    nav {
+        padding: 24px 16px;
+    }
+}
+
+/*==========Navbar End==========*/

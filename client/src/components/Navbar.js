@@ -1,56 +1,62 @@
-import './Navbar.css';
-import {Link} from "react-router-dom";
 import {useEffect} from "react";
 
-export const Navbar = ({active}) => {
+export const Navbar = () => {
 
-    let prevScroll = window.scrollY;
-    useEffect(()=>{
-        const checkScroll = () => {
-            let nav = document.getElementById("navbar");
-            if(window.scrollY>prevScroll){
-                nav.style.transform = "translateY(-100%)";
+    //Scroll to top
+    function scrollTop() {
+        window.scrollTo(0, 0);
+    }
+
+    //Scroll Y for hideNav method
+    let scrollY = window.scrollY;
+
+    //Navbar Scroll Methods
+    useEffect(() => {
+        const hideNav = () => {
+            let nav = document.getElementById("nav");
+            let logo = document.getElementById("logo");
+            console.log(scrollY);
+            if (window.scrollY > scrollY) {
+                nav.classList.add("hide");
+            } else {
+                nav.classList.remove("hide");
             }
-            if(prevScroll>window.scrollY){
-                nav.style.transform = "none";
+
+            if (window.scrollY > 100) {
+                logo.classList.add("hide");
+            } else {
+                logo.classList.remove("hide");
             }
-            prevScroll = window.scrollY;
+
+            scrollY = window.scrollY;
         }
 
-        window.addEventListener("scroll", checkScroll);
+        window.addEventListener("scroll", hideNav);
 
-        return ()=> {
-            window.removeEventListener("scroll", checkScroll);
+        return () => {
+            window.removeEventListener("scroll", hideNav);
         }
-    },[])
+    }, [])
 
     return (
         <>
-            <section className="navbar" id="navbar">
-                <section className="topBar" id="topBar">
-                    <div className="topBar-content">
-                        <span className="topBar-christ">CHRIST (DEEMED TO BE UNIVERSITY)</span>
+            <nav id="nav">
+                <div className="navbar-container">
+                    <div className="left">
+                        <img src="assets/gw_dark.png" alt="Gateways 2023" onClick={scrollTop}/>
+                        <span id="logo" className="logo" onClick={scrollTop}>GATEWAYS</span>
                     </div>
-                </section>
-                <nav className="nav" id="nav">
-                    <div className="nav-logo">
-                        <span className="gw-name">GATEWAYS</span><span className="gw-year">2023</span>
+                    <div className="right">
+                        <a href="#flash">Flash Mob</a>
+                        <a href="#ing">Inauguration</a>
+                        <a href="#eve">Events</a>
+                        <a href="#val">Valedictory</a>
                     </div>
-                    <div className="nav-list">
-                        <Link to={"/"} className={active === "home"?"active":""}>Home</Link>
-                        <Link to={"/"} className={active === "events"?"active":""}>Events</Link>
-                        <Link to={"/"} className={active === "about"?"active":""}>About</Link>
+                    <div className="ham">
+                        <i className="fa-solid fa-bars"/>
                     </div>
-                    <div className="nav-menu">
-                        <span tabIndex="0">MENU</span>
-                        <div className="menu-btn" tabIndex="0">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </nav>
-            </section>
+                </div>
+            </nav>
         </>
     )
 }
