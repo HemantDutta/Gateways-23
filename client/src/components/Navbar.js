@@ -22,7 +22,7 @@ export const Navbar = () => {
                 nav.classList.remove("hide");
             }
 
-            if (window.scrollY > 100) {
+            if (window.scrollY < 100) {
                 logo.classList.add("hide");
             } else {
                 logo.classList.remove("hide");

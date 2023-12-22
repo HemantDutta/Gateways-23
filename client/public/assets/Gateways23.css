@@ -24,7 +24,8 @@
     --clr-2: #FFC0D9;
     --clr-3: #F9F9E0;
     --clr-4: #8ACDD7;
-    --bg: #FAF3F0;
+    --bg: #ffffff;
+    --bg-dark: #14141a;
 }
 
 
@@ -36,7 +37,7 @@ body {
     line-height: 1.5;
     letter-spacing: 2px;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 500vh;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -66,9 +67,36 @@ body {
 /*==========Common CSS==========*/
 
 .container {
-    height: 200vh;
     padding: 0 76px;
     margin: 50px 0;
+}
+
+.cali {
+    font-family: 'Dancing Script', cursive;
+}
+
+.gradient {
+    background: linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4));
+    background-size: 200% 200%;
+    animation: gradAnim 5s ease infinite;
+    font-size: 1.5em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+@keyframes gradAnim {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 /*==========Common CSS End==========*/
@@ -175,3 +203,79 @@ nav .navbar-container .ham {
 }
 
 /*==========Navbar End==========*/
+
+/*==========Hero==========*/
+
+.home .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    min-height: 100vh;
+}
+
+.home .hero .head {
+    font-size: 156px;
+    font-weight: bold;
+}
+
+.home .hero .tag {
+    font-size: 24px;
+}
+
+/*==========Hero End==========*/
+
+/*==========Intro==========*/
+
+.intro {
+    background-color: var(--bg-dark);
+    color: white;
+}
+
+.intro .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 56px;
+    padding: 56px 0;
+}
+
+.intro .intro-container main .small-head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.intro .intro-container main .small-head .text {
+    font-size: 32px;
+}
+
+.intro .intro-container main .small-head .anim-bar {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.intro .intro-container main .small-head .anim-bar span {
+    display: inline-block;
+    width: 25vw;
+    height: 2px;
+    background-color: #fff;
+}
+
+.intro .intro-container main .small-head .anim-bar span:nth-child(1) {
+    position: relative;
+    background-color: #939393;
+    z-index: 100;
+}
+
+.intro .intro-container main .small-head .anim-bar span:nth-child(2) {
+    position: absolute;
+    background-color: #fff;
+    z-index: 105;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+/*==========Intro End==========*/
