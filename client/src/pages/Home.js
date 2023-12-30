@@ -16,20 +16,18 @@ export const Home = () => {
             scrollTrigger: {
                 scrub: 0.2,
                 trigger: ".intro",
-                markers: true
             }
         })
     }, [])
 
     //Text Line Animation
-    useEffect(()=>{
+    useEffect(() => {
         gsap.to("#tl1", {
             clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
             scrollTrigger: {
                 scrub: 0.2,
                 trigger: ".intro",
                 start: "+200",
-                markers: true
             }
         })
         gsap.to("#tl2", {
@@ -38,7 +36,6 @@ export const Home = () => {
                 scrub: 0.2,
                 trigger: ".intro",
                 start: "+300",
-                markers: true
             }
         })
         gsap.to("#tl3", {
@@ -47,13 +44,12 @@ export const Home = () => {
                 scrub: 0.2,
                 trigger: ".intro",
                 start: "+400",
-                markers: true
             }
         })
-    },[])
+    }, [])
 
     //Smooth Scroll
-    useEffect(()=>{
+    useEffect(() => {
         const lenis = new Lenis()
 
         function raf(time) {
@@ -62,7 +58,7 @@ export const Home = () => {
         }
 
         requestAnimationFrame(raf)
-    },[])
+    }, [])
 
     return (
         <>
@@ -103,6 +99,25 @@ export const Home = () => {
                             <img src="/assets/cu_white_logo.png" alt="Christ University" title="Christ University"/>
                         </div>
                         <span className="segue cali gradient">Let's see how it went...</span>
+                    </div>
+                </section>
+                <section className="events" id="events">
+                    <div className="events-container container">
+                        <div className="ing">
+                            <div className="ing-entry">
+                                <div className="left">
+                                    <div className="head">
+                                        <span>Flash</span>
+                                        <span>Mob</span>
+                                    </div>
+                                    <span className="date">6th December 2023</span>
+                                </div>
+                                <div className="right">
+                                    <img src="/assets/fm_1.jpg" alt="Flash Mob"/>
+                                    <img src="/assets/fm_2.jpg" alt="Flash Mob"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
