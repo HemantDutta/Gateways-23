@@ -21,6 +21,37 @@ export const Home = () => {
         })
     }, [])
 
+    //Text Line Animation
+    useEffect(()=>{
+        gsap.to("#tl1", {
+            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+            scrollTrigger: {
+                scrub: 0.2,
+                trigger: ".intro",
+                start: "+300",
+                markers: true
+            }
+        })
+        gsap.to("#tl2", {
+            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+            scrollTrigger: {
+                scrub: 0.2,
+                trigger: ".intro",
+                start: "+400",
+                markers: true
+            }
+        })
+        gsap.to("#tl3", {
+            clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+            scrollTrigger: {
+                scrub: 0.2,
+                trigger: ".intro",
+                start: "+500",
+                markers: true
+            }
+        })
+    },[])
+
     //Smooth Scroll
     useEffect(()=>{
         const lenis = new Lenis()
@@ -54,9 +85,23 @@ export const Home = () => {
                                     <span id="anim-bar"></span>
                                 </div>
                             </div>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur culpa, delectus doloribus laudantium mollitia nihil odio porro possimus, quam, repudiandae saepe tempore veritatis voluptates.</span>
+                            <div className="text-line">
+                                <span>Lorem ipsum dolor sit</span>
+                                <span id="tl1">Lorem ipsum dolor sit</span>
+                            </div>
+                            <div className="text-line">
+                                <span>Lorem ipsum dolor sit</span>
+                                <span id="tl2">Lorem ipsum dolor sit</span>
+                            </div>
+                            <div className="text-line">
+                                <span>Lorem ipsum dolor sit</span>
+                                <span id="tl3">Lorem ipsum dolor sit</span>
+                            </div>
                         </main>
-                        <div className="graphic"></div>
+                        <div className="graphic">
+                            <img src="/assets/gw_white_trans.png" alt="Code Cosmos" title="Code Cosmos"/>
+                            <img src="/assets/cu_white_logo.png" alt="Christ University" title="Christ University"/>
+                        </div>
                         <span className="segue"></span>
                     </div>
                 </section>
