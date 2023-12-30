@@ -28,7 +28,7 @@ export const Home = () => {
             scrollTrigger: {
                 scrub: 0.2,
                 trigger: ".intro",
-                start: "+300",
+                start: "+200",
                 markers: true
             }
         })
@@ -37,7 +37,7 @@ export const Home = () => {
             scrollTrigger: {
                 scrub: 0.2,
                 trigger: ".intro",
-                start: "+400",
+                start: "+300",
                 markers: true
             }
         })
@@ -46,7 +46,7 @@ export const Home = () => {
             scrollTrigger: {
                 scrub: 0.2,
                 trigger: ".intro",
-                start: "+500",
+                start: "+400",
                 markers: true
             }
         })
@@ -102,7 +102,7 @@ export const Home = () => {
                             <img src="/assets/gw_white_trans.png" alt="Code Cosmos" title="Code Cosmos"/>
                             <img src="/assets/cu_white_logo.png" alt="Christ University" title="Christ University"/>
                         </div>
-                        <span className="segue"></span>
+                        <span className="segue cali gradient">Let's see how it went...</span>
                     </div>
                 </section>
             </div>

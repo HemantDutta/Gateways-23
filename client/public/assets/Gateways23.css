@@ -251,6 +251,7 @@ nav .navbar-container .ham {
 .intro {
     background-color: var(--bg-dark);
     color: white;
+    padding-top: 150px;
 }
 
 .intro .intro-container {
@@ -258,7 +259,7 @@ nav .navbar-container .ham {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 56px;
+    gap: 76px;
     padding-top: 56px;
     padding-bottom: 56px;
 }
@@ -323,5 +324,93 @@ nav .navbar-container .ham {
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 
-/*.intro .intro-container*/
+.intro .intro-container .graphic {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 64px;
+}
+
+.intro .intro-container .graphic img:nth-child(1) {
+    width: 250px;
+}
+
+.intro .intro-container .graphic img:nth-child(2) {
+    width: 350px;
+}
+
+.intro .intro-container .segue {
+    font-size: 56px;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 1290px) {
+    .intro .intro-container .graphic img:nth-child(1) {
+        width: 200px;
+    }
+
+    .intro .intro-container .graphic img:nth-child(2) {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .intro .intro-container .graphic img:nth-child(1) {
+        width: 150px;
+    }
+
+    .intro .intro-container .graphic img:nth-child(2) {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 691px) {
+    .intro .intro-container .graphic img:nth-child(1) {
+        width: 100px;
+    }
+
+    .intro .intro-container .graphic img:nth-child(2) {
+        width: 200px;
+    }
+
+    .intro .intro-container .segue {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 556px) {
+    .intro .intro-container .graphic {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .intro .intro-container .graphic img:nth-child(1) {
+        width: 100px;
+    }
+
+    .intro .intro-container .graphic img:nth-child(2) {
+        width: 150px;
+    }
+
+    .intro .intro-container main .text-line span {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .intro .intro-container .segue {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .intro .intro-container main .text-line span {
+        font-size: 28px;
+    }
+
+    .intro .intro-container .segue {
+        font-size: 32px;
+    }
+}
 /*==========Intro End==========*/
