@@ -42,12 +42,6 @@ body {
     background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    :root {
-        scroll-behavior: smooth;
-    }
-}
-
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -69,6 +63,24 @@ body {
 .container {
     padding: 0 76px;
     margin: 50px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding: 0 56px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 0 32px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .container {
+        padding: 0 16px;
+    }
 }
 
 .cali {
@@ -216,12 +228,20 @@ nav .navbar-container .ham {
 }
 
 .home .hero .head {
-    font-size: 156px;
+    font-size: 10vw;
     font-weight: bold;
+    text-align: center;
 }
 
 .home .hero .tag {
     font-size: 24px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .home .hero .tag {
+        font-size: 18px;
+    }
 }
 
 /*==========Hero End==========*/
