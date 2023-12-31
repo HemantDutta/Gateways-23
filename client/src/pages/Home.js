@@ -118,6 +118,20 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="comp">
+                            <div className="comp-entry">
+                                <div className="top">
+                                    <div className="head">
+                                        <span>Events</span>
+                                    </div>
+                                    <span className="date">7th & 8th December 2023</span>
+                                </div>
+                                <div className="bottom">
+                                    <img src="/assets/eve_1.jpg" alt="Events"/>
+                                    <img src="/assets/eve_2.jpg" alt="Events"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
