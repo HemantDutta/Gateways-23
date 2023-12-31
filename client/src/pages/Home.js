@@ -20,6 +20,42 @@ export const Home = () => {
         })
     }, [])
 
+    //Hero Images Animation
+    useEffect(()=>{
+        gsap.to("#ii1", {
+            transform: "translateY(-20%)",
+            scrollTrigger: {
+                scrub: 0.2,
+                trigger: "#hero",
+                start: "top",
+                end: "bottom",
+                markers: true
+            }
+        })
+
+        gsap.to("#ii2", {
+            transform: "translateY(-20%)",
+            scrollTrigger: {
+                scrub: 0.3,
+                trigger: "#hero",
+                start: "top",
+                end: "bottom",
+                markers: true
+            }
+        })
+
+        gsap.to("#ii3", {
+            transform: "translateY(40%)",
+            scrollTrigger: {
+                scrub: 0.4,
+                trigger: "#hero",
+                start: "top",
+                end: "bottom",
+                markers: true
+            }
+        })
+    },[])
+
     //Text Line Animation
     useEffect(() => {
         gsap.to("#tl1", {
@@ -70,6 +106,17 @@ export const Home = () => {
                 <section className="hero container" id="hero">
                     <span className="head cali">GATEWAYS 2023</span>
                     <span className="tag">Thank you for making it <span className="cali gradient">unforgettable</span></span>
+                    <div className="img-flex">
+                        <div className="img-item" id="ii1">
+                            <img src="/assets/hr_1.jpg" alt="Everyone" title="Everyone"/>
+                        </div>
+                        <div className="img-item" id="ii2">
+                            <img src="/assets/hr_2.jpg" alt="Best Performance of the day" title="Best Performance of the day"/>
+                        </div>
+                        <div className="img-item" id="ii3">
+                            <img src="/assets/hr_3.jpg" alt="I wasn't there for this :(" title="I wasn't there for this :("/>
+                        </div>
+                    </div>
                 </section>
                 <section className="intro" id="intro">
                     <div className="intro-container container">

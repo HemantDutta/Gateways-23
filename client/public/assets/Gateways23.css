@@ -41,6 +41,10 @@ body {
     background-repeat: no-repeat;
 }
 
+#root, html {
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -219,6 +223,7 @@ nav .navbar-container .ham {
 /*==========Hero==========*/
 
 .home .hero {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,22 +231,88 @@ nav .navbar-container .ham {
     margin-top: 0;
     min-height: 100vh;
     background-color: #fff;
+    z-index: 115;
 }
 
 .home .hero .head {
     font-size: 10vw;
     font-weight: bold;
     text-align: center;
+    z-index: 115;
 }
 
 .home .hero .tag {
     font-size: 24px;
     text-align: center;
+    z-index: 115;
+}
+
+.home .hero .img-flex {
+    position: absolute;
+    z-index: 105;
+    bottom: -40%;
+    width: 100%;
+    height: 600px;
+}
+
+.home .hero .img-flex .img-item {
+    position: absolute;
+}
+
+.home .hero .img-flex .img-item img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.home .hero .img-flex .img-item:nth-child(1) {
+    width: 50vw;
+    height: 600px;
+    bottom: 10%;
+    left: -10%;
+    z-index: 106;
+}
+
+.home .hero .img-flex .img-item:nth-child(2) {
+    width: 30vw;
+    height: 700px;
+    bottom: -20%;
+    left: 40%;
+    z-index: 105;
+}
+
+.home .hero .img-flex .img-item:nth-child(3) {
+    width: 50vw;
+    height: 600px;
+    bottom: 20%;
+    right: -20%;
+    z-index: 106;
 }
 
 @media screen and (max-width: 500px) {
     .home .hero .tag {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .home .hero .img-flex .img-item:nth-child(1) {
+        height: calc(200px + 35vw);
+        bottom: 30%;
+    }
+
+    .home .hero .img-flex .img-item:nth-child(2) {
+        height: calc(300px + 25vw);
+        width: 45vw;
+        left: 30%;
+        bottom: 0;
+    }
+
+    .home .hero .img-flex .img-item:nth-child(3) {
+        height: calc(200px + 35vw);
+        bottom: 40%;
+        right: -10%;
     }
 }
 
@@ -252,7 +323,9 @@ nav .navbar-container .ham {
 .intro {
     background-color: #14141a;
     color: white;
-    padding-top: 150px;
+    padding-top: 350px;
+    position: relative;
+    z-index: 100;
 }
 
 .intro .intro-container {
