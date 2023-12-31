@@ -21,7 +21,7 @@ export const Home = () => {
     }, [])
 
     //Hero Images Animation
-    useEffect(()=>{
+    useEffect(() => {
         gsap.to("#ii1", {
             transform: "translateY(-20%)",
             scrollTrigger: {
@@ -29,7 +29,6 @@ export const Home = () => {
                 trigger: "#hero",
                 start: "top",
                 end: "bottom",
-                markers: true
             }
         })
 
@@ -40,7 +39,6 @@ export const Home = () => {
                 trigger: "#hero",
                 start: "top",
                 end: "bottom",
-                markers: true
             }
         })
 
@@ -51,10 +49,9 @@ export const Home = () => {
                 trigger: "#hero",
                 start: "top",
                 end: "bottom",
-                markers: true
             }
         })
-    },[])
+    }, [])
 
     //Text Line Animation
     useEffect(() => {
@@ -129,17 +126,20 @@ export const Home = () => {
                                 </div>
                             </div>
                             <div className="text-line">
-                                <span>Lorem ipsum dolor sit</span>
-                                <span id="tl1">Lorem ipsum dolor sit</span>
+                                <span>Believe you can and</span>
+                                <span id="tl1">Believe you can and</span>
                             </div>
                             <div className="text-line">
-                                <span>Lorem ipsum dolor sit</span>
-                                <span id="tl2">Lorem ipsum dolor sit</span>
+                                <span>you're halfway</span>
+                                <span id="tl2">you're halfway</span>
                             </div>
                             <div className="text-line">
-                                <span>Lorem ipsum dolor sit</span>
-                                <span id="tl3">Lorem ipsum dolor sit</span>
+                                <span>there</span>
+                                <span id="tl3">there</span>
                             </div>
+                            <span className="desc">
+                                Gateways 2023 owes its success to the unyielding belief and hard work of our students. Their shared passion and tireless dedication turned aspirations into reality, overcoming challenges with resilience. Through collaborative efforts, they transformed the event into a celebration of innovation, showcasing the power of teamwork and a collective commitment to excellence.
+                            </span>
                         </main>
                         <div className="graphic">
                             <img src="/assets/gw_white_trans.png" alt="Code Cosmos" title="Code Cosmos"/>
