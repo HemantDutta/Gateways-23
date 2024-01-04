@@ -124,7 +124,7 @@ nav {
     left: 0;
     width: 100%;
     padding: 24px 76px;
-    transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+    transition: all 1s cubic-bezier(0.87, 0, 0.13, 1);
     z-index: 999;
 }
 
@@ -517,20 +517,24 @@ nav .navbar-container .ham {
     gap: 56px;
 }
 
-.events .events-container .ing {
+.events .events-container .ing, .events .events-container .val {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.events .events-container .ing .ing-entry {
+.events .events-container .val {
+    justify-content: flex-end;
+}
+
+.events .events-container .ing .ing-entry, .events .events-container .val .val-entry {
     display: flex;
     align-items: stretch;
     width: 1000px;
     height: 600px;
 }
 
-.events .events-container .ing .ing-entry .left {
+.events .events-container .ing .ing-entry .left, .events .events-container .val .val-entry .left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -541,7 +545,11 @@ nav .navbar-container .ham {
     flex-basis: 40%;
 }
 
-.events .events-container .ing .ing-entry .left .head {
+.events .events-container .val .val-entry .left {
+    background-color: var(--clr-2);
+}
+
+.events .events-container .ing .ing-entry .left .head, .events .events-container .val .val-entry .left .head {
     display: flex;
     flex-direction: column;
     font-family: 'Bungee Shade', sans-serif;
@@ -549,12 +557,12 @@ nav .navbar-container .ham {
     font-size: 56px;
 }
 
-.events .events-container .ing .ing-entry .left .date {
+.events .events-container .ing .ing-entry .left .date, .events .events-container .val .val-entry .left .date {
     font-size: 18px;
     font-weight: bold;
 }
 
-.events .events-container .ing .ing-entry .right {
+.events .events-container .ing .ing-entry .right, .events .events-container .val .val-entry .right {
     flex-basis: 60%;
     height: 100%;
     display: flex;
@@ -563,7 +571,7 @@ nav .navbar-container .ham {
     overflow: hidden;
 }
 
-.events .events-container .ing .ing-entry .right img {
+.events .events-container .ing .ing-entry .right img, .events .events-container .val .val-entry .right img {
     transition: all 1.2s cubic-bezier(0.87, 0, 0.13, 1);
     position: relative;
     object-fit: cover;
@@ -571,24 +579,24 @@ nav .navbar-container .ham {
     object-position: center;
 }
 
-.events .events-container .ing .ing-entry .right img:nth-child(1) {
+.events .events-container .ing .ing-entry .right img:nth-child(1), .events .events-container .val .val-entry .right img:nth-child(1) {
     z-index: 105;
 }
 
-.events .events-container .ing .ing-entry .right img:nth-child(2) {
+.events .events-container .ing .ing-entry .right img:nth-child(2), .events .events-container .val .val-entry .right img:nth-child(2) {
     filter: blur(20px);
     transform: translateX(20%);
     scale: 1.5;
     z-index: 100;
 }
 
-.events .events-container .ing .ing-entry .right:hover img:nth-child(1) {
+.events .events-container .ing .ing-entry .right:hover img:nth-child(1), .events .events-container .val .val-entry .right:hover img:nth-child(1) {
     transform: translateX(-100%);
     filter: blur(20px);
     scale: 1.5;
 }
 
-.events .events-container .ing .ing-entry .right:hover img:nth-child(2) {
+.events .events-container .ing .ing-entry .right:hover img:nth-child(2), .events .events-container .val .val-entry .right:hover img:nth-child(2) {
     transform: translateX(-100%);
     filter: blur(0);
     scale: 1;
@@ -597,7 +605,7 @@ nav .navbar-container .ham {
 .events .events-container .comp {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .events .events-container .comp .comp-entry {
@@ -744,7 +752,7 @@ nav .navbar-container .ham {
 }
 
 @media screen and (max-width: 1191px) {
-    .events .events-container .ing .ing-entry, .events .events-container .ing-main .main-entry {
+    .events .events-container .ing .ing-entry, .events .events-container .ing-main .main-entry, .events .events-container .val .val-entry {
         width: 100%;
     }
 
@@ -752,13 +760,13 @@ nav .navbar-container .ham {
         width: 100%;
     }
 
-    .events .events-container .ing .ing-entry .right img, .events .events-container .ing-main .main-entry .left img {
+    .events .events-container .ing .ing-entry .right img, .events .events-container .ing-main .main-entry .left img, .events .events-container .val .val-entry .right img {
         height: 100%;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .events .events-container .ing .ing-entry, .events .events-container .ing-main .main-entry {
+    .events .events-container .ing .ing-entry, .events .events-container .ing-main .main-entry, .events .events-container .val .val-entry {
         flex-direction: column;
         width: 600px;
     }
@@ -767,19 +775,19 @@ nav .navbar-container .ham {
         width: 600px;
     }
 
-    .events .events-container .ing .ing-entry .right, .events .events-container .ing-main .main-entry .left {
+    .events .events-container .ing .ing-entry .right, .events .events-container .ing-main .main-entry .left, .events .events-container .val .val-entry .right {
         flex-basis: 100%;
         width: 100%;
     }
 
-    .events .events-container .ing .ing-entry .right img, .events .events-container .ing-main .main-entry .left img {
+    .events .events-container .ing .ing-entry .right img, .events .events-container .ing-main .main-entry .left img, .events .events-container .val .val-entry .right img {
         height: auto;
     }
 
 }
 
 @media screen and (max-width: 420px) {
-    .events .events-container .ing .ing-entry .right img, .events .events-container .ing-main .main-entry .left img {
+    .events .events-container .ing .ing-entry .right img, .events .events-container .ing-main .main-entry .left img, .events .events-container .val .val-entry .right img {
         height: 100%;
     }
 }
@@ -788,6 +796,77 @@ nav .navbar-container .ham {
     .events .events-container .ing .ing-entry .left .head, .events .events-container .ing-main .main-entry .right .head, .events .events-container .comp .comp-entry .top .head {
         font-size: 32px;
     }
+
+    .events .events-container .val .val-entry .left .head {
+        font-size: 32px;
+    }
 }
 
 /*==========Events End==========*/
+
+/*==========Conclusion==========*/
+
+.conclusion {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conclusion .conclusion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.conclusion .conclusion-container .graphic {
+    width: 350px;
+}
+
+.conclusion .conclusion-container .quote {
+    font-size: 32px;
+}
+
+@media screen and (max-width: 500px) {
+    .conclusion .conclusion-container .quote {
+        font-size: 24px;
+    }
+
+    .conclusion .conclusion-container .graphic {
+        width: 250px;
+    }
+}
+
+/*==========Conclusion End==========*/
+
+/*==========Footer==========*/
+
+footer {
+    position: relative;
+    z-index: 100;
+}
+
+footer .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+footer .footer-container img {
+    width: 20px;
+}
+
+footer .footer-container span {
+    font-size: 18px;
+}
+
+footer .footer-container span a {
+    color: black;
+    font-weight: bold;
+}
+
+/*==========Footer End==========*/

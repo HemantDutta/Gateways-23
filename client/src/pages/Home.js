@@ -168,8 +168,8 @@ export const Home = () => {
                         <div className="ing-main">
                             <div className="main-entry">
                                 <div className="left">
-                                    <img src="/assets/ing_1.jpg" alt="Flash Mob"/>
-                                    <img src="/assets/ing_2.jpg" alt="Flash Mob"/>
+                                    <img src="/assets/ing_1.jpg" alt="Inauguration"/>
+                                    <img src="/assets/ing_2.jpg" alt="Inauguration"/>
                                 </div>
                                 <div className="right">
                                     <div className="head">
@@ -198,12 +198,33 @@ export const Home = () => {
                         </div>
                         <div className="val">
                             <div className="val-entry">
-                                <div className="left"></div>
-                                <div className="right"></div>
+                                <div className="left">
+                                    <div className="head">
+                                        <span>Conclusion</span>
+                                    </div>
+                                    <span className="date">6th December 2023</span>
+                                </div>
+                                <div className="right">
+                                    <img src="/assets/va_1.jpg" alt="Valedictory"/>
+                                    <img src="/assets/va_2.jpg" alt="Valedictory"/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section className="conclusion" id="conclusion">
+                    <div className="conclusion-container container">
+                        <span className="quote">With sincere gratitude, we extend appreciation to the <span className="cali">Gateways 2023</span> team for their exemplary dedication and brilliance. As the curtain falls, we extend our best wishes to the Gateways 2024 team, trusting they will carry forward this <span className="cali">legacy</span> of excellence with finesse and innovation.</span>
+                        <img src="/assets/conc_1.png" alt="Graphic" className="graphic"/>
+                    </div>
+                </section>
+                <footer>
+                    <div className="footer-container container">
+                        <img src="/assets/ft_icon.png" alt="Icon"/>
+                        <span>Designed & Developed by <a href="https://www.linkedin.com/in/hemantduttahd/" target="_blank" rel="noreferrer">Hemant Dutta</a>&nbsp;<a href="https://github.com/HemantDutta" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"/></a></span>
+                        <img src="/assets/ft_icon.png" alt="Icon"/>
+                    </div>
+                </footer>
             </div>
             {/*  Body End  */}
         </>
