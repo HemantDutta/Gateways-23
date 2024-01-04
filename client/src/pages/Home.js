@@ -33,7 +33,7 @@ export const Home = () => {
         })
 
         gsap.to("#ii2", {
-            transform: "translateY(-20%)",
+            transform: "translateY(-30%)",
             scrollTrigger: {
                 scrub: 0.3,
                 trigger: "#hero",
@@ -200,9 +200,10 @@ export const Home = () => {
                             <div className="val-entry">
                                 <div className="left">
                                     <div className="head">
-                                        <span>Conclusion</span>
+                                        <span>End</span>
+                                        <span>Event</span>
                                     </div>
-                                    <span className="date">6th December 2023</span>
+                                    <span className="date">8th December 2023</span>
                                 </div>
                                 <div className="right">
                                     <img src="/assets/va_1.jpg" alt="Valedictory"/>

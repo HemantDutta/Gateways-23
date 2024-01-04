@@ -133,12 +133,14 @@ nav.hide {
 }
 
 nav .navbar-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    z-index: 999;
 }
 
 nav .navbar-container .left {
@@ -179,11 +181,54 @@ nav .navbar-container .right a {
 
 nav .navbar-container .ham {
     display: none;
+    gap: 5px;
+    flex-direction: column;
+}
+
+nav .navbar-container .ham span {
+    height: 2px;
+    background-color: #000000;
+    width: 20px;
+    transition: all 1.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+nav .navbar-container .ham.active span:nth-child(1) {
+    rotate: 405deg;
+    translate: 0 7px;
+}
+
+nav .navbar-container .ham.active span:nth-child(3) {
+    rotate: -405deg;
+    translate: 0 -7px;
+}
+
+nav .navbar-container .ham.active span:nth-child(2) {
+    opacity: 0;
+}
+
+nav .big-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 990;
+    transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+nav .big-menu.active {
+    height: 100vh;
+    opacity: 1;
 }
 
 @media screen and (max-width: 991px) {
     nav .navbar-container .ham {
-        display: initial;
+        display: flex;
     }
 
     nav .navbar-container .right {

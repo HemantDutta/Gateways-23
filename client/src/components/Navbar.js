@@ -15,7 +15,6 @@ export const Navbar = () => {
         const hideNav = () => {
             let nav = document.getElementById("nav");
             let logo = document.getElementById("logo");
-            console.log(scrollY);
             if (window.scrollY > scrollY) {
                 nav.classList.add("hide");
             } else {
@@ -36,7 +35,22 @@ export const Navbar = () => {
         return () => {
             window.removeEventListener("scroll", hideNav);
         }
-    }, [])
+    }, []);
+
+    //Big Menu Toggle
+    function bigMenuToggle() {
+        //Big Menu Vars
+        let bigMenu = document.getElementById("bigMenu");
+        let ham = document.getElementById("ham");
+
+        if (!bigMenu.classList.contains("active")) {
+            bigMenu.classList.add("active");
+            ham.classList.add("active");
+        } else {
+            bigMenu.classList.remove("active");
+            ham.classList.remove("active");
+        }
+    }
 
     return (
         <>
@@ -52,8 +66,15 @@ export const Navbar = () => {
                         <a href="#eve">Events</a>
                         <a href="#val">Valedictory</a>
                     </div>
-                    <div className="ham">
-                        <i className="fa-solid fa-bars"/>
+                    <div className="ham" id="ham" onClick={bigMenuToggle}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div className="big-menu" id="bigMenu">
+                    <div className="list">
+
                     </div>
                 </div>
             </nav>
