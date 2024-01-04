@@ -165,6 +165,23 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="ing-main">
+                            <div className="main-entry">
+                                <div className="left">
+                                    <img src="/assets/ing_1.jpg" alt="Flash Mob"/>
+                                    <img src="/assets/ing_2.jpg" alt="Flash Mob"/>
+                                </div>
+                                <div className="right">
+                                    <div className="head">
+                                        <span>Event</span>
+                                        <span>Launch</span>
+                                    </div>
+                                    <div className="date">
+                                        <span>7th December 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className="comp">
                             <div className="comp-entry">
                                 <div className="top">
