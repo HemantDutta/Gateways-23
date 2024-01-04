@@ -37,6 +37,24 @@ export const Navbar = () => {
         }
     }, []);
 
+    //Close BigMenu on Resize
+    useEffect(() => {
+        const closeBigMenu = () => {
+            if (window.innerWidth > 991) {
+                let bigMenu = document.getElementById("bigMenu");
+                let ham = document.getElementById("ham");
+                bigMenu.classList.remove("active");
+                ham.classList.remove("active");
+            }
+        }
+
+        window.addEventListener("resize", closeBigMenu);
+
+        return () => {
+            window.removeEventListener("resize", closeBigMenu);
+        }
+    }, [])
+
     //Big Menu Toggle
     function bigMenuToggle() {
         //Big Menu Vars
