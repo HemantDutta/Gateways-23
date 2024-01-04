@@ -196,6 +196,12 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="val">
+                            <div className="val-entry">
+                                <div className="left"></div>
+                                <div className="right"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
