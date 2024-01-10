@@ -1,10 +1,13 @@
 import {Navbar} from "../components/Navbar";
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Lenis from '@studio-freight/lenis'
 
 export const Home = () => {
+
+    //Refs
+    const imgAnim = useRef(null);
 
     //Register Scroll Trigger
     gsap.registerPlugin(ScrollTrigger);
@@ -81,6 +84,19 @@ export const Home = () => {
         })
     }, [])
 
+    //Image Parallax Animation
+    useEffect(() => {
+        document.querySelectorAll(".imgAnim").forEach(item => {
+            gsap.to(item, {
+                transform: "translateY(-20%)",
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: 0.2
+                }
+            })
+        })
+    }, [])
+
     //Smooth Scroll
     useEffect(() => {
         const lenis = new Lenis()
@@ -105,7 +121,7 @@ export const Home = () => {
                     <span className="tag">Thank you for making it <span className="cali gradient">unforgettable</span></span>
                     <div className="img-flex">
                         <div className="img-item" id="ii1">
-                            <img src="/assets/hr_1.jpg" alt="Everyone" title="Everyone"/>
+                            <img src="/assets/hr_1.JPG" alt="Everyone" title="Everyone"/>
                         </div>
                         <div className="img-item" id="ii2">
                             <img src="/assets/hr_2.jpg" alt="Best Performance of the day" title="Best Performance of the day"/>
@@ -150,7 +166,7 @@ export const Home = () => {
                 </section>
                 <section className="events" id="events">
                     <div className="events-container container">
-                        <div className="ing">
+                        <div className="ing" id="flash">
                             <div className="ing-entry">
                                 <div className="left">
                                     <div className="head">
@@ -165,7 +181,39 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="ing-main">
+                        <div className="fm-grid img-grid">
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/fmg_2.JPG" alt="Flash Mob" loading="lazy"/>
+                                    <span className="cap cali">Flash Mob: A symphony of elegance...</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/fmg_3.JPG" alt="Flash Mob" loading="lazy"/>
+                                    <span className="cap cali">spontaneous grace...</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/fmg_5.JPG" alt="Flash Mob" loading="lazy"/>
+                                    <span className="cap cali">and synchronized brilliance...</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/fmg_1.jpg" alt="Flash Mob" loading="lazy"/>
+                                    <span className="cap cali">that left us in awe...</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/fm_4.JPG" alt="Flash Mob" loading="lazy"/>
+                                    <span className="cap cali">Thank you for the dazzling performance!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="ing-main" id="ing">
                             <div className="main-entry">
                                 <div className="left">
                                     <img src="/assets/ing_1.jpg" alt="Inauguration"/>
@@ -182,7 +230,39 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="comp">
+                        <div className="ing-grid img-grid">
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/in_g1.jpg" alt="Inauguration" loading="lazy"/>
+                                    <span className="cap cali">Grand Inauguration: A Tapestry of Prestige</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/in_g2.jpg" alt="Inauguration" loading="lazy"/>
+                                    <span className="cap cali">Prestigious Kickoff: Elegance Captured</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/in_g3.jpg" alt="Inauguration" loading="lazy"/>
+                                    <span className="cap cali">A Grand Prelude</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/in_g4.jpg" alt="Inauguration" loading="lazy"/>
+                                    <span className="cap cali">Embarking in Style: Grandeur Unveiled</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/in_g5.jpg" alt="Inauguration" loading="lazy"/>
+                                    <span className="cap cali">A Prestigious Commencement!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="comp" id="eve">
                             <div className="comp-entry">
                                 <div className="top">
                                     <div className="head">
@@ -196,18 +276,112 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="val">
+                        <div className="eve-grid img-grid">
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/evg_1.jpg" alt="Events" loading="lazy"/>
+                                    <span className="cap cali">Capturing Moments of Pure Joy and Fun</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/evg_2.jpg" alt="Events" loading="lazy"/>
+                                    <span className="cap cali">Laughter in Every Frame</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/evg_3.jpg" alt="Events" loading="lazy"/>
+                                    <span className="cap cali">Vibrant Event Vibes</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/evg_4.jpg" alt="Events" loading="lazy"/>
+                                    <span className="cap cali">A Tapestry of Smiles</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/evg_5.jpg" alt="Events" loading="lazy"/>
+                                    <span className="cap cali">Where Fun Takes Center Stage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="val" id="val">
                             <div className="val-entry">
                                 <div className="left">
-                                    <div className="head">
-                                        <span>End</span>
-                                        <span>Event</span>
+                                    <div className="head special">
+                                        <span>Vale</span>
+                                        <span>dictory</span>
                                     </div>
                                     <span className="date">8th December 2023</span>
                                 </div>
                                 <div className="right">
                                     <img src="/assets/va_1.jpg" alt="Valedictory"/>
                                     <img src="/assets/va_2.jpg" alt="Valedictory"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="val-grid img-grid">
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_1.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Triumphant End: Hard Work Rewarded</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_2.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Success in Every Smile</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_3.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Cheers to Achievement</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_4.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Hard Work, Happy Hearts</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_5.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Culmination of Success</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_6.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Smiles of Triumph</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_7.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Well-Earned Applause</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_8.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Every Effort Counts</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_9.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">Smiles All Around</span>
+                                </div>
+                            </div>
+                            <div className="img-flex">
+                                <div className="img-item">
+                                    <img className="imgAnim" src="/assets/vag_10.jpg" alt="Valedictory" loading="lazy"/>
+                                    <span className="cap cali">A Tapestry of Happiness</span>
                                 </div>
                             </div>
                         </div>

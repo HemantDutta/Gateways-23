@@ -1,6 +1,9 @@
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
 
 export const Navbar = () => {
+
+    //Refs
+    const list = useRef(null);
 
     //Scroll to top
     function scrollTop() {
@@ -62,11 +65,17 @@ export const Navbar = () => {
         let ham = document.getElementById("ham");
 
         if (!bigMenu.classList.contains("active")) {
-            bigMenu.classList.add("active");
-            ham.classList.add("active");
+            list.current.style.display = "flex";
+            setTimeout(()=>{
+                bigMenu.classList.add("active");
+                ham.classList.add("active");
+            },0)
         } else {
             bigMenu.classList.remove("active");
             ham.classList.remove("active");
+            setTimeout(()=>{
+                list.current.style.display = "none";
+            },400)
         }
     }
 
@@ -91,8 +100,11 @@ export const Navbar = () => {
                     </div>
                 </div>
                 <div className="big-menu" id="bigMenu">
-                    <div className="list">
-
+                    <div className="list container" ref={list}>
+                        <a className="bigAnim" href="#flash" onClick={bigMenuToggle}>Flash Mob <span/></a>
+                        <a className="bigAnim" href="#ing" onClick={bigMenuToggle}>Inauguration <span/></a>
+                        <a className="bigAnim" href="#eve" onClick={bigMenuToggle}>Events <span/></a>
+                        <a className="bigAnim" href="#val" onClick={bigMenuToggle}>Valedictory <span/></a>
                     </div>
                 </div>
             </nav>
